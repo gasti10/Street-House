@@ -56,7 +56,7 @@ namespace Labo0
    
             GL.Hint(HintTarget.PerspectiveCorrectionHint, HintMode.Nicest);
 
-            tex1 = CargarTextura("files/Texturas/maggie.png");
+            tex1 = CargarTextura("files/Texturas/modern1.jpg");
     
         }
 
