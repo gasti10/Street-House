@@ -1,0 +1,274 @@
+V:\Users\df\Documents\Visual Studio 2010\Projects\Labo0\Labo0\bin\Debug\files\shaders\fshader1.glsl
+V:\Users\df\Documents\Visual Studio 2010\Projects\Labo0\Labo0\bin\Debug\files\shaders\vshader1.glsl
+V:\Users\df\Documents\Visual Studio 2010\Projects\Labo0\Labo0\bin\Debug\Labo0.exe
+V:\Users\df\Documents\Visual Studio 2010\Projects\Labo0\Labo0\bin\Debug\Labo0.pdb
+V:\Users\df\Documents\Visual Studio 2010\Projects\Labo0\Labo0\bin\Debug\OpenTK.dll
+V:\Users\df\Documents\Visual Studio 2010\Projects\Labo0\Labo0\bin\Debug\OpenTK.GLControl.dll
+V:\Users\df\Documents\Visual Studio 2010\Projects\Labo0\Labo0\bin\Debug\OpenTK.xml
+V:\Users\df\Documents\Visual Studio 2010\Projects\Labo0\Labo0\bin\Debug\OpenTK.GLControl.xml
+V:\Users\df\Documents\Visual Studio 2010\Projects\Labo0\Labo0\obj\x86\Debug\ResolveAssemblyReference.cache
+V:\Users\df\Documents\Visual Studio 2010\Projects\Labo0\Labo0\obj\x86\Debug\Labo0.MainWindow.resources
+V:\Users\df\Documents\Visual Studio 2010\Projects\Labo0\Labo0\obj\x86\Debug\Labo0.Properties.Resources.resources
+V:\Users\df\Documents\Visual Studio 2010\Projects\Labo0\Labo0\obj\x86\Debug\GenerateResource.read.1.tlog
+V:\Users\df\Documents\Visual Studio 2010\Projects\Labo0\Labo0\obj\x86\Debug\GenerateResource.write.1.tlog
+V:\Users\df\Documents\Visual Studio 2010\Projects\Labo0\Labo0\obj\x86\Debug\Labo0.exe
+V:\Users\df\Documents\Visual Studio 2010\Projects\Labo0\Labo0\obj\x86\Debug\Labo0.pdb
+C:\Users\ngazcon\Desktop\Labo0\Labo0\obj\x86\Debug\Labo0.exe
+C:\Users\ngazcon\Desktop\Labo0\Labo0\obj\x86\Debug\Labo0.pdb
+C:\Users\ngazcon\Desktop\Labo0\Labo0\bin\Debug\files\shaders\fshader1.glsl
+C:\Users\ngazcon\Desktop\Labo0\Labo0\bin\Debug\files\shaders\vshader1.glsl
+C:\Users\ngazcon\Desktop\Labo0\Labo0\bin\Debug\Labo0.exe
+C:\Users\ngazcon\Desktop\Labo0\Labo0\bin\Debug\Labo0.pdb
+C:\Users\ngazcon\Desktop\Labo0\Labo0\bin\Debug\OpenTK.dll
+C:\Users\ngazcon\Desktop\Labo0\Labo0\bin\Debug\OpenTK.GLControl.dll
+C:\Users\ngazcon\Desktop\Labo0\Labo0\bin\Debug\OpenTK.xml
+C:\Users\ngazcon\Desktop\Labo0\Labo0\bin\Debug\OpenTK.GLControl.xml
+C:\Users\ngazcon\Desktop\Labo0\Labo0\obj\x86\Debug\Labo0.MainWindow.resources
+C:\Users\ngazcon\Desktop\Labo0\Labo0\obj\x86\Debug\Labo0.Properties.Resources.resources
+C:\Users\ngazcon\Desktop\Labo0\Labo0\obj\x86\Debug\Labo0.csproj.GenerateResource.Cache
+C:\Users\ngazcon\Desktop\Labo0\Labo0\obj\x86\Debug\CGUNS.GLControl3.resources
+C:\sak\CG2015\LABORATORIOS\LAB00\Lab0 modificado\Labo0\Labo0\obj\x86\Debug\Labo0.exe
+C:\sak\CG2015\LABORATORIOS\LAB00\Lab0 modificado\Labo0\Labo0\obj\x86\Debug\Labo0.pdb
+C:\sak\CG2016\LABORATORIOS\Lab0 modificado\Labo0\Labo0\obj\x86\Debug\Labo0.exe
+C:\sak\CG2016\LABORATORIOS\Lab0 modificado\Labo0\Labo0\obj\x86\Debug\Labo0.pdb
+C:\sak\CG2016\LABORATORIOS\Lab0 modificado\Labo0\Labo0\bin\Debug\files\shaders\fshader1.glsl
+C:\sak\CG2016\LABORATORIOS\Lab0 modificado\Labo0\Labo0\bin\Debug\files\shaders\vshader1.glsl
+C:\sak\CG2016\LABORATORIOS\Lab0 modificado\Labo0\Labo0\bin\Debug\Labo0.exe
+C:\sak\CG2016\LABORATORIOS\Lab0 modificado\Labo0\Labo0\bin\Debug\Labo0.pdb
+C:\sak\CG2016\LABORATORIOS\Lab0 modificado\Labo0\Labo0\bin\Debug\OpenTK.dll
+C:\sak\CG2016\LABORATORIOS\Lab0 modificado\Labo0\Labo0\bin\Debug\OpenTK.GLControl.dll
+C:\sak\CG2016\LABORATORIOS\Lab0 modificado\Labo0\Labo0\bin\Debug\OpenTK.xml
+C:\sak\CG2016\LABORATORIOS\Lab0 modificado\Labo0\Labo0\bin\Debug\OpenTK.GLControl.xml
+C:\sak\CG2016\LABORATORIOS\Lab0 modificado\Labo0\Labo0\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\sak\CG2016\LABORATORIOS\Lab0 modificado\Labo0\Labo0\obj\x86\Debug\CGUNS.GLControl3.resources
+C:\sak\CG2016\LABORATORIOS\Lab0 modificado\Labo0\Labo0\obj\x86\Debug\Labo0.MainWindow.resources
+C:\sak\CG2016\LABORATORIOS\Lab0 modificado\Labo0\Labo0\obj\x86\Debug\Labo0.Properties.Resources.resources
+C:\sak\CG2016\LABORATORIOS\Lab0 modificado\Labo0\Labo0\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\sak\CG2016\LABORATORIOS\Lab0 modificado\Labo0\Labo0\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\sak\CG2016\LABORATORIOS\Lab0f\Labo0\Labo0\obj\x86\Debug\Labo0.exe
+C:\sak\CG2016\LABORATORIOS\Lab0f\Labo0\Labo0\obj\x86\Debug\Labo0.pdb
+C:\sak\CG2016\LABORATORIOS\Lab0f\Labo0\Labo0\bin\Debug\files\shaders\fshader1.glsl
+C:\sak\CG2016\LABORATORIOS\Lab0f\Labo0\Labo0\bin\Debug\files\shaders\vshader1.glsl
+C:\sak\CG2016\LABORATORIOS\Lab0f\Labo0\Labo0\bin\Debug\Labo0.exe
+C:\sak\CG2016\LABORATORIOS\Lab0f\Labo0\Labo0\bin\Debug\Labo0.pdb
+C:\sak\CG2016\LABORATORIOS\Lab0f\Labo0\Labo0\bin\Debug\OpenTK.dll
+C:\sak\CG2016\LABORATORIOS\Lab0f\Labo0\Labo0\bin\Debug\OpenTK.GLControl.dll
+C:\sak\CG2016\LABORATORIOS\Lab0f\Labo0\Labo0\bin\Debug\OpenTK.xml
+C:\sak\CG2016\LABORATORIOS\Lab0f\Labo0\Labo0\bin\Debug\OpenTK.GLControl.xml
+C:\sak\CG2016\LABORATORIOS\Lab0f\Labo0\Labo0\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\sak\CG2016\LABORATORIOS\Lab0f\Labo0\Labo0\obj\x86\Debug\CGUNS.GLControl3.resources
+C:\sak\CG2016\LABORATORIOS\Lab0f\Labo0\Labo0\obj\x86\Debug\Labo0.MainWindow.resources
+C:\sak\CG2016\LABORATORIOS\Lab0f\Labo0\Labo0\obj\x86\Debug\Labo0.Properties.Resources.resources
+C:\sak\CG2016\LABORATORIOS\Lab0f\Labo0\Labo0\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\sak\CG2016\LABORATORIOS\Lab0f\Labo0\Labo0\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\sak\CG2016\LABORATORIOS\Lab0c\Labo0\Labo0\obj\x86\Debug\Labo0.exe
+C:\sak\CG2016\LABORATORIOS\Lab0c\Labo0\Labo0\obj\x86\Debug\Labo0.pdb
+C:\sak\CG2016\LABORATORIOS\Lab0c\Labo0\Labo0\bin\Debug\files\shaders\fshader1.glsl
+C:\sak\CG2016\LABORATORIOS\Lab0c\Labo0\Labo0\bin\Debug\files\shaders\vshader1.glsl
+C:\sak\CG2016\LABORATORIOS\Lab0c\Labo0\Labo0\bin\Debug\Labo0.exe
+C:\sak\CG2016\LABORATORIOS\Lab0c\Labo0\Labo0\bin\Debug\Labo0.pdb
+C:\sak\CG2016\LABORATORIOS\Lab0c\Labo0\Labo0\bin\Debug\OpenTK.dll
+C:\sak\CG2016\LABORATORIOS\Lab0c\Labo0\Labo0\bin\Debug\OpenTK.GLControl.dll
+C:\sak\CG2016\LABORATORIOS\Lab0c\Labo0\Labo0\bin\Debug\OpenTK.xml
+C:\sak\CG2016\LABORATORIOS\Lab0c\Labo0\Labo0\bin\Debug\OpenTK.GLControl.xml
+C:\sak\CG2016\LABORATORIOS\Lab0c\Labo0\Labo0\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\sak\CG2016\LABORATORIOS\Lab0c\Labo0\Labo0\obj\x86\Debug\CGUNS.GLControl3.resources
+C:\sak\CG2016\LABORATORIOS\Lab0c\Labo0\Labo0\obj\x86\Debug\Labo0.MainWindow.resources
+C:\sak\CG2016\LABORATORIOS\Lab0c\Labo0\Labo0\obj\x86\Debug\Labo0.Properties.Resources.resources
+C:\sak\CG2016\LABORATORIOS\Lab0c\Labo0\Labo0\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\sak\CG2016\LABORATORIOS\Lab0c\Labo0\Labo0\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\sak\CG2016\LABORATORIOS\Lab0d\Labo0\Labo0\obj\x86\Debug\Labo0.exe
+C:\sak\CG2016\LABORATORIOS\Lab0d\Labo0\Labo0\obj\x86\Debug\Labo0.pdb
+C:\sak\CG2016\LABORATORIOS\Lab0d\Labo0\Labo0\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\sak\CG2016\LABORATORIOS\Lab0d\Labo0\Labo0\obj\x86\Debug\CGUNS.GLControl3.resources
+C:\sak\CG2016\LABORATORIOS\Lab0d\Labo0\Labo0\obj\x86\Debug\Labo0.MainWindow.resources
+C:\sak\CG2016\LABORATORIOS\Lab0d\Labo0\Labo0\obj\x86\Debug\Labo0.Properties.Resources.resources
+C:\sak\CG2016\LABORATORIOS\Lab0d\Labo0\Labo0\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\sak\CG2016\LABORATORIOS\Lab0d\Labo0\Labo0\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\sak\CG2016\LABORATORIOS\Lab0d\Labo0\Labo0\bin\Debug\files\shaders\fshader1.glsl
+C:\sak\CG2016\LABORATORIOS\Lab0d\Labo0\Labo0\bin\Debug\files\shaders\vshader1.glsl
+C:\sak\CG2016\LABORATORIOS\Lab0d\Labo0\Labo0\bin\Debug\Labo0.exe
+C:\sak\CG2016\LABORATORIOS\Lab0d\Labo0\Labo0\bin\Debug\Labo0.pdb
+C:\sak\CG2016\LABORATORIOS\Lab0d\Labo0\Labo0\bin\Debug\OpenTK.dll
+C:\sak\CG2016\LABORATORIOS\Lab0d\Labo0\Labo0\bin\Debug\OpenTK.GLControl.dll
+C:\sak\CG2016\LABORATORIOS\Lab0d\Labo0\Labo0\bin\Debug\OpenTK.xml
+C:\sak\CG2016\LABORATORIOS\Lab0d\Labo0\Labo0\bin\Debug\OpenTK.GLControl.xml
+E:\SUSANA\CompGrafica\2016\LABORATORIOS\Lab0e\Labo0\Labo0\obj\x86\Debug\Labo0.exe
+E:\SUSANA\CompGrafica\2016\LABORATORIOS\Lab0e\Labo0\Labo0\obj\x86\Debug\Labo0.pdb
+E:\SUSANA\CompGrafica\2016\LABORATORIOS\Lab0e\Labo0\Labo0\bin\Debug\files\shaders\fshader1.glsl
+E:\SUSANA\CompGrafica\2016\LABORATORIOS\Lab0e\Labo0\Labo0\bin\Debug\files\shaders\vshader1.glsl
+E:\SUSANA\CompGrafica\2016\LABORATORIOS\Lab0e\Labo0\Labo0\bin\Debug\Labo0.exe
+E:\SUSANA\CompGrafica\2016\LABORATORIOS\Lab0e\Labo0\Labo0\bin\Debug\Labo0.pdb
+E:\SUSANA\CompGrafica\2016\LABORATORIOS\Lab0e\Labo0\Labo0\bin\Debug\OpenTK.dll
+E:\SUSANA\CompGrafica\2016\LABORATORIOS\Lab0e\Labo0\Labo0\bin\Debug\OpenTK.GLControl.dll
+E:\SUSANA\CompGrafica\2016\LABORATORIOS\Lab0e\Labo0\Labo0\bin\Debug\OpenTK.xml
+E:\SUSANA\CompGrafica\2016\LABORATORIOS\Lab0e\Labo0\Labo0\bin\Debug\OpenTK.GLControl.xml
+E:\SUSANA\CompGrafica\2016\LABORATORIOS\Lab0e\Labo0\Labo0\obj\x86\Debug\CGUNS.GLControl3.resources
+E:\SUSANA\CompGrafica\2016\LABORATORIOS\Lab0e\Labo0\Labo0\obj\x86\Debug\Labo0.MainWindow.resources
+E:\SUSANA\CompGrafica\2016\LABORATORIOS\Lab0e\Labo0\Labo0\obj\x86\Debug\Labo0.Properties.Resources.resources
+E:\SUSANA\CompGrafica\2016\LABORATORIOS\Lab0e\Labo0\Labo0\obj\x86\Debug\Labo0.csproj.GenerateResource.Cache
+E:\SUSANA\CompGrafica\2016\LABORATORIOS\Lab0f\Labo0\Labo0\obj\x86\Debug\Labo0.exe
+E:\SUSANA\CompGrafica\2016\LABORATORIOS\Lab0f\Labo0\Labo0\obj\x86\Debug\Labo0.pdb
+E:\SUSANA\CompGrafica\2016\LABORATORIOS\Lab0f\Labo0\Labo0\obj\x86\Debug\CGUNS.GLControl3.resources
+E:\SUSANA\CompGrafica\2016\LABORATORIOS\Lab0f\Labo0\Labo0\obj\x86\Debug\Labo0.MainWindow.resources
+E:\SUSANA\CompGrafica\2016\LABORATORIOS\Lab0f\Labo0\Labo0\obj\x86\Debug\Labo0.Properties.Resources.resources
+E:\SUSANA\CompGrafica\2016\LABORATORIOS\Lab0f\Labo0\Labo0\obj\x86\Debug\Labo0.csproj.GenerateResource.Cache
+E:\SUSANA\CompGrafica\2016\LABORATORIOS\Lab0f\Labo0\Labo0\bin\Debug\files\shaders\fshader1.glsl
+E:\SUSANA\CompGrafica\2016\LABORATORIOS\Lab0f\Labo0\Labo0\bin\Debug\files\shaders\vshader1.glsl
+E:\SUSANA\CompGrafica\2016\LABORATORIOS\Lab0f\Labo0\Labo0\bin\Debug\Labo0.exe
+E:\SUSANA\CompGrafica\2016\LABORATORIOS\Lab0f\Labo0\Labo0\bin\Debug\Labo0.pdb
+E:\SUSANA\CompGrafica\2016\LABORATORIOS\Lab0f\Labo0\Labo0\bin\Debug\OpenTK.dll
+E:\SUSANA\CompGrafica\2016\LABORATORIOS\Lab0f\Labo0\Labo0\bin\Debug\OpenTK.GLControl.dll
+E:\SUSANA\CompGrafica\2016\LABORATORIOS\Lab0f\Labo0\Labo0\bin\Debug\OpenTK.xml
+E:\SUSANA\CompGrafica\2016\LABORATORIOS\Lab0f\Labo0\Labo0\bin\Debug\OpenTK.GLControl.xml
+E:\SUSANA\CompGrafica\2016\LABORATORIOS\Lab0g\Labo0\Labo0\obj\x86\Debug\Labo0.exe
+E:\SUSANA\CompGrafica\2016\LABORATORIOS\Lab0g\Labo0\Labo0\obj\x86\Debug\Labo0.pdb
+E:\SUSANA\CompGrafica\2016\LABORATORIOS\Lab0g\Labo0\Labo0\bin\Debug\files\shaders\fshader1.glsl
+E:\SUSANA\CompGrafica\2016\LABORATORIOS\Lab0g\Labo0\Labo0\bin\Debug\files\shaders\vshader1.glsl
+E:\SUSANA\CompGrafica\2016\LABORATORIOS\Lab0g\Labo0\Labo0\bin\Debug\Labo0.exe
+E:\SUSANA\CompGrafica\2016\LABORATORIOS\Lab0g\Labo0\Labo0\bin\Debug\Labo0.pdb
+E:\SUSANA\CompGrafica\2016\LABORATORIOS\Lab0g\Labo0\Labo0\bin\Debug\OpenTK.dll
+E:\SUSANA\CompGrafica\2016\LABORATORIOS\Lab0g\Labo0\Labo0\bin\Debug\OpenTK.GLControl.dll
+E:\SUSANA\CompGrafica\2016\LABORATORIOS\Lab0g\Labo0\Labo0\bin\Debug\OpenTK.xml
+E:\SUSANA\CompGrafica\2016\LABORATORIOS\Lab0g\Labo0\Labo0\bin\Debug\OpenTK.GLControl.xml
+E:\SUSANA\CompGrafica\2016\LABORATORIOS\Lab0g\Labo0\Labo0\obj\x86\Debug\Labo0.csprojResolveAssemblyReference.cache
+E:\SUSANA\CompGrafica\2016\LABORATORIOS\Lab0g\Labo0\Labo0\obj\x86\Debug\CGUNS.GLControl3.resources
+E:\SUSANA\CompGrafica\2016\LABORATORIOS\Lab0g\Labo0\Labo0\obj\x86\Debug\Labo0.MainWindow.resources
+E:\SUSANA\CompGrafica\2016\LABORATORIOS\Lab0g\Labo0\Labo0\obj\x86\Debug\Labo0.Properties.Resources.resources
+E:\SUSANA\CompGrafica\2016\LABORATORIOS\Lab0g\Labo0\Labo0\obj\x86\Debug\Labo0.csproj.GenerateResource.Cache
+E:\SUSANA\CompGrafica\2016\LABORATORIOS\Iluminacion\Labo0\Labo0\obj\x86\Debug\Labo0.exe
+E:\SUSANA\CompGrafica\2016\LABORATORIOS\Iluminacion\Labo0\Labo0\obj\x86\Debug\Labo0.pdb
+E:\SUSANA\CompGrafica\2016\LABORATORIOS\Iluminacion\Labo0\Labo0\bin\Debug\files\shaders\fshader1.glsl
+E:\SUSANA\CompGrafica\2016\LABORATORIOS\Iluminacion\Labo0\Labo0\bin\Debug\files\shaders\vshader1.glsl
+E:\SUSANA\CompGrafica\2016\LABORATORIOS\Iluminacion\Labo0\Labo0\bin\Debug\Labo0.exe
+E:\SUSANA\CompGrafica\2016\LABORATORIOS\Iluminacion\Labo0\Labo0\bin\Debug\Labo0.pdb
+E:\SUSANA\CompGrafica\2016\LABORATORIOS\Iluminacion\Labo0\Labo0\bin\Debug\OpenTK.dll
+E:\SUSANA\CompGrafica\2016\LABORATORIOS\Iluminacion\Labo0\Labo0\bin\Debug\OpenTK.GLControl.dll
+E:\SUSANA\CompGrafica\2016\LABORATORIOS\Iluminacion\Labo0\Labo0\bin\Debug\OpenTK.xml
+E:\SUSANA\CompGrafica\2016\LABORATORIOS\Iluminacion\Labo0\Labo0\bin\Debug\OpenTK.GLControl.xml
+E:\SUSANA\CompGrafica\2016\LABORATORIOS\Iluminacion\Labo0\Labo0\obj\x86\Debug\Labo0.csprojResolveAssemblyReference.cache
+E:\SUSANA\CompGrafica\2016\LABORATORIOS\Iluminacion\Labo0\Labo0\obj\x86\Debug\CGUNS.GLControl3.resources
+E:\SUSANA\CompGrafica\2016\LABORATORIOS\Iluminacion\Labo0\Labo0\obj\x86\Debug\Labo0.MainWindow.resources
+E:\SUSANA\CompGrafica\2016\LABORATORIOS\Iluminacion\Labo0\Labo0\obj\x86\Debug\Labo0.Properties.Resources.resources
+E:\SUSANA\CompGrafica\2016\LABORATORIOS\Iluminacion\Labo0\Labo0\obj\x86\Debug\Labo0.csproj.GenerateResource.Cache
+E:\SUSANA\CompGrafica\2016\LABORATORIOS\TEXTURA\Labo0\Labo0\obj\x86\Debug\Labo0.exe
+E:\SUSANA\CompGrafica\2016\LABORATORIOS\TEXTURA\Labo0\Labo0\obj\x86\Debug\Labo0.pdb
+E:\SUSANA\CompGrafica\2016\LABORATORIOS\TEXTURA\Labo0\Labo0\obj\x86\Debug\Labo0.csprojResolveAssemblyReference.cache
+E:\SUSANA\CompGrafica\2016\LABORATORIOS\TEXTURA\Labo0\Labo0\obj\x86\Debug\CGUNS.GLControl3.resources
+E:\SUSANA\CompGrafica\2016\LABORATORIOS\TEXTURA\Labo0\Labo0\obj\x86\Debug\Labo0.MainWindow.resources
+E:\SUSANA\CompGrafica\2016\LABORATORIOS\TEXTURA\Labo0\Labo0\obj\x86\Debug\Labo0.Properties.Resources.resources
+E:\SUSANA\CompGrafica\2016\LABORATORIOS\TEXTURA\Labo0\Labo0\obj\x86\Debug\Labo0.csproj.GenerateResource.Cache
+E:\SUSANA\CompGrafica\2016\LABORATORIOS\TEXTURA\Labo0\Labo0\bin\Debug\CGUNS\Primitives\Piramide.cs
+E:\SUSANA\CompGrafica\2016\LABORATORIOS\TEXTURA\Labo0\Labo0\bin\Debug\files\shaders\fshader1.glsl
+E:\SUSANA\CompGrafica\2016\LABORATORIOS\TEXTURA\Labo0\Labo0\bin\Debug\files\shaders\fshaderaux.glsl
+E:\SUSANA\CompGrafica\2016\LABORATORIOS\TEXTURA\Labo0\Labo0\bin\Debug\files\shaders\vshader1.glsl
+E:\SUSANA\CompGrafica\2016\LABORATORIOS\TEXTURA\Labo0\Labo0\bin\Debug\files\shaders\vshaderaux.glsl
+E:\SUSANA\CompGrafica\2016\LABORATORIOS\TEXTURA\Labo0\Labo0\bin\Debug\Labo0.exe
+E:\SUSANA\CompGrafica\2016\LABORATORIOS\TEXTURA\Labo0\Labo0\bin\Debug\Labo0.pdb
+E:\SUSANA\CompGrafica\2016\LABORATORIOS\TEXTURA\Labo0\Labo0\bin\Debug\OpenTK.dll
+E:\SUSANA\CompGrafica\2016\LABORATORIOS\TEXTURA\Labo0\Labo0\bin\Debug\OpenTK.GLControl.dll
+E:\SUSANA\CompGrafica\2016\LABORATORIOS\TEXTURA\Labo0\Labo0\bin\Debug\OpenTK.xml
+E:\SUSANA\CompGrafica\2016\LABORATORIOS\TEXTURA\Labo0\Labo0\bin\Debug\OpenTK.GLControl.xml
+E:\SUSANA\CompGrafica\2016\LABORATORIOS\TEXTURA\Labo0\Labo0\bin\Debug\files\Texturas\cherries.bmp
+E:\SUSANA\CompGrafica\2016\LABORATORIOS\TEXTURA\Labo0\Labo0\bin\Debug\files\Texturas\fruit.bmp
+E:\SUSANA\CompGrafica\2016\LABORATORIOS\TEXTURA\Labo0\Labo0\bin\Debug\files\Texturas\image.bmp
+E:\SUSANA\CompGrafica\2016\LABORATORIOS\TEXTURA\Labo0\Labo0\bin\Debug\files\shaders\fTextu.glsl
+E:\SUSANA\CompGrafica\2016\LABORATORIOS\TEXTURA\Labo0\Labo0\bin\Debug\files\shaders\vTextu.glsl
+D:\SAK\CG2016\Texturas\Labo0\Labo0\obj\x86\Debug\Labo0.exe
+D:\SAK\CG2016\Texturas\Labo0\Labo0\obj\x86\Debug\Labo0.pdb
+D:\SAK\CG2016\Texturas\Labo0\Labo0\bin\Debug\files\Texturas\cherries.bmp
+D:\SAK\CG2016\Texturas\Labo0\Labo0\bin\Debug\files\Texturas\fruit.bmp
+D:\SAK\CG2016\Texturas\Labo0\Labo0\bin\Debug\files\Texturas\image.bmp
+D:\SAK\CG2016\Texturas\Labo0\Labo0\bin\Debug\CGUNS\Primitives\Piramide.cs
+D:\SAK\CG2016\Texturas\Labo0\Labo0\bin\Debug\files\shaders\fshader1.glsl
+D:\SAK\CG2016\Texturas\Labo0\Labo0\bin\Debug\files\shaders\fshaderaux.glsl
+D:\SAK\CG2016\Texturas\Labo0\Labo0\bin\Debug\files\shaders\fTextu.glsl
+D:\SAK\CG2016\Texturas\Labo0\Labo0\bin\Debug\files\shaders\vshader1.glsl
+D:\SAK\CG2016\Texturas\Labo0\Labo0\bin\Debug\files\shaders\vshaderaux.glsl
+D:\SAK\CG2016\Texturas\Labo0\Labo0\bin\Debug\files\shaders\vTextu.glsl
+D:\SAK\CG2016\Texturas\Labo0\Labo0\bin\Debug\Labo0.exe
+D:\SAK\CG2016\Texturas\Labo0\Labo0\bin\Debug\Labo0.pdb
+D:\SAK\CG2016\Texturas\Labo0\Labo0\bin\Debug\OpenTK.dll
+D:\SAK\CG2016\Texturas\Labo0\Labo0\bin\Debug\OpenTK.GLControl.dll
+D:\SAK\CG2016\Texturas\Labo0\Labo0\bin\Debug\OpenTK.xml
+D:\SAK\CG2016\Texturas\Labo0\Labo0\bin\Debug\OpenTK.GLControl.xml
+D:\SAK\CG2016\Texturas\Labo0\Labo0\obj\x86\Debug\Labo0.csprojResolveAssemblyReference.cache
+D:\SAK\CG2016\Texturas\Labo0\Labo0\obj\x86\Debug\CGUNS.GLControl3.resources
+D:\SAK\CG2016\Texturas\Labo0\Labo0\obj\x86\Debug\Labo0.MainWindow.resources
+D:\SAK\CG2016\Texturas\Labo0\Labo0\obj\x86\Debug\Labo0.Properties.Resources.resources
+D:\SAK\CG2016\Texturas\Labo0\Labo0\obj\x86\Debug\Labo0.csproj.GenerateResource.Cache
+D:\SAK\CG2016\Texturas\Labo0\Labo0\bin\Debug\files\Texturas\maggie.png
+C:\sak\CG2016\LABORATORIOS\TEXTURAS\TEXTURAS\soloTextu\Labo0\Labo0\obj\x86\Debug\Labo0.exe
+C:\sak\CG2016\LABORATORIOS\TEXTURAS\TEXTURAS\soloTextu\Labo0\Labo0\obj\x86\Debug\Labo0.pdb
+C:\sak\CG2016\LABORATORIOS\TEXTURAS\TEXTURAS\soloTextu\Labo0\Labo0\bin\Debug\files\Texturas\cherries.bmp
+C:\sak\CG2016\LABORATORIOS\TEXTURAS\TEXTURAS\soloTextu\Labo0\Labo0\bin\Debug\files\Texturas\fruit.bmp
+C:\sak\CG2016\LABORATORIOS\TEXTURAS\TEXTURAS\soloTextu\Labo0\Labo0\bin\Debug\files\Texturas\image.bmp
+C:\sak\CG2016\LABORATORIOS\TEXTURAS\TEXTURAS\soloTextu\Labo0\Labo0\bin\Debug\files\Texturas\maggie.png
+C:\sak\CG2016\LABORATORIOS\TEXTURAS\TEXTURAS\soloTextu\Labo0\Labo0\bin\Debug\CGUNS\Primitives\Piramide.cs
+C:\sak\CG2016\LABORATORIOS\TEXTURAS\TEXTURAS\soloTextu\Labo0\Labo0\bin\Debug\files\shaders\fTextu.glsl
+C:\sak\CG2016\LABORATORIOS\TEXTURAS\TEXTURAS\soloTextu\Labo0\Labo0\bin\Debug\files\shaders\vTextu.glsl
+C:\sak\CG2016\LABORATORIOS\TEXTURAS\TEXTURAS\soloTextu\Labo0\Labo0\bin\Debug\Labo0.exe
+C:\sak\CG2016\LABORATORIOS\TEXTURAS\TEXTURAS\soloTextu\Labo0\Labo0\bin\Debug\Labo0.pdb
+C:\sak\CG2016\LABORATORIOS\TEXTURAS\TEXTURAS\soloTextu\Labo0\Labo0\bin\Debug\OpenTK.dll
+C:\sak\CG2016\LABORATORIOS\TEXTURAS\TEXTURAS\soloTextu\Labo0\Labo0\bin\Debug\OpenTK.GLControl.dll
+C:\sak\CG2016\LABORATORIOS\TEXTURAS\TEXTURAS\soloTextu\Labo0\Labo0\bin\Debug\OpenTK.xml
+C:\sak\CG2016\LABORATORIOS\TEXTURAS\TEXTURAS\soloTextu\Labo0\Labo0\bin\Debug\OpenTK.GLControl.xml
+C:\sak\CG2016\LABORATORIOS\TEXTURAS\TEXTURAS\soloTextu\Labo0\Labo0\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\sak\CG2016\LABORATORIOS\TEXTURAS\TEXTURAS\soloTextu\Labo0\Labo0\obj\x86\Debug\CGUNS.GLControl3.resources
+C:\sak\CG2016\LABORATORIOS\TEXTURAS\TEXTURAS\soloTextu\Labo0\Labo0\obj\x86\Debug\Labo0.MainWindow.resources
+C:\sak\CG2016\LABORATORIOS\TEXTURAS\TEXTURAS\soloTextu\Labo0\Labo0\obj\x86\Debug\Labo0.Properties.Resources.resources
+C:\sak\CG2016\LABORATORIOS\TEXTURAS\TEXTURAS\soloTextu\Labo0\Labo0\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\sak\CG2016\LABORATORIOS\TEXTURAS\TEXTURAS\soloTextu\Labo0\Labo0\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\sak\CG2016\LABORATORIOS\TEXTURAS\TEXTURAS\soloTextu\Labo0\Labo0\bin\Debug\files\Texturas\modern1.jpg
+C:\sak\CG2016\LABORATORIOS\TEXTURAS\TEXTURAS\soloTextu\Labo0\Labo0\bin\Debug\files\Texturas\modern2.jpg
+C:\sak\CG2016\LABORATORIOS\TEXTURAS\TEXTURAS\soloTextu\Labo0\Labo0\bin\Debug\files\Texturas\modern3.jpg
+C:\sak\CG2016\LABORATORIOS\TEXTURAS\TEXTURAS\soloTextu\Labo0\Labo0\bin\Debug\files\Texturas\modern6.jpg
+C:\sak\CG2017\EnLABS\LABORATORIOS\TEXTURAS\soloTextu\Labo0\Labo0\obj\x86\Debug\Labo0.exe
+C:\sak\CG2017\EnLABS\LABORATORIOS\TEXTURAS\soloTextu\Labo0\Labo0\obj\x86\Debug\Labo0.pdb
+C:\sak\CG2017\EnLABS\LABORATORIOS\TEXTURAS\soloTextu\Labo0\Labo0\bin\Debug\files\Texturas\cherries.bmp
+C:\sak\CG2017\EnLABS\LABORATORIOS\TEXTURAS\soloTextu\Labo0\Labo0\bin\Debug\files\Texturas\fruit.bmp
+C:\sak\CG2017\EnLABS\LABORATORIOS\TEXTURAS\soloTextu\Labo0\Labo0\bin\Debug\files\Texturas\image.bmp
+C:\sak\CG2017\EnLABS\LABORATORIOS\TEXTURAS\soloTextu\Labo0\Labo0\bin\Debug\files\Texturas\maggie.png
+C:\sak\CG2017\EnLABS\LABORATORIOS\TEXTURAS\soloTextu\Labo0\Labo0\bin\Debug\files\Texturas\modern1.jpg
+C:\sak\CG2017\EnLABS\LABORATORIOS\TEXTURAS\soloTextu\Labo0\Labo0\bin\Debug\files\Texturas\modern2.jpg
+C:\sak\CG2017\EnLABS\LABORATORIOS\TEXTURAS\soloTextu\Labo0\Labo0\bin\Debug\files\Texturas\modern3.jpg
+C:\sak\CG2017\EnLABS\LABORATORIOS\TEXTURAS\soloTextu\Labo0\Labo0\bin\Debug\files\Texturas\modern6.jpg
+C:\sak\CG2017\EnLABS\LABORATORIOS\TEXTURAS\soloTextu\Labo0\Labo0\bin\Debug\CGUNS\Primitives\Piramide.cs
+C:\sak\CG2017\EnLABS\LABORATORIOS\TEXTURAS\soloTextu\Labo0\Labo0\bin\Debug\files\shaders\fTextu.glsl
+C:\sak\CG2017\EnLABS\LABORATORIOS\TEXTURAS\soloTextu\Labo0\Labo0\bin\Debug\files\shaders\vTextu.glsl
+C:\sak\CG2017\EnLABS\LABORATORIOS\TEXTURAS\soloTextu\Labo0\Labo0\bin\Debug\Labo0.exe
+C:\sak\CG2017\EnLABS\LABORATORIOS\TEXTURAS\soloTextu\Labo0\Labo0\bin\Debug\Labo0.pdb
+C:\sak\CG2017\EnLABS\LABORATORIOS\TEXTURAS\soloTextu\Labo0\Labo0\bin\Debug\OpenTK.dll
+C:\sak\CG2017\EnLABS\LABORATORIOS\TEXTURAS\soloTextu\Labo0\Labo0\bin\Debug\OpenTK.GLControl.dll
+C:\sak\CG2017\EnLABS\LABORATORIOS\TEXTURAS\soloTextu\Labo0\Labo0\bin\Debug\OpenTK.xml
+C:\sak\CG2017\EnLABS\LABORATORIOS\TEXTURAS\soloTextu\Labo0\Labo0\bin\Debug\OpenTK.GLControl.xml
+C:\sak\CG2017\EnLABS\LABORATORIOS\TEXTURAS\soloTextu\Labo0\Labo0\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\sak\CG2017\EnLABS\LABORATORIOS\TEXTURAS\soloTextu\Labo0\Labo0\obj\x86\Debug\CGUNS.GLControl3.resources
+C:\sak\CG2017\EnLABS\LABORATORIOS\TEXTURAS\soloTextu\Labo0\Labo0\obj\x86\Debug\Labo0.MainWindow.resources
+C:\sak\CG2017\EnLABS\LABORATORIOS\TEXTURAS\soloTextu\Labo0\Labo0\obj\x86\Debug\Labo0.Properties.Resources.resources
+C:\sak\CG2017\EnLABS\LABORATORIOS\TEXTURAS\soloTextu\Labo0\Labo0\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\sak\CG2017\EnLABS\LABORATORIOS\TEXTURAS\soloTextu\Labo0\Labo0\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\Gastón\Desktop\Computacion Grafica\Street-House\Street-House\Labo0\Labo0\bin\Debug\files\Texturas\cherries.bmp
+C:\Users\Gastón\Desktop\Computacion Grafica\Street-House\Street-House\Labo0\Labo0\bin\Debug\files\Texturas\fruit.bmp
+C:\Users\Gastón\Desktop\Computacion Grafica\Street-House\Street-House\Labo0\Labo0\bin\Debug\files\Texturas\image.bmp
+C:\Users\Gastón\Desktop\Computacion Grafica\Street-House\Street-House\Labo0\Labo0\bin\Debug\files\Texturas\maggie.png
+C:\Users\Gastón\Desktop\Computacion Grafica\Street-House\Street-House\Labo0\Labo0\bin\Debug\files\Texturas\modern1.jpg
+C:\Users\Gastón\Desktop\Computacion Grafica\Street-House\Street-House\Labo0\Labo0\bin\Debug\files\Texturas\modern2.jpg
+C:\Users\Gastón\Desktop\Computacion Grafica\Street-House\Street-House\Labo0\Labo0\bin\Debug\files\Texturas\modern3.jpg
+C:\Users\Gastón\Desktop\Computacion Grafica\Street-House\Street-House\Labo0\Labo0\bin\Debug\files\Texturas\modern6.jpg
+C:\Users\Gastón\Desktop\Computacion Grafica\Street-House\Street-House\Labo0\Labo0\bin\Debug\CGUNS\Primitives\Piramide.cs
+C:\Users\Gastón\Desktop\Computacion Grafica\Street-House\Street-House\Labo0\Labo0\bin\Debug\files\shaders\fTextu.glsl
+C:\Users\Gastón\Desktop\Computacion Grafica\Street-House\Street-House\Labo0\Labo0\bin\Debug\files\shaders\vTextu.glsl
+C:\Users\Gastón\Desktop\Computacion Grafica\Street-House\Street-House\Labo0\Labo0\bin\Debug\Labo0.exe
+C:\Users\Gastón\Desktop\Computacion Grafica\Street-House\Street-House\Labo0\Labo0\bin\Debug\Labo0.pdb
+C:\Users\Gastón\Desktop\Computacion Grafica\Street-House\Street-House\Labo0\Labo0\bin\Debug\OpenTK.dll
+C:\Users\Gastón\Desktop\Computacion Grafica\Street-House\Street-House\Labo0\Labo0\bin\Debug\OpenTK.GLControl.dll
+C:\Users\Gastón\Desktop\Computacion Grafica\Street-House\Street-House\Labo0\Labo0\bin\Debug\OpenTK.xml
+C:\Users\Gastón\Desktop\Computacion Grafica\Street-House\Street-House\Labo0\Labo0\bin\Debug\OpenTK.GLControl.xml
+C:\Users\Gastón\Desktop\Computacion Grafica\Street-House\Street-House\Labo0\Labo0\obj\x86\Debug\Labo0.csprojResolveAssemblyReference.cache
+C:\Users\Gastón\Desktop\Computacion Grafica\Street-House\Street-House\Labo0\Labo0\obj\x86\Debug\CGUNS.GLControl3.resources
+C:\Users\Gastón\Desktop\Computacion Grafica\Street-House\Street-House\Labo0\Labo0\obj\x86\Debug\Labo0.MainWindow.resources
+C:\Users\Gastón\Desktop\Computacion Grafica\Street-House\Street-House\Labo0\Labo0\obj\x86\Debug\Labo0.Properties.Resources.resources
+C:\Users\Gastón\Desktop\Computacion Grafica\Street-House\Street-House\Labo0\Labo0\obj\x86\Debug\Labo0.csproj.GenerateResource.Cache
+C:\Users\Gastón\Desktop\Computacion Grafica\Street-House\Street-House\Labo0\Labo0\obj\x86\Debug\Labo0.exe
+C:\Users\Gastón\Desktop\Computacion Grafica\Street-House\Street-House\Labo0\Labo0\obj\x86\Debug\Labo0.pdb
