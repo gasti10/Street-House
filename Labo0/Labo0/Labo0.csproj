@@ -55,17 +55,24 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CGUNS\Cameras\QuatCamera.cs" />
+    <Compile Include="CGUNS\Cameras\SphericalCamera.cs" />
+    <Compile Include="CGUNS\Light.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="CGUNS\Material.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
     <Compile Include="CGUNS\Meshes\FaceVertexList\FVLFace.cs" />
     <Compile Include="CGUNS\Meshes\FaceVertexList\FVLMesh.cs" />
     <Compile Include="CGUNS\Meshes\HalfEdge\HEFace.cs" />
     <Compile Include="CGUNS\Meshes\HalfEdge\HEHalfEdge.cs" />
     <Compile Include="CGUNS\Meshes\HalfEdge\HEMesh.cs" />
     <Compile Include="CGUNS\Meshes\HalfEdge\HEVertex.cs" />
-    <Compile Include="CGUNS\Parsers\ObjFileParser.cs" />
-    <Compile Include="CGUNS\Primitives\Cube.cs" />
-    <Compile Include="CGUNS\Primitives\Piramide.cs">
+    <Compile Include="CGUNS\Meshes\Mesh.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
+    <Compile Include="CGUNS\Meshes\ObjetoGrafico.cs" />
+    <Compile Include="CGUNS\Parsers\ObjFileParser.cs" />
     <Compile Include="CGUNS\Shaders\Exceptions.cs" />
     <Compile Include="CGUNS\Shaders\Shader.cs" />
     <Compile Include="CGUNS\Shaders\ShaderProgram.cs" />
@@ -95,19 +102,25 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="CGUNS\ModelosOBJ\humbird.OBJ" />
-    <None Include="CGUNS\ModelosOBJ\IronMan.obj" />
-    <None Include="CGUNS\ModelosOBJ\micilindro.obj" />
-    <None Include="CGUNS\ModelosOBJ\mono.obj" />
-    <None Include="CGUNS\ModelosOBJ\octaedro.obj" />
-    <None Include="CGUNS\ModelosOBJ\piram.obj" />
-    <None Include="CGUNS\ModelosOBJ\Tetera.obj" />
-    <None Include="CGUNS\ModelosOBJ\tetra.obj" />
-    <None Include="CGUNS\ModelosOBJ\torus.obj" />
-    <None Include="files\shaders\fTextu.glsl">
+    <None Include="CGUNS\ModelosOBJ\arbol1.obj">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="files\shaders\vTextu.glsl">
+    <None Include="CGUNS\ModelosOBJ\banco1.obj">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="CGUNS\ModelosOBJ\casa1_tipo1.obj">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="CGUNS\ModelosOBJ\IronMan.obj">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="CGUNS\ModelosOBJ\tiger.obj">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="files\shaders\fPhong.glsl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="files\shaders\vPhong.glsl">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="Properties\Settings.settings">
@@ -145,6 +158,9 @@
     <Content Include="files\Texturas\modern6.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="CGUNS\Primitives\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

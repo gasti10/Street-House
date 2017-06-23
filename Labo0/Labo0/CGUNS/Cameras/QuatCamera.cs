@@ -56,6 +56,31 @@ namespace CGUNS.Cameras
             return Matrix4.Mult(Matrix4.CreateFromQuaternion(cameraRot), Matrix4.CreateTranslation(-cameraPos));
         }
 
+        public Vector3 getPosition() {
+            //Matriz de Transformacion del Espacio del Ojo al espacio del Mundo
+            Matrix4 viewToWorld = ViewMatrix().Inverted();
+            //Posicion de la camara en el espacio del ojo (Osea el origen)
+            Vector4 eyePos = new Vector4(0, 0, 0, 1);
+            //Transformo el origen de la camara en espacio del ojo al espacio del mundo
+            return new Vector3(
+                  Vector4.Dot(viewToWorld.Column0, eyePos),
+                  Vector4.Dot(viewToWorld.Column1, eyePos),
+                  Vector4.Dot(viewToWorld.Column2, eyePos)
+                );
+        }
+
+        /// <summary>
+        /// Retorna la Matriz de Vista que representa esta camara.
+        /// </summary>
+        /// <returns></returns>
+        public  Matrix4 ViewMatrix()
+        {
+            //Construimos la matriz y la devolvemos.
+            Matrix4 posicion = Matrix4.CreateTranslation(cameraPos);
+            Matrix4 rotacion = Matrix4.CreateFromQuaternion(cameraRot);
+            //return Matrix4.LookAt(eye, target, up);
+            return Matrix4.Mult(rotacion, posicion);
+        }
 
         public void Acercar(float distance)
         {

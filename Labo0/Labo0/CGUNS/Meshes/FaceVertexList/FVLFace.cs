@@ -49,8 +49,12 @@ namespace CGUNS.Meshes.FaceVertexList {
         this.texCordIndexes.Add(texCordIndex);
     }
 
+        public int[] VerticesDeCara()
+        {
+            return vertexIndexes.ToArray();
+        }
 
-    public int[] IndicesDeCara()
+        public int[] IndicesDeCara()
     {
         return vertexIndexes.ToArray();
     }
