@@ -16,7 +16,7 @@ uniform mat4 modelMatrix;
 void main(){
 	 gl_Position = projMat * viewMatrix * modelMatrix * vec4(vPos, 1.0);
 	 
-	 f_TexCoord = TexCoord;
+	 f_TexCoord = TexCoord;//vec2(TexCoord.s, 1 - TexCoord.t);
 	 
 	 mat4 mvMatrix = viewMatrix * modelMatrix;
 	 mat3 normalMatrix = transpose(inverse( mat3(mvMatrix) ));

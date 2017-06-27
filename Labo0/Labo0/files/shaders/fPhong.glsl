@@ -13,6 +13,7 @@ struct Light {
 	vec4 position; //Light position in World Space
 	vec3 Ia;
 	vec3 Ip;
+	vec3 Is;
 	float coneAngle;
 	vec3 coneDirection; //Cone direction in World Space
 	int enabled;
@@ -42,7 +43,8 @@ float phongSpecular(vec3 L, vec3 N, float roughness)
 	float spec = 0;
 	float sDotN = max( dot(L, N), 0.0 );
 	vec3 reflectionVector = reflect( -L, N );
-	vec3 viewDirection = normalize(cameraPosition - fragPos) ;//en bumpMapping se hace distinto
+	vec3 cameraPositionView = normalize(vec3(viewMatrix * vec4(cameraPosition,1.0)));//coord de CAMARA
+	vec3 viewDirection = normalize(cameraPositionView - fragPos) ;//en bumpMapping se hace distinto
 	if( sDotN > 0.0 )
 		spec = pow( max( dot(reflectionVector, viewDirection), 0.0 ), roughness );
 	return spec;
@@ -61,8 +63,8 @@ vec3 phongModel( vec3 N, Light light,vec3 texColor )
 		vec3 posLuz = (viewMatrix * light.position).xyz;
 		L = normalize(light.position.xyz - fragPos);
 		
-		//Cone restrictions
-		vec3 coneDirection = normalize(light.coneDirection);
+		//Cone restrictions lo paso a coord. de CAMARA
+		vec3 coneDirection = vec3(normalize(viewMatrix * vec4(light.coneDirection,1.0)));
 		vec3 rayDirection = -L;
 		float lightToSurfaceAngle = degrees(acos(dot(rayDirection, coneDirection)));
 		if (lightToSurfaceAngle <= light.coneAngle) { //Inside cone
@@ -80,7 +82,7 @@ vec3 phongModel( vec3 N, Light light,vec3 texColor )
 	vec3 diffuse = sDotN * light.Ip * material.Kd * texColor;
 
 	//Especular
-	vec3 spec = phongSpecular(L, N, material.Shininess) * material.Ks;
+	vec3 spec = phongSpecular(L, N, material.Shininess) * material.Ks * light.Is;
 	
 	//Retorna el color final con conservacion de energia
 	return ambient + attenuation * (diffuse  + spec )  * light.enabled;

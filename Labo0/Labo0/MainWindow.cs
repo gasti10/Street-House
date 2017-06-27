@@ -49,11 +49,11 @@ namespace Labo0
             programTextures = new Dictionary<string, int>();
 
             SetupTextures();
-            miPiram = new ObjetoGrafico("CGUNS/ModelosOBJ/banco1.obj");
-            //miPiram.AddTextureToAllMeshes(GetTextureID("prueba1"));
-            //miPiram.Build(sProgram);
-            //miPiram.setMaterial(Material.Gold);
-            
+            miPiram = new ObjetoGrafico("CGUNS/ModelosOBJ/castillo.obj");
+            miPiram.AddTextureToAllMeshes(GetTextureID("prueba1"));
+            miPiram.Build(sProgram);
+            miPiram.setMaterial(Material.Default);
+            /**
             foreach (Mesh m in miPiram.Meshes)
             {
                 Char[] separator = { '.' };
@@ -72,12 +72,12 @@ namespace Labo0
                         break;
                 }
             }
-            
+            **/
             allLight = new Light[1];
             myLight = new Light();
-            myLight.Position = new Vector4(0.0f, 1.0f, 0.0f,1.0f);//spot desde arriba
-            myLight.Iambient = new Vector3(0.8f, 0.65f, 0.2f);
-            myLight.Idiffuse = new Vector3(0.38f, 0.15f, 0.72f);
+            myLight.Position = new Vector4(4.0f, 4.0f, 4.0f,0.0f);//simula ser el SOL
+            myLight.Iambient = new Vector3(0.9f, 0.9f, 0.9f);
+            myLight.Idiffuse = new Vector3(1.0f, 1.0f, 0.8f);
             myLight.Ispecular = new Vector3(0.8f, 0.8f, 0.8f);
             myLight.ConeAngle = 10.0f;
             myLight.ConeDirection = new Vector3(0.0f, -1.0f, 0.0f);
@@ -100,7 +100,7 @@ namespace Labo0
 
         private void SetupTextures()
         {
-            CargarTextura("files/Texturas/modern1.jpg", "prueba1");
+            CargarTextura("files/Texturas/castillo.png", "prueba1");
             CargarTextura("files/Texturas/modern3.jpg", "prueba2");
         }
 
@@ -149,7 +149,10 @@ namespace Labo0
             sProgram.SetUniformValue("viewMatrix", viewMatrix);
 
             //Dibujamos el objeto.
-           // Matrix4.CreateTranslation(0,-1.0f,0,out modelMatrix);
+            //Matrix4 scale = Matrix4.CreateRotationY(0.0f);
+            //Matrix4 traslation = Matrix4.CreateTranslation(0, 0.0f, 75.0f);
+            //Matrix4.Mult( ref traslation, ref scale ,out modelMatrix );
+
             sProgram.SetUniformValue("modelMatrix", modelMatrix);
     
             miPiram.Dibujar(sProgram);
@@ -163,6 +166,7 @@ namespace Labo0
                 sProgram.SetUniformValue("allLights[" + i + "].position", allLight[i].Position);
                 sProgram.SetUniformValue("allLights[" + i + "].Ia", allLight[i].Iambient);
                 sProgram.SetUniformValue("allLights[" + i + "].Ip", allLight[i].Idiffuse);
+                sProgram.SetUniformValue("allLights[" + i + "].Ip", allLight[i].Ispecular);
                 sProgram.SetUniformValue("allLights[" + i + "].coneAngle", allLight[i].ConeAngle);
                 sProgram.SetUniformValue("allLights[" + i + "].coneDirection", allLight[i].ConeDirection);
                 sProgram.SetUniformValue("allLights[" + i + "].enabled", allLight[i].Enabled);
