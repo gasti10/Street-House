@@ -33,7 +33,7 @@ namespace Labo0
         //Aca se almacenan las texturas
         private Dictionary<string, int> programTextures;
 
-        private SphericalCamera myCamera;  //Camara
+        private Camera myCamera;  //Camara
         private Rectangle viewport; //Viewport a utilizar (Porcion del glControl en donde voy a dibujar).
         private ObjetoGrafico miPiram;
         private Light myLight;
@@ -84,8 +84,8 @@ namespace Labo0
             myLight.Enabled = 1;
             allLight[0] = myLight;
 
-            
-            myCamera = new SphericalCamera(); //Creo una camara.
+
+            myCamera = new CamaraSimple(new Vector3(2.0f,99.0f,0),myCamera.aspect); //Creo una camara.
       
             gl.Enable(EnableCap.DepthTest);
 
@@ -181,20 +181,22 @@ namespace Labo0
         private void glControl3_Resize(object sender, EventArgs e)
         {   //Actualizamos el viewport para que dibuje en el centro de la pantalla.
             Size size = glControl3.Size;
-            if (size.Width < size.Height)
+            int w = size.Width;
+            int h = size.Height;
+            float aspecto = 1;
+
+            // Calculate aspect ratio, checking for divide by zero
+            if (h > 0)
             {
-                viewport.X = 0;
-                viewport.Y = (size.Height - size.Width) / 2;
-                viewport.Width = size.Width;
-                viewport.Height = size.Width;
+                aspecto = (float)w / (float)h;
             }
-            else
-            {
-                viewport.X = (size.Width - size.Height) / 2;
-                viewport.Y = 0;
-                viewport.Width = size.Height;
-                viewport.Height = size.Height;
-            }
+            if (myCamera is null) myCamera = new QuatCamera(aspecto);
+            myCamera.aspect = aspecto;
+            //Configuro el tamaño del viewport
+            viewport.X = 0;
+            viewport.Y = 0;
+            viewport.Width = w;
+            viewport.Height = h;
             glControl3.Invalidate(); //Invalidamos el glControl para que se redibuje.(llama al metodo Paint)
         }
 
@@ -243,35 +245,34 @@ namespace Labo0
         private void glControl3_KeyPress(object sender, System.Windows.Forms.KeyPressEventArgs e)
         {
                 switch (e.KeyChar) {
-        case 'j':
-          myCamera.Acercar(1f);
-          break;
-        case 'k':
-          myCamera.Alejar(1f);
-          break;
-        case 'w':
-          myCamera.Arriba();
-          break;
-        case 's':
-          myCamera.Abajo();
-          break;
-        case 'a':
-          myCamera.Izquierda();
-          break;
-        case 'd':
-          myCamera.Derecha();
-          break;
-        case 't':
-          myLight.ConeAngle += 10.0f;
-          break;
-       case 'y':
-          myLight.ConeAngle -= 10.0f;
-          break;                
-        case 'g':
-          myLight.Position = new Vector4(0,0,2.0f,1.0f);
-          myLight.ConeDirection = new Vector3(0,0,-1.0f);    
-        break;               
-                 
+                    case 'j':
+                      myCamera.Acercar(1f);
+                      break;
+                    case 'k':
+                      myCamera.Alejar(1f);
+                      break;
+                    case 'w':
+                      myCamera.Arriba();
+                      break;
+                    case 's':
+                      myCamera.Abajo();
+                      break;
+                    case 'a':
+                      myCamera.Izquierda();
+                      break;
+                    case 'd':
+                      myCamera.Derecha();
+                      break;
+                    case 'c':
+                        myCamera = new QuatCamera(myCamera.aspect);
+                        break;
+                    case 'v':
+                        myCamera = new CamaraSimple(new Vector3(2.0f, 99.0f, 0),myCamera.aspect);
+                        break;                
+                    case 'g':
+                      myLight.Position = new Vector4(0,0,2.0f,1.0f);
+                      myLight.ConeDirection = new Vector3(0,0,-1.0f);    
+                    break;           
       }
       glControl3.Invalidate();
     }

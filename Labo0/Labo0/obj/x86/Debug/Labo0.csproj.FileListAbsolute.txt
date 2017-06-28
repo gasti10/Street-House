@@ -281,3 +281,4 @@ C:\Users\Gastón\Desktop\Computacion Grafica\Street-House\Street-House\Labo0\Lab
 C:\Users\Gastón\Desktop\Computacion Grafica\Street-House\Street-House\Labo0\Labo0\bin\Debug\CGUNS\ModelosOBJ\banco1.obj
 C:\Users\Gastón\Desktop\Computacion Grafica\Street-House\Street-House\Labo0\Labo0\bin\Debug\files\Texturas\castillo.png
 C:\Users\Gastón\Desktop\Computacion Grafica\Street-House\Street-House\Labo0\Labo0\bin\Debug\CGUNS\ModelosOBJ\castillo.obj
+C:\Users\Gastón\Desktop\Computacion Grafica\Street-House\Street-House\Labo0\Labo0\bin\Debug\CGUNS\Cameras\CameraSimple.cs

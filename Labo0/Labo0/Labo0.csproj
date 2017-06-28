@@ -54,6 +54,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CGUNS\Cameras\Camera.cs" />
+    <Compile Include="CGUNS\Cameras\CameraSimple.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
     <Compile Include="CGUNS\Cameras\QuatCamera.cs" />
     <Compile Include="CGUNS\Cameras\SphericalCamera.cs" />
     <Compile Include="CGUNS\Light.cs">
