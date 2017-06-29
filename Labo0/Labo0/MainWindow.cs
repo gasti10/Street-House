@@ -377,7 +377,7 @@ namespace Labo0
             {
                 aspecto = (float)w / (float)h;
             }
-            if (myCamera is null) myCamera = new QuatCamera(aspecto);
+            if (myCamera == null ) myCamera = new QuatCamera(aspecto);
             myCamera.aspect = aspecto;
             //Configuro el tamaño del viewport
             viewport.X = 0;

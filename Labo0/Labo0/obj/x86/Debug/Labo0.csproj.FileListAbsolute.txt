@@ -340,3 +340,47 @@ C:\Users\Gastón\Desktop\Computacion Grafica\Street-House\Street-House\Labo0\Lab
 C:\Users\Gastón\Desktop\Computacion Grafica\Street-House\Street-House\Labo0\Labo0\bin\Debug\files\Texturas\cruce\road.jpg
 C:\Users\Gastón\Desktop\Computacion Grafica\Street-House\Street-House\Labo0\Labo0\bin\Debug\files\Texturas\cruce\plano.jpg
 C:\Users\Gastón\Desktop\Computacion Grafica\Street-House\Street-House\Labo0\Labo0\bin\Debug\CGUNS\ModelosOBJ\Street mediocompletoconcruce2.obj
+C:\Users\Alejandro\Source\Repos\Street-House\Street-House\Labo0\Labo0\obj\x86\Debug\Labo0.exe
+C:\Users\Alejandro\Source\Repos\Street-House\Street-House\Labo0\Labo0\obj\x86\Debug\Labo0.pdb
+C:\Users\Alejandro\Source\Repos\Street-House\Street-House\Labo0\Labo0\obj\x86\Debug\Labo0.csprojResolveAssemblyReference.cache
+C:\Users\Alejandro\Source\Repos\Street-House\Street-House\Labo0\Labo0\obj\x86\Debug\CGUNS.GLControl3.resources
+C:\Users\Alejandro\Source\Repos\Street-House\Street-House\Labo0\Labo0\obj\x86\Debug\Labo0.MainWindow.resources
+C:\Users\Alejandro\Source\Repos\Street-House\Street-House\Labo0\Labo0\obj\x86\Debug\Labo0.Properties.Resources.resources
+C:\Users\Alejandro\Source\Repos\Street-House\Street-House\Labo0\Labo0\obj\x86\Debug\Labo0.csproj.GenerateResource.Cache
+C:\Users\Alejandro\Source\Repos\Street-House\Street-House\Labo0\Labo0\bin\Debug\files\Texturas\arbol\hojas.jpg
+C:\Users\Alejandro\Source\Repos\Street-House\Street-House\Labo0\Labo0\bin\Debug\files\Texturas\arbol\tronco.jpg
+C:\Users\Alejandro\Source\Repos\Street-House\Street-House\Labo0\Labo0\bin\Debug\files\Texturas\auto\autoford.jpg
+C:\Users\Alejandro\Source\Repos\Street-House\Street-House\Labo0\Labo0\bin\Debug\files\Texturas\banco\banco.png
+C:\Users\Alejandro\Source\Repos\Street-House\Street-House\Labo0\Labo0\bin\Debug\files\Texturas\casas\casa_tipo1.png
+C:\Users\Alejandro\Source\Repos\Street-House\Street-House\Labo0\Labo0\bin\Debug\files\Texturas\casas\casa_tipo10.png
+C:\Users\Alejandro\Source\Repos\Street-House\Street-House\Labo0\Labo0\bin\Debug\files\Texturas\casas\casa_tipo2.png
+C:\Users\Alejandro\Source\Repos\Street-House\Street-House\Labo0\Labo0\bin\Debug\files\Texturas\casas\casa_tipo3.png
+C:\Users\Alejandro\Source\Repos\Street-House\Street-House\Labo0\Labo0\bin\Debug\files\Texturas\casas\casa_tipo4.png
+C:\Users\Alejandro\Source\Repos\Street-House\Street-House\Labo0\Labo0\bin\Debug\files\Texturas\casas\casa_tipo5.png
+C:\Users\Alejandro\Source\Repos\Street-House\Street-House\Labo0\Labo0\bin\Debug\files\Texturas\casas\casa_tipo6.png
+C:\Users\Alejandro\Source\Repos\Street-House\Street-House\Labo0\Labo0\bin\Debug\files\Texturas\casas\casa_tipo7.png
+C:\Users\Alejandro\Source\Repos\Street-House\Street-House\Labo0\Labo0\bin\Debug\files\Texturas\casas\casa_tipo8.png
+C:\Users\Alejandro\Source\Repos\Street-House\Street-House\Labo0\Labo0\bin\Debug\files\Texturas\casas\casa_tipo9.png
+C:\Users\Alejandro\Source\Repos\Street-House\Street-House\Labo0\Labo0\bin\Debug\files\Texturas\castillo\castillo.png
+C:\Users\Alejandro\Source\Repos\Street-House\Street-House\Labo0\Labo0\bin\Debug\files\Texturas\cruce\line.png
+C:\Users\Alejandro\Source\Repos\Street-House\Street-House\Labo0\Labo0\bin\Debug\files\Texturas\cruce\road.jpg
+C:\Users\Alejandro\Source\Repos\Street-House\Street-House\Labo0\Labo0\bin\Debug\files\Texturas\cruce\plano.jpg
+C:\Users\Alejandro\Source\Repos\Street-House\Street-House\Labo0\Labo0\bin\Debug\CGUNS\Cameras\CameraSimple.cs
+C:\Users\Alejandro\Source\Repos\Street-House\Street-House\Labo0\Labo0\bin\Debug\CGUNS\Light.cs
+C:\Users\Alejandro\Source\Repos\Street-House\Street-House\Labo0\Labo0\bin\Debug\CGUNS\Material.cs
+C:\Users\Alejandro\Source\Repos\Street-House\Street-House\Labo0\Labo0\bin\Debug\CGUNS\Meshes\Mesh.cs
+C:\Users\Alejandro\Source\Repos\Street-House\Street-House\Labo0\Labo0\bin\Debug\CGUNS\ModelosOBJ\arbol1.obj
+C:\Users\Alejandro\Source\Repos\Street-House\Street-House\Labo0\Labo0\bin\Debug\CGUNS\ModelosOBJ\banco1.obj
+C:\Users\Alejandro\Source\Repos\Street-House\Street-House\Labo0\Labo0\bin\Debug\CGUNS\ModelosOBJ\casa1_tipo1.obj
+C:\Users\Alejandro\Source\Repos\Street-House\Street-House\Labo0\Labo0\bin\Debug\CGUNS\ModelosOBJ\castillo.obj
+C:\Users\Alejandro\Source\Repos\Street-House\Street-House\Labo0\Labo0\bin\Debug\CGUNS\ModelosOBJ\IronMan.obj
+C:\Users\Alejandro\Source\Repos\Street-House\Street-House\Labo0\Labo0\bin\Debug\CGUNS\ModelosOBJ\Street mediocompletoconcruce2.obj
+C:\Users\Alejandro\Source\Repos\Street-House\Street-House\Labo0\Labo0\bin\Debug\CGUNS\ModelosOBJ\tiger.obj
+C:\Users\Alejandro\Source\Repos\Street-House\Street-House\Labo0\Labo0\bin\Debug\files\shaders\fPhong.glsl
+C:\Users\Alejandro\Source\Repos\Street-House\Street-House\Labo0\Labo0\bin\Debug\files\shaders\vPhong.glsl
+C:\Users\Alejandro\Source\Repos\Street-House\Street-House\Labo0\Labo0\bin\Debug\Labo0.exe
+C:\Users\Alejandro\Source\Repos\Street-House\Street-House\Labo0\Labo0\bin\Debug\Labo0.pdb
+C:\Users\Alejandro\Source\Repos\Street-House\Street-House\Labo0\Labo0\bin\Debug\OpenTK.dll
+C:\Users\Alejandro\Source\Repos\Street-House\Street-House\Labo0\Labo0\bin\Debug\OpenTK.GLControl.dll
+C:\Users\Alejandro\Source\Repos\Street-House\Street-House\Labo0\Labo0\bin\Debug\OpenTK.xml
+C:\Users\Alejandro\Source\Repos\Street-House\Street-House\Labo0\Labo0\bin\Debug\OpenTK.GLControl.xml

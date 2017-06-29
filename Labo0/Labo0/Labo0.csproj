@@ -127,9 +127,11 @@
     <None Include="CGUNS\ModelosOBJ\tiger.obj">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Include="files\shaders\fBumpedPhong.glsl" />
     <None Include="files\shaders\fPhong.glsl">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Include="files\shaders\vBumpedPhong.glsl" />
     <None Include="files\shaders\vPhong.glsl">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
