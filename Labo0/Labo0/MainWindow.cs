@@ -63,47 +63,47 @@ namespace Labo0
 
                     case "mesa_Object_1":
                         m.AddTexture(GetTextureID("mesa"));
-                        m.material = Material.Default;
+                        m.material = Material.Wood;
                         m.Build(sProgram);
                         break;
                     case "banco1_ParkBench":
                         m.AddTexture(GetTextureID("banco"));
-                        m.material = Material.Default;
+                        m.material = Material.Wood;
                         m.Build(sProgram);
                         break;
                     case "banco2_ParkBench":
                         m.AddTexture(GetTextureID("banco"));
-                        m.material = Material.Gold;
+                        m.material = Material.Wood;
                         m.Build(sProgram);
                         break;
                     case "banco3_ParkBench":
                         m.AddTexture(GetTextureID("banco"));
-                        m.material = Material.Gold;
+                        m.material = Material.Wood;
                         m.Build(sProgram);
                         break;
                     case "banco4_ParkBench":
                         m.AddTexture(GetTextureID("banco"));
-                        m.material = Material.Gold;
+                        m.material = Material.Wood;
                         m.Build(sProgram);
                         break;
                     case "banco5_ParkBench":
                         m.AddTexture(GetTextureID("banco"));
-                        m.material = Material.Gold;
+                        m.material = Material.Wood;
                         m.Build(sProgram);
                         break;
                     case "banco6_ParkBench":
                         m.AddTexture(GetTextureID("banco"));
-                        m.material = Material.Gold;
+                        m.material = Material.Wood;
                         m.Build(sProgram);
                         break;
                     case "banco7_ParkBench":
                         m.AddTexture(GetTextureID("banco"));
-                        m.material = Material.Default;
+                        m.material = Material.Wood;
                         m.Build(sProgram);
                         break;
                     case "banco8_ParkBench":
                         m.AddTexture(GetTextureID("banco"));
-                        m.material = Material.Gold;
+                        m.material = Material.Wood;
                         m.Build(sProgram);
                         break;
 
@@ -115,100 +115,100 @@ namespace Labo0
                         break;
                      case "casa1_tipo1":
                          m.AddTexture(GetTextureID("casa_tipo1"));
-                         m.material = Material.Gold;
+                         m.material = Material.Default;
                          m.Build(sProgram);
                          break;
                      case "casa2_tipo1":
                          m.AddTexture(GetTextureID("casa_tipo1"));
-                         m.material = Material.Gold;
+                         m.material = Material.Default;
                          m.Build(sProgram);
                          break;
                      case "casa3_tipo1":
                          m.AddTexture(GetTextureID("casa_tipo1"));
-                         m.material = Material.Gold;
+                         m.material = Material.Default;
                          m.Build(sProgram);
                          break;
                      case "casa4_tipo1":
                          m.AddTexture(GetTextureID("casa_tipo1"));
-                         m.material = Material.Gold;
+                         m.material = Material.Default;
                          m.Build(sProgram);
                          break;
                      case "casa5_tipo1":
                          m.AddTexture(GetTextureID("casa_tipo1"));
-                         m.material = Material.Gold;
+                         m.material = Material.Default;
                          m.Build(sProgram);
                          break;
                      case "casa6_tipo1":
                          m.AddTexture(GetTextureID("casa_tipo1"));
-                         m.material = Material.Gold;
+                         m.material = Material.Default;
                          m.Build(sProgram);
                          break;
                      case "casa7_tipo2":
                          m.AddTexture(GetTextureID("casa_tipo2"));
-                         m.material = Material.Gold;
+                         m.material = Material.Default;
                          m.Build(sProgram);
                          break;
                      case "casa8_tipo2":
                          m.AddTexture(GetTextureID("casa_tipo2"));
-                         m.material = Material.Gold;
+                         m.material = Material.Default;
                          m.Build(sProgram);
                          break;
                      
                     case "casa9_tipo2":
                         m.AddTexture(GetTextureID("casa_tipo2"));
-                        m.material = Material.Gold;
+                        m.material = Material.Default;
                         m.Build(sProgram);
                         break;
                      
                     case "casa10_tipo3":
                         m.AddTexture(GetTextureID("casa_tipo3"));
-                        m.material = Material.Gold;
+                        m.material = Material.Default;
                         m.Build(sProgram);
                         break;
                    case "casa11_tipo4":
                         m.AddTexture(GetTextureID("casa_tipo3"));
-                        m.material = Material.Gold;
+                        m.material = Material.Default;
                         m.Build(sProgram);
                         break;
                     case "casa12_tipo5":
                         m.AddTexture(GetTextureID("casa_tipo3"));
-                        m.material = Material.Gold;
+                        m.material = Material.Default;
                         m.Build(sProgram);
                         break;
 
                     case "casa13_tipo6":
                         m.AddTexture(GetTextureID("casa_tipo3"));
-                        m.material = Material.Gold;
+                        m.material = Material.Default;
                         m.Build(sProgram);
                         break;
                     case "casa14_tipo7":
                         m.AddTexture(GetTextureID("casa_tipo7"));
-                        m.material = Material.Gold;
+                        m.material = Material.Default;
                         m.Build(sProgram);
                         break;
                     case "casa15_tipo7":
                         m.AddTexture(GetTextureID("casa_tipo7"));
-                        m.material = Material.Gold;
+                        m.material = Material.Default;
                         m.Build(sProgram);
                         break;
                     case "casa16_tipo8":
                         m.AddTexture(GetTextureID("casa_tipo8"));
-                        m.material = Material.Gold;
+                        m.material = Material.Default;
                         m.Build(sProgram);
                         break;
                     case "casa17_tipo8":
                         m.AddTexture(GetTextureID("casa_tipo8"));
-                        m.material = Material.Gold;
+                        m.material = Material.Default;
                         m.Build(sProgram);
                         break;
                     case "casa18_tipo9":
                         m.AddTexture(GetTextureID("casa_tipo9"));
-                        m.material = Material.Gold;
+                        m.material = Material.Default;
                         m.Build(sProgram);
                         break;
                     case "casa19_tipo10":
                         m.AddTexture(GetTextureID("casa_tipo10"));
-                        m.material = Material.Gold;
+                        m.material = Material.Default;
                         m.Build(sProgram);
                         break;
 
@@ -219,7 +219,7 @@ namespace Labo0
                         break;
                     case "plano_cruece_Plane001_Plane001_20___Default":
                         m.AddTexture(GetTextureID("plano"));
-                        m.material = Material.Default;
+                        m.material = Material.Chrome;
                         m.Build(sProgram);
                         break;
                     case "line_cruce_Object010_Object010_21___Default":
