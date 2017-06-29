@@ -282,3 +282,51 @@ C:\Users\Gastón\Desktop\Computacion Grafica\Street-House\Street-House\Labo0\Lab
 C:\Users\Gastón\Desktop\Computacion Grafica\Street-House\Street-House\Labo0\Labo0\bin\Debug\files\Texturas\castillo.png
 C:\Users\Gastón\Desktop\Computacion Grafica\Street-House\Street-House\Labo0\Labo0\bin\Debug\CGUNS\ModelosOBJ\castillo.obj
 C:\Users\Gastón\Desktop\Computacion Grafica\Street-House\Street-House\Labo0\Labo0\bin\Debug\CGUNS\Cameras\CameraSimple.cs
+D:\ProyectoFinal Grafica\Street-House\Labo0\Labo0\bin\Debug\CGUNS\Cameras\CameraSimple.cs
+D:\ProyectoFinal Grafica\Street-House\Labo0\Labo0\bin\Debug\CGUNS\Light.cs
+D:\ProyectoFinal Grafica\Street-House\Labo0\Labo0\bin\Debug\CGUNS\Material.cs
+D:\ProyectoFinal Grafica\Street-House\Labo0\Labo0\bin\Debug\CGUNS\Meshes\Mesh.cs
+D:\ProyectoFinal Grafica\Street-House\Labo0\Labo0\bin\Debug\CGUNS\ModelosOBJ\arbol1.obj
+D:\ProyectoFinal Grafica\Street-House\Labo0\Labo0\bin\Debug\CGUNS\ModelosOBJ\banco1.obj
+D:\ProyectoFinal Grafica\Street-House\Labo0\Labo0\bin\Debug\CGUNS\ModelosOBJ\casa1_tipo1.obj
+D:\ProyectoFinal Grafica\Street-House\Labo0\Labo0\bin\Debug\CGUNS\ModelosOBJ\castillo.obj
+D:\ProyectoFinal Grafica\Street-House\Labo0\Labo0\bin\Debug\CGUNS\ModelosOBJ\IronMan.obj
+D:\ProyectoFinal Grafica\Street-House\Labo0\Labo0\bin\Debug\CGUNS\ModelosOBJ\tiger.obj
+D:\ProyectoFinal Grafica\Street-House\Labo0\Labo0\bin\Debug\files\shaders\fPhong.glsl
+D:\ProyectoFinal Grafica\Street-House\Labo0\Labo0\bin\Debug\files\shaders\vPhong.glsl
+D:\ProyectoFinal Grafica\Street-House\Labo0\Labo0\bin\Debug\Labo0.exe
+D:\ProyectoFinal Grafica\Street-House\Labo0\Labo0\bin\Debug\Labo0.pdb
+D:\ProyectoFinal Grafica\Street-House\Labo0\Labo0\bin\Debug\OpenTK.dll
+D:\ProyectoFinal Grafica\Street-House\Labo0\Labo0\bin\Debug\OpenTK.GLControl.dll
+D:\ProyectoFinal Grafica\Street-House\Labo0\Labo0\bin\Debug\OpenTK.xml
+D:\ProyectoFinal Grafica\Street-House\Labo0\Labo0\bin\Debug\OpenTK.GLControl.xml
+D:\ProyectoFinal Grafica\Street-House\Labo0\Labo0\obj\x86\Debug\Labo0.csprojResolveAssemblyReference.cache
+D:\ProyectoFinal Grafica\Street-House\Labo0\Labo0\obj\x86\Debug\CGUNS.GLControl3.resources
+D:\ProyectoFinal Grafica\Street-House\Labo0\Labo0\obj\x86\Debug\Labo0.MainWindow.resources
+D:\ProyectoFinal Grafica\Street-House\Labo0\Labo0\obj\x86\Debug\Labo0.Properties.Resources.resources
+D:\ProyectoFinal Grafica\Street-House\Labo0\Labo0\obj\x86\Debug\Labo0.csproj.GenerateResource.Cache
+D:\ProyectoFinal Grafica\Street-House\Labo0\Labo0\obj\x86\Debug\Labo0.exe
+D:\ProyectoFinal Grafica\Street-House\Labo0\Labo0\obj\x86\Debug\Labo0.pdb
+D:\ProyectoFinal Grafica\Street-House\Labo0\Labo0\bin\Debug\CGUNS\ModelosOBJ\Street mediocompleto.obj
+D:\ProyectoFinal Grafica\Street-House\Labo0\Labo0\bin\Debug\CGUNS\ModelosOBJ\Street mediocompletoOr.obj
+D:\ProyectoFinal Grafica\Street-House\Labo0\Labo0\bin\Debug\files\Texturas\arbol\hojas.jpg
+D:\ProyectoFinal Grafica\Street-House\Labo0\Labo0\bin\Debug\files\Texturas\arbol\tronco.jpg
+D:\ProyectoFinal Grafica\Street-House\Labo0\Labo0\bin\Debug\files\Texturas\auto\autoford.jpg
+D:\ProyectoFinal Grafica\Street-House\Labo0\Labo0\bin\Debug\files\Texturas\banco\banco.png
+D:\ProyectoFinal Grafica\Street-House\Labo0\Labo0\bin\Debug\files\Texturas\casas\casa_tipo1.png
+D:\ProyectoFinal Grafica\Street-House\Labo0\Labo0\bin\Debug\files\Texturas\casas\casa_tipo10.png
+D:\ProyectoFinal Grafica\Street-House\Labo0\Labo0\bin\Debug\files\Texturas\casas\casa_tipo2.png
+D:\ProyectoFinal Grafica\Street-House\Labo0\Labo0\bin\Debug\files\Texturas\casas\casa_tipo3.png
+D:\ProyectoFinal Grafica\Street-House\Labo0\Labo0\bin\Debug\files\Texturas\casas\casa_tipo4.png
+D:\ProyectoFinal Grafica\Street-House\Labo0\Labo0\bin\Debug\files\Texturas\casas\casa_tipo5.png
+D:\ProyectoFinal Grafica\Street-House\Labo0\Labo0\bin\Debug\files\Texturas\casas\casa_tipo6.png
+D:\ProyectoFinal Grafica\Street-House\Labo0\Labo0\bin\Debug\files\Texturas\casas\casa_tipo7.png
+D:\ProyectoFinal Grafica\Street-House\Labo0\Labo0\bin\Debug\files\Texturas\casas\casa_tipo8.png
+D:\ProyectoFinal Grafica\Street-House\Labo0\Labo0\bin\Debug\files\Texturas\casas\casa_tipo9.png
+D:\ProyectoFinal Grafica\Street-House\Labo0\Labo0\bin\Debug\files\Texturas\castillo\castillo.png
+D:\ProyectoFinal Grafica\Street-House\Labo0\Labo0\bin\Debug\files\Texturas\cruce\line.png
+D:\ProyectoFinal Grafica\Street-House\Labo0\Labo0\bin\Debug\files\Texturas\cruce\road.jpg
+D:\ProyectoFinal Grafica\Street-House\Labo0\Labo0\bin\Debug\files\Texturas\cruce\plano.jpg
+D:\ProyectoFinal Grafica\Street-House\Labo0\Labo0\bin\Debug\CGUNS\ModelosOBJ\cruce.obj
+D:\ProyectoFinal Grafica\Street-House\Labo0\Labo0\bin\Debug\CGUNS\ModelosOBJ\Street mediocompletoconcruce.obj
+D:\ProyectoFinal Grafica\Street-House\Labo0\Labo0\bin\Debug\CGUNS\ModelosOBJ\Street mediocompletoconcruce2.obj

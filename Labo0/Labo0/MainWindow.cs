@@ -49,31 +49,193 @@ namespace Labo0
             programTextures = new Dictionary<string, int>();
 
             SetupTextures();
-            miPiram = new ObjetoGrafico("CGUNS/ModelosOBJ/castillo.obj");
-            miPiram.AddTextureToAllMeshes(GetTextureID("prueba1"));
-            miPiram.Build(sProgram);
-            miPiram.setMaterial(Material.Default);
-            /**
+            miPiram = new ObjetoGrafico("CGUNS/ModelosOBJ/Street mediocompletoconcruce2.obj");
+            // miPiram.AddTextureToAllMeshes(GetTextureID("prueba1"));
+            //miPiram.Build(sProgram);
+            //miPiram.setMaterial(Material.Default);
+
             foreach (Mesh m in miPiram.Meshes)
             {
                 Char[] separator = { '.' };
                 string prefijo = m.Name.Split(separator)[0];
                 switch (prefijo)
                 {
-                    case "Gun_Object_1":
-                        m.AddTexture(GetTextureID("prueba1"));
+
+                    case "mesa_Object_1":
+                        m.AddTexture(GetTextureID("mesa"));
+                        m.material = Material.Default;
+                        m.Build(sProgram);
+                        break;
+                    case "banco1_ParkBench":
+                        m.AddTexture(GetTextureID("banco"));
+                        m.material = Material.Default;
+                        m.Build(sProgram);
+                        break;
+                    case "banco2_ParkBench":
+                        m.AddTexture(GetTextureID("banco"));
                         m.material = Material.Gold;
                         m.Build(sProgram);
                         break;
-                    default://case "Wheels_Right_Object_4":
-                        m.AddTexture(GetTextureID("prueba2"));
-                        m.material = Material.CyanPlastic;
+                    case "banco3_ParkBench":
+                        m.AddTexture(GetTextureID("banco"));
+                        m.material = Material.Gold;
+                        m.Build(sProgram);
+                        break;
+                    case "banco4_ParkBench":
+                        m.AddTexture(GetTextureID("banco"));
+                        m.material = Material.Gold;
+                        m.Build(sProgram);
+                        break;
+                    case "banco5_ParkBench":
+                        m.AddTexture(GetTextureID("banco"));
+                        m.material = Material.Gold;
+                        m.Build(sProgram);
+                        break;
+                    case "banco6_ParkBench":
+                        m.AddTexture(GetTextureID("banco"));
+                        m.material = Material.Gold;
+                        m.Build(sProgram);
+                        break;
+                    case "banco7_ParkBench":
+                        m.AddTexture(GetTextureID("banco"));
+                        m.material = Material.Default;
+                        m.Build(sProgram);
+                        break;
+                    case "banco8_ParkBench":
+                        m.AddTexture(GetTextureID("banco"));
+                        m.material = Material.Gold;
+                        m.Build(sProgram);
+                        break;
+
+
+                    case "castillo_PROP_Amusement_Park_Jumping_Castle":
+                        m.AddTexture(GetTextureID("castillo"));
+                        m.material = Material.Default;
+                        m.Build(sProgram);
+                        break;
+                     case "casa1_tipo1":
+                         m.AddTexture(GetTextureID("casa_tipo1"));
+                         m.material = Material.Gold;
+                         m.Build(sProgram);
+                         break;
+                     case "casa2_tipo1":
+                         m.AddTexture(GetTextureID("casa_tipo1"));
+                         m.material = Material.Gold;
+                         m.Build(sProgram);
+                         break;
+                     case "casa3_tipo1":
+                         m.AddTexture(GetTextureID("casa_tipo1"));
+                         m.material = Material.Gold;
+                         m.Build(sProgram);
+                         break;
+                     case "casa4_tipo1":
+                         m.AddTexture(GetTextureID("casa_tipo1"));
+                         m.material = Material.Gold;
+                         m.Build(sProgram);
+                         break;
+                     case "casa5_tipo1":
+                         m.AddTexture(GetTextureID("casa_tipo1"));
+                         m.material = Material.Gold;
+                         m.Build(sProgram);
+                         break;
+                     case "casa6_tipo1":
+                         m.AddTexture(GetTextureID("casa_tipo1"));
+                         m.material = Material.Gold;
+                         m.Build(sProgram);
+                         break;
+                     case "casa7_tipo2":
+                         m.AddTexture(GetTextureID("casa_tipo2"));
+                         m.material = Material.Gold;
+                         m.Build(sProgram);
+                         break;
+                     case "casa8_tipo2":
+                         m.AddTexture(GetTextureID("casa_tipo2"));
+                         m.material = Material.Gold;
+                         m.Build(sProgram);
+                         break;
+                     
+                    case "casa9_tipo2":
+                        m.AddTexture(GetTextureID("casa_tipo2"));
+                        m.material = Material.Gold;
+                        m.Build(sProgram);
+                        break;
+                     
+                    case "casa10_tipo3":
+                        m.AddTexture(GetTextureID("casa_tipo3"));
+                        m.material = Material.Gold;
+                        m.Build(sProgram);
+                        break;
+                   case "casa11_tipo4":
+                        m.AddTexture(GetTextureID("casa_tipo3"));
+                        m.material = Material.Gold;
+                        m.Build(sProgram);
+                        break;
+                    case "casa12_tipo5":
+                        m.AddTexture(GetTextureID("casa_tipo3"));
+                        m.material = Material.Gold;
+                        m.Build(sProgram);
+                        break;
+
+                    case "casa13_tipo6":
+                        m.AddTexture(GetTextureID("casa_tipo3"));
+                        m.material = Material.Gold;
+                        m.Build(sProgram);
+                        break;
+                    case "casa14_tipo7":
+                        m.AddTexture(GetTextureID("casa_tipo7"));
+                        m.material = Material.Gold;
+                        m.Build(sProgram);
+                        break;
+                    case "casa15_tipo7":
+                        m.AddTexture(GetTextureID("casa_tipo7"));
+                        m.material = Material.Gold;
+                        m.Build(sProgram);
+                        break;
+                    case "casa16_tipo8":
+                        m.AddTexture(GetTextureID("casa_tipo8"));
+                        m.material = Material.Gold;
+                        m.Build(sProgram);
+                        break;
+                    case "casa17_tipo8":
+                        m.AddTexture(GetTextureID("casa_tipo8"));
+                        m.material = Material.Gold;
+                        m.Build(sProgram);
+                        break;
+                    case "casa18_tipo9":
+                        m.AddTexture(GetTextureID("casa_tipo9"));
+                        m.material = Material.Gold;
+                        m.Build(sProgram);
+                        break;
+                    case "casa19_tipo10":
+                        m.AddTexture(GetTextureID("casa_tipo10"));
+                        m.material = Material.Gold;
+                        m.Build(sProgram);
+                        break;
+
+                    case "cruce_cruce_Line002_Line002_20___Default":
+                        m.AddTexture(GetTextureID("road"));
+                        m.material = Material.Silver;
+                        m.Build(sProgram);
+                        break;
+                    case "plano_cruece_Plane001_Plane001_20___Default":
+                        m.AddTexture(GetTextureID("plano"));
+                        m.material = Material.Default;
+                        m.Build(sProgram);
+                        break;
+                    case "line_cruce_Object010_Object010_21___Default":
+                        m.AddTexture(GetTextureID("line"));
+                        m.material = Material.Default;
                         m.Build(sProgram);
                         break;
                 }
             }
-            **/
-            allLight = new Light[1];
+
+           
+
+                   
+            
+
+                        allLight = new Light[1];
             myLight = new Light();
             myLight.Position = new Vector4(4.0f, 4.0f, 4.0f,0.0f);//simula ser el SOL
             myLight.Iambient = new Vector3(0.9f, 0.9f, 0.9f);
@@ -100,8 +262,33 @@ namespace Labo0
 
         private void SetupTextures()
         {
-            CargarTextura("files/Texturas/castillo.png", "prueba1");
-            CargarTextura("files/Texturas/modern3.jpg", "prueba2");
+            //Texturas de los tipos de casas
+            CargarTextura("files/Texturas/casas/casa_tipo1.png", "casa_tipo1");
+            CargarTextura("files/Texturas/casas/casa_tipo2.png", "casa_tipo2");
+            CargarTextura("files/Texturas/casas/casa_tipo3.png", "casa_tipo3");
+            CargarTextura("files/Texturas/casas/casa_tipo4.png", "casa_tipo4");
+            CargarTextura("files/Texturas/casas/casa_tipo5.png", "casa_tipo5");
+            CargarTextura("files/Texturas/casas/casa_tipo6.png", "casa_tipo6");
+            CargarTextura("files/Texturas/casas/casa_tipo7.png", "casa_tipo7");
+            CargarTextura("files/Texturas/casas/casa_tipo8.png", "casa_tipo8");
+            CargarTextura("files/Texturas/casas/casa_tipo9.png", "casa_tipo9");
+            CargarTextura("files/Texturas/casas/casa_tipo10.png", "casa_tipo10");
+            //Textura del castillo
+            CargarTextura("files/Texturas/castillo/castillo.png", "castillo");
+
+            //textura del auto
+            CargarTextura("files/Texturas/auto/autoford.jpg", "auto");
+            //texturas de los bancos
+            CargarTextura("files/Texturas/banco/banco.png", "banco");
+            //textura de las hojas del arbol
+            CargarTextura("files/Texturas/arbol/hojas.jpg", "hojas");
+            //textura de las hojas del arbol
+            CargarTextura("files/Texturas/arbol/tronco.jpg", "mesa");
+            //textura del cruce
+            CargarTextura("files/Texturas/cruce/plano.jpg", "plano");
+            CargarTextura("files/Texturas/cruce/line.png", "line");
+            CargarTextura("files/Texturas/cruce/road.jpg", "road");
+
         }
 
         private int CargarTextura(String imagenTex,String nombre)
@@ -278,3 +465,4 @@ namespace Labo0
     }
   }
         }   
+            
