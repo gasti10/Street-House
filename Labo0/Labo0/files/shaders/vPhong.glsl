@@ -4,6 +4,8 @@
 in vec3 vPos;
 in vec2 TexCoord;
 in vec3 vNormal;
+in vec3 vTangente;
+in vec3 vBitangente; 
 
 out vec2 f_TexCoord;
 out vec3 fragPos;
@@ -14,7 +16,10 @@ uniform mat4 viewMatrix;
 uniform mat4 modelMatrix;
 
 void main(){
-	 gl_Position = projMat * viewMatrix * modelMatrix * vec4(vPos, 1.0);
+	//Tengo que usar tang y bitang para que no las descarte y falle al compilar
+	vec3 alpedo = (vTangente + vBitangente) * 0.0001;
+
+	 gl_Position = projMat * viewMatrix * modelMatrix * vec4(vPos, 1.0)+ alpedo - alpedo;
 	 
 	 f_TexCoord = vec2(TexCoord.s, 1 - TexCoord.t);
 	 

@@ -174,13 +174,13 @@ namespace CGUNS.Meshes.FaceVertexList
             
             Vector2[] texturas;
             Vector3[] normales;
-            /**
+            
             Vector4[] tangentes;
             Vector3[] bitangentes;
-            **/
+            
             reordenar(out posiciones, out texturas, out normales, out indices);
 
-           // CalcularBaseTangente(posiciones, texturas, normales, out tangentes, out bitangentes);
+            CalcularBaseTangente(posiciones, texturas, normales, out tangentes, out bitangentes);
 
             //VBO con el atributo "posicion" de los vertices.
             bufferType = BufferTarget.ArrayBuffer;
@@ -207,7 +207,7 @@ namespace CGUNS.Meshes.FaceVertexList
 
             gl.BufferData<Vector2>(bufferType, size, texturas, hint); //Lo lleno con la info.
             gl.BindBuffer(bufferType, 0); // Lo deselecciono (0: ninguno)
-/**
+
             //VBO con el atributo "tangentes" de los vertices.
             size = new IntPtr(tangentes.Length * Vector4.SizeInBytes);
             tan_VBO = gl.GenBuffer();  //Le pido un Id de buffer a OpenGL
@@ -223,7 +223,7 @@ namespace CGUNS.Meshes.FaceVertexList
 
             gl.BufferData<Vector3>(bufferType, size, bitangentes, hint); //Lo lleno con la info.
             gl.BindBuffer(bufferType, 0); // Lo deselecciono (0: ninguno)
-            **/
+            
             //VBO con otros atributos de los vertices (color, normal, textura, etc).
             //Se pueden hacer en distintos VBOs o en el mismo.
 
@@ -272,7 +272,7 @@ namespace CGUNS.Meshes.FaceVertexList
                 }
             }
         }
-        /**
+        
         private void CalcularBaseTangente(Vector3[] vertices, Vector2[] texturas, Vector3[] normales, out Vector4[] tangentes, out Vector3[] bitangentes)
         {
             int cantFaces = FaceCount;
@@ -328,7 +328,7 @@ namespace CGUNS.Meshes.FaceVertexList
                 tangentes[i].W = (Vector3.Dot(Vector3.Cross(n, t), bitangentes[i]) < 0.0f) ? -1.0f : 1.0f;
             }
         }
-**/
+
 
         private void CrearVAO(ShaderProgram sProgram)
         {
@@ -389,7 +389,7 @@ namespace CGUNS.Meshes.FaceVertexList
             gl.EnableVertexAttribArray(attribIndex); //Habilitamos el indice de atributo.
             gl.BindBuffer(bufferType, n_VBO); //Seleccionamos el buffer a utilizar.
             gl.VertexAttribPointer(attribIndex, cantComponentes, attribType, false, stride, offset);//Configuramos el layout (como estan organizados) los datos en el buffer.
-            /*
+            
             //2. Configuramos el VBO de tangentes.
             attribIndex = sProgram.GetVertexAttribLocation("vTangente"); //Yo lo saco de mi clase ProgramShader.
             cantComponentes = 4;   // 3 componentes (x, y, z)
@@ -401,8 +401,8 @@ namespace CGUNS.Meshes.FaceVertexList
             gl.EnableVertexAttribArray(attribIndex); //Habilitamos el indice de atributo.
             gl.BindBuffer(bufferType, tan_VBO); //Seleccionamos el buffer a utilizar.
             gl.VertexAttribPointer(attribIndex, cantComponentes, attribType, false, stride, offset);//Configuramos el layout (como estan organizados) los datos en el buffer.
-            */
-            /*
+            
+            
             //2. Configuramos el VBO de bitangentes.
             attribIndex = sProgram.GetVertexAttribLocation("vBitangente"); //Yo lo saco de mi clase ProgramShader.
             cantComponentes = 3;   // 3 componentes (x, y, z)
@@ -414,7 +414,7 @@ namespace CGUNS.Meshes.FaceVertexList
             gl.EnableVertexAttribArray(attribIndex); //Habilitamos el indice de atributo.
             gl.BindBuffer(bufferType, bitan_VBO); //Seleccionamos el buffer a utilizar.
             gl.VertexAttribPointer(attribIndex, cantComponentes, attribType, false, stride, offset);//Configuramos el layout (como estan organizados) los datos en el buffer.
-            */
+            
             // 2.a.El bloque anterior se repite para cada atributo del vertice (color, normal, textura..)
 
             // 3. Configuramos el EBO a utilizar. (como son indices, no necesitan info de layout)

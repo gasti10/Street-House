@@ -29,30 +29,40 @@ namespace Labo0
         #region Declaracion de variables
 
         private ShaderProgram sProgram; //Nuestro programa de shaders.
+        private ShaderProgram sProgramBump; 
 
         //Aca se almacenan las texturas
         private Dictionary<string, int> programTextures;
 
         private Camera myCamera;  //Camara
         private Rectangle viewport; //Viewport a utilizar (Porcion del glControl en donde voy a dibujar).
-        private ObjetoGrafico miPiram;
+        private ObjetoGrafico miPiram,mapa;
         private Light myLight;
         private Light[] allLight;
+        private Material material;
         #endregion
 
         private void glControl3_Load(object sender, EventArgs e)
         {            
             logContextInfo(); //Mostramos info de contexto.
-            SetupShaders("vPhong.glsl","fPhong.glsl",out sProgram); //Creamos los shaders y el programa de shader
+            //SetupShaders("vPhong.glsl", "fPhong.glsl", out sProgram); //Creamos los shaders y el programa de shader
+            SetupShaders("vBumpedPhong.glsl", "fBumpedPhong.glsl", out sProgram); //Creamos los shaders y el programa de shader
+            SetupShaders("vBumpedPhong.glsl", "fBumpedPhong.glsl", out sProgramBump); //Creamos los shaders y el programa de shader
 
             //Creo el contenedor de texturas
             programTextures = new Dictionary<string, int>();
 
             SetupTextures();
             miPiram = new ObjetoGrafico("CGUNS/ModelosOBJ/Street mediocompletoconcruce2.obj");
-            // miPiram.AddTextureToAllMeshes(GetTextureID("prueba1"));
+            //miPiram.AddTextureToAllMeshes(GetTextureID("prueba1"));
             //miPiram.Build(sProgram);
             //miPiram.setMaterial(Material.Default);
+
+            mapa = new ObjetoGrafico("CGUNS/ModelosOBJ/plano.obj");
+            mapa.Build(sProgramBump);
+            mapa.AddTextureToAllMeshes(GetTextureID("calle"));
+            mapa.AddTextureToAllMeshes(GetTextureID("calle_n"));
+            mapa.setMaterial(Material.Default);
 
             foreach (Mesh m in miPiram.Meshes)
             {
@@ -211,7 +221,7 @@ namespace Labo0
                         m.material = Material.Default;
                         m.Build(sProgram);
                         break;
-
+                    
                     case "cruce_cruce_Line002_Line002_20___Default":
                         m.AddTexture(GetTextureID("road"));
                         m.material = Material.Silver;
@@ -227,15 +237,32 @@ namespace Labo0
                         m.material = Material.Default;
                         m.Build(sProgram);
                         break;
+                    
                 }
             }
 
-           
 
-                   
+            allLight = new Light[2];
+
+            allLight[0] = new Light();
+            allLight[0].Position = new Vector4(0.0f, 4.0f, 0.0f, 1.0f);
+            allLight[0].Iambient = new Vector3(1.0f, 1.0f, 1.0f);
+            allLight[0].Idiffuse = new Vector3(1.0f, 1.0f, 1.0f);
+            allLight[0].Ispecular = new Vector3(1.0f, 1.0f, 1.0f);
+            allLight[0].ConeAngle = 180.0f;
+            allLight[0].ConeDirection = new Vector3(0.0f, -1.0f, 0.0f);
+            allLight[0].Enabled = 0;
             
-
-                        allLight = new Light[1];
+            allLight[1] = new Light();
+            allLight[1].Position = new Vector4(1.0f, 4.0f, 1.0f, 1.0f);
+            allLight[1].Iambient = new Vector3(1f, 1f, 1f); //239, 127, 26
+            allLight[1].Idiffuse = new Vector3(0.243f, 0.165f, 0.005f);
+            allLight[1].Ispecular = new Vector3(0.8f, 0.8f, 0.8f);
+            allLight[1].ConeAngle = 25.0f;
+            allLight[1].ConeDirection = new Vector3(0.0f, -1.0f, 0.0f);
+            allLight[1].Enabled = 0;
+            /*
+            allLight = new Light[1];
             myLight = new Light();
             myLight.Position = new Vector4(4.0f, 4.0f, 4.0f,0.0f);//simula ser el SOL
             myLight.Iambient = new Vector3(0.9f, 0.9f, 0.9f);
@@ -245,7 +272,7 @@ namespace Labo0
             myLight.ConeDirection = new Vector3(0.0f, -1.0f, 0.0f);
             myLight.Enabled = 1;
             allLight[0] = myLight;
-
+            */
 
             myCamera = new CamaraSimple(new Vector3(2.0f,99.0f,0),myCamera.aspect); //Creo una camara.
       
@@ -286,8 +313,11 @@ namespace Labo0
             CargarTextura("files/Texturas/arbol/tronco.jpg", "mesa");
             //textura del cruce
             CargarTextura("files/Texturas/cruce/plano.jpg", "plano");
-            CargarTextura("files/Texturas/cruce/line.png", "line");
+            CargarTextura("files/Texturas/cruce/line.jpg", "line");
             CargarTextura("files/Texturas/cruce/road.jpg", "road");
+            //textura del plano
+            CargarTextura("files/Texturas/plano/plano4.jpg", "calle");
+            CargarTextura("files/Texturas/plano/plano4_NRM.jpg", "calle_n");
 
         }
 
@@ -332,7 +362,7 @@ namespace Labo0
             gl.Viewport(viewport); //Especificamos en que parte del glControl queremos dibujar.
             sProgram.Activate(); //Activamos el programa de shaders
             //Seteamos los valores uniformes.
-            sProgram.SetUniformValue("projMat", projMatrix);
+            sProgram.SetUniformValue("projMatrix", projMatrix);
             sProgram.SetUniformValue("viewMatrix", viewMatrix);
 
             //Dibujamos el objeto.
@@ -341,9 +371,9 @@ namespace Labo0
             //Matrix4.Mult( ref traslation, ref scale ,out modelMatrix );
 
             sProgram.SetUniformValue("modelMatrix", modelMatrix);
-    
+
             miPiram.Dibujar(sProgram);
-            
+             
             sProgram.SetUniformValue("A", 0.3f);
             sProgram.SetUniformValue("B", 0.007f);
             sProgram.SetUniformValue("C", 0.00008f);
@@ -352,15 +382,60 @@ namespace Labo0
             {
                 sProgram.SetUniformValue("allLights[" + i + "].position", allLight[i].Position);
                 sProgram.SetUniformValue("allLights[" + i + "].Ia", allLight[i].Iambient);
-                sProgram.SetUniformValue("allLights[" + i + "].Ip", allLight[i].Idiffuse);
-                sProgram.SetUniformValue("allLights[" + i + "].Ip", allLight[i].Ispecular);
+                sProgram.SetUniformValue("allLights[" + i + "].Is", allLight[i].Idiffuse);
+                sProgram.SetUniformValue("allLights[" + i + "].Id", allLight[i].Ispecular);
                 sProgram.SetUniformValue("allLights[" + i + "].coneAngle", allLight[i].ConeAngle);
                 sProgram.SetUniformValue("allLights[" + i + "].coneDirection", allLight[i].ConeDirection);
                 sProgram.SetUniformValue("allLights[" + i + "].enabled", allLight[i].Enabled);
             }
             
-            sProgram.SetUniformValue("cameraPosition", myCamera.getPosition());
+           // sProgram.SetUniformValue("cameraPosition", myCamera.getPosition());
             sProgram.Deactivate(); //Desactivamos el programa de shader.
+
+            //SHADER para el piso
+            sProgramBump.Activate(); //Activamos el programa de shaders
+
+
+            /// BUMPED PHONG
+            //Configuracion de los valores uniformes del shader compartidos por todos
+            material = Material.Silver;
+
+            sProgramBump.SetUniformValue("modelMatrix", modelMatrix);
+            sProgramBump.SetUniformValue("projMatrix", myCamera.getProjectionMatrix());
+            sProgramBump.SetUniformValue("viewMatrix", myCamera.getViewMatrix());
+            // sProgramBump.SetUniformValue("normalMatrix", normalMatrix);
+            sProgramBump.SetUniformValue("A", 0.3f);
+            sProgramBump.SetUniformValue("B", 0.007f);
+            sProgramBump.SetUniformValue("C", 0.00008f);
+            sProgramBump.SetUniformValue("material.Ka", material.Kambient);
+            //sProgramBump.SetUniformValue("material.Kd", material.Kdiffuse);
+            sProgramBump.SetUniformValue("material.Ks", material.Kspecular);
+            sProgramBump.SetUniformValue("material.Shininess", material.Shininess);
+            sProgramBump.SetUniformValue("ColorTex", GetTextureID("calle"));
+            sProgramBump.SetUniformValue("NormalMapTex", GetTextureID("calle_n"));
+
+
+            sProgramBump.SetUniformValue("numLights", allLight.Length);
+            for (int i = 0; i < allLight.Length; i++)
+            {
+                sProgramBump.SetUniformValue("allLights[" + i + "].position", allLight[i].Position);
+                sProgramBump.SetUniformValue("allLights[" + i + "].Ia", allLight[i].Iambient);
+                sProgramBump.SetUniformValue("allLights[" + i + "].Id", allLight[i].Idiffuse);
+                sProgramBump.SetUniformValue("allLights[" + i + "].Is", allLight[i].Ispecular);
+                sProgramBump.SetUniformValue("allLights[" + i + "].coneAngle", allLight[i].ConeAngle);
+                sProgramBump.SetUniformValue("allLights[" + i + "].coneDirection", allLight[i].ConeDirection);
+                sProgramBump.SetUniformValue("allLights[" + i + "].enabled", allLight[i].Enabled);
+               // sProgramBump.SetUniformValue("allLights[" + i + "].direccional", allLight[i].Direccional);
+            }
+            //Dibujamos el mapa
+            Matrix4 scale = Matrix4.CreateScale(20f);
+            Matrix4 traslacion = Matrix4.CreateTranslation(0f, 0.4f, 0.0f);
+            Matrix4 modelPlano = scale ;
+
+
+            sProgramBump.SetUniformValue("modelMatrix", modelPlano);
+            //mapa.Dibujar(sProgramBump);
+            sProgramBump.Deactivate(); //Desactivamos el programa de shader.
 
             glControl3.SwapBuffers(); //Intercambiamos buffers frontal y trasero, para evitar flickering.
         }
