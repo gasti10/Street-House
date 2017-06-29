@@ -11,34 +11,16 @@ namespace CGUNS
 
         //SOME MATERIALS
         public static Material Default = new Material(
-        new Vector3(0.5f, 0.5f, 0.5f),
-        new Vector3(0.7f, 0.7f, 0.7f),
-        new Vector3(0.5f, 0.5f, 0.5f),
+        new Vector3(0.5880f ,0.5880f, 0.5880f),
+        new Vector3(0.5880f, 0.5880f ,0.5880f),
+        new Vector3(0.3240f, 0.3240f ,0.3240f),
         0.07f * gloss);
 
-        public static Material MetalTank = new Material(
-        new Vector3(0.3f, 0.3f, 0.3f),
-        new Vector3(0.45f, 0.45f, 0.45f),
-        new Vector3(1, 1, 1),
-        0.5f * gloss);
-
-        public static Material Terrain = new Material(
-        new Vector3(0.5f, 0.5f, 0.5f),
-        new Vector3(0.5f, 0.5f, 0.5f),
+        public static Material Wood = new Material(
         new Vector3(1f, 1f, 1f),
-        0.25f * gloss);
-
-        public static Material Edificio1 = new Material(
+        new Vector3(0.4f, 0.4f, 0.4f),
         new Vector3(0.6f, 0.6f, 0.6f),
-        new Vector3(0.9f, 0.9f, 0.9f),
-        new Vector3(0.04f, 0.07f, 0.07f),
-        0.078125f * gloss);
-
-        public static Material Edificio2 = new Material(
-        new Vector3(0.3f, 0.3f, 0.3f),
-        new Vector3(0.5f, 0.5f, 0.5f),
-        new Vector3(0.04f, 0.07f, 0.07f),
-        0.078125f * gloss);
+        0.2f * gloss);
 
         public static Material Ruby = new Material(
         new Vector3(0.1745f, 0.01175f, 0.01175f),
@@ -123,9 +105,7 @@ namespace CGUNS
         new Vector3(0.02f, 0.02f, 0.02f),
         new Vector3(0.01f, 0.01f, 0.01f),
         new Vector3(0.4f, 0.4f, 0.4f),
-        0.078125f * gloss);
-
-        
+        0.078125f * gloss);        
 
         public static Material GreenRubber = new Material(
         new Vector3(0.0f, 0.05f, 0.0f),
