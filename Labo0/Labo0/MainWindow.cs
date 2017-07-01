@@ -390,8 +390,8 @@ namespace Labo0
 
             allLight[0] = new Light();
             allLight[0].Position = new Vector4(4.0f, 4.0f, 4.0f, 0.0f);//simula ser el SOL
-            allLight[0].Iambient = new Vector3(0.3f, 0.3f, 0.3f);
-            allLight[0].Idiffuse = new Vector3(1.0f, 1.0f, 0.8f);
+            allLight[0].Iambient = new Vector3(0.1f, 0.1f, 0.1f);
+            allLight[0].Idiffuse = new Vector3(0.7f, 0.7f, 0.7f);
            // allLight[0].Ispecular = new Vector3(0.8f, 0.8f, 0.8f);
             allLight[0].ConeAngle = 180.0f;
             allLight[0].ConeDirection = new Vector3(0.0f, -1.0f, 0.0f);

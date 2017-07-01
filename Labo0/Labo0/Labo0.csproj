@@ -231,12 +231,24 @@
     <Content Include="files\Texturas\farol\pilarluz.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="files\Texturas\plano\calle.png" />
-    <Content Include="files\Texturas\plano\calle_NRM.jpg" />
-    <Content Include="files\Texturas\plano\cruce.jpg" />
-    <Content Include="files\Texturas\plano\cruce_NRM.jpg" />
-    <Content Include="files\Texturas\plano\plano4.jpg" />
-    <Content Include="files\Texturas\plano\plano4_NRM.jpg" />
+    <Content Include="files\Texturas\plano\calle.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="files\Texturas\plano\calle_NRM.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="files\Texturas\plano\cruce.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="files\Texturas\plano\cruce_NRM.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="files\Texturas\plano\plano4.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="files\Texturas\plano\plano4_NRM.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="files\Texturas\semaforo\amarillo.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
