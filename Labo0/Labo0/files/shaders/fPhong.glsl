@@ -1,6 +1,6 @@
 //FRAGMENT SHADER
 #version 330
-#define maxLights 10
+#define maxLights 7
 
 struct Material {
 	vec3 Ka;

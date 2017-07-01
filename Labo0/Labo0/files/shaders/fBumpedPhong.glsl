@@ -1,7 +1,7 @@
 // FRAGMENT SHADER. Simple
 
 #version 330
-#define maxLights 6
+#define maxLights 7
 
 //in vec3 LightDir;
 in vec2 f_TexCoord;
@@ -17,7 +17,7 @@ struct Light {
 	float coneAngle;
 	vec3 coneDirection; //Cone direction in World Space
 	int enabled;
-	int direccional;
+	//int direccional;
 };
 
 struct Material {

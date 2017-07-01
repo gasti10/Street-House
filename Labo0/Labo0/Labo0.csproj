@@ -121,6 +121,7 @@
     <None Include="CGUNS\ModelosOBJ\IronMan.obj">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Include="CGUNS\ModelosOBJ\plano.obj" />
     <None Include="CGUNS\ModelosOBJ\Street mediocompletoconcruce2.obj">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -197,12 +198,21 @@
     <Content Include="files\Texturas\cruce\line.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="files\Texturas\cruce\line_NRM.jpg" />
+    <Content Include="files\Texturas\cruce\plano_NRM.jpg" />
     <Content Include="files\Texturas\cruce\road.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="files\Texturas\cruce\plano.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="files\Texturas\cruce\road_NRM.jpg" />
+    <Content Include="files\Texturas\plano\calle.png" />
+    <Content Include="files\Texturas\plano\calle_NRM.jpg" />
+    <Content Include="files\Texturas\plano\cruce.jpg" />
+    <Content Include="files\Texturas\plano\cruce_NRM.jpg" />
+    <Content Include="files\Texturas\plano\plano4.jpg" />
+    <Content Include="files\Texturas\plano\plano4_NRM.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
