@@ -112,6 +112,9 @@
     <None Include="CGUNS\ModelosOBJ\banco1.obj">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Include="CGUNS\ModelosOBJ\casa.obj">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="CGUNS\ModelosOBJ\casa1_tipo1.obj">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

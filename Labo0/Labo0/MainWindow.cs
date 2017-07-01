@@ -45,8 +45,8 @@ namespace Labo0
         private void glControl3_Load(object sender, EventArgs e)
         {            
             logContextInfo(); //Mostramos info de contexto.
-            //SetupShaders("vPhong.glsl", "fPhong.glsl", out sProgram); //Creamos los shaders y el programa de shader
-            SetupShaders("vBumpedPhong.glsl", "fBumpedPhong.glsl", out sProgram); //Creamos los shaders y el programa de shader
+            SetupShaders("vPhong.glsl", "fPhong.glsl", out sProgram); //Creamos los shaders y el programa de shader
+            //SetupShaders("vBumpedPhong.glsl", "fBumpedPhong.glsl", out sProgram); //Creamos los shaders y el programa de shader
             SetupShaders("vBumpedPhong.glsl", "fBumpedPhong.glsl", out sProgramBump); //Creamos los shaders y el programa de shader
 
             //Creo el contenedor de texturas
@@ -246,18 +246,28 @@ namespace Labo0
             }
 
 
-            allLight = new Light[6];
+            allLight = new Light[1];
 
+            allLight[0] = new Light();
+            allLight[0].Position = new Vector4(4.0f, 8.0f, 4.0f, 0.0f);//simula ser el SOL
+            allLight[0].Iambient = new Vector3(0.9f, 0.9f, 0.9f);
+            allLight[0].Idiffuse = new Vector3(1.0f, 1.0f, 0.8f);
+            allLight[0].Ispecular = new Vector3(0.8f, 0.8f, 0.8f);
+            allLight[0].ConeAngle = 45.0f;
+            allLight[0].ConeDirection = new Vector3(0.0f, -1.0f, 0.0f);
+            allLight[0].Enabled = 0;            
+
+            /*
             //Luz tipo del Sol
             allLight[0] = new Light();
-            allLight[0].Position = new Vector4(4.0f, 40.0f, 4.0f, 1.0f);
-            allLight[0].Iambient = new Vector3(0.9f, 0.9f, 0.9f);
-            allLight[0].Idiffuse = new Vector3(1.0f, 1.0f, 1.0f);
+            allLight[0].Position = new Vector4(0.0f, 2.0f, 0.0f, 1.0f);
+            allLight[0].Iambient = new Vector3(1f, 1f, 1f);
+            allLight[0].Idiffuse = new Vector3(1f, 1f, 1f);
             allLight[0].Ispecular = new Vector3(1.0f, 1.0f, 1.0f);
             allLight[0].ConeAngle = 180.0f;
             allLight[0].ConeDirection = new Vector3(0.0f, -1.0f, 0.0f);
-            allLight[0].Enabled = 0;
-            
+            allLight[0].Enabled = 1;
+            /*
             //Luz tipo de auto 1
             allLight[1] = new Light();
             allLight[1].Position = new Vector4(1.5f, 0.20f, -3.40f, 1.0f);
@@ -277,36 +287,37 @@ namespace Labo0
             allLight[2].ConeAngle = 15.0f;
             allLight[2].ConeDirection = new Vector3(-0.95f, -0.25f, 0.0f);
             allLight[2].Enabled = 1;
-
+            
             //Luz tipo Farol
             allLight[3] = new Light();
             allLight[3].Position = new Vector4(12.0f, 8.00f, -10.00f, 1.0f);
             allLight[3].Iambient = new Vector3(1f, 1f, 1f);
-            allLight[3].Idiffuse = new Vector3(0.443f, 0.365f, 0.055f);
+            allLight[3].Idiffuse = new Vector3(1f, 1f, 1f); //0.243f, 0.165f, 0.005f
             allLight[3].Ispecular = new Vector3(0.8f, 0.8f, 0.8f);
             allLight[3].ConeAngle = 55.0f;
             allLight[3].ConeDirection = new Vector3(0.0f, -1.0f, 0.0f);
             allLight[3].Enabled = 1;
             
+            //Luz tipo Faro2
             allLight[4] = new Light();
             allLight[4].Position = new Vector4(-12.0f, 8.00f, -10.00f, 1.0f);
-            allLight[4].Iambient = new Vector3(0f, 0f, 0f); //239, 127, 26
-            allLight[4].Idiffuse = new Vector3(0.243f, 0.165f, 0.005f);
+            allLight[4].Iambient = new Vector3(1f, 1f, 1f); //239, 127, 26
+            allLight[4].Idiffuse = new Vector3(1f, 1f, 1f);
             allLight[4].Ispecular = new Vector3(0.8f, 0.8f, 0.8f);
             allLight[4].ConeAngle = 55.0f;
             allLight[4].ConeDirection = new Vector3(0.0f, -1.0f, 0.0f);
             allLight[4].Enabled = 1;
             
-
+            //Luz tipo Faro3
             allLight[5] = new Light();
             allLight[5].Position = new Vector4(-13.0f, 8.00f, 13.00f, 1.0f);
             allLight[5].Iambient = new Vector3(1f, 1f, 1f);
-            allLight[5].Idiffuse = new Vector3(0.243f, 0.165f, 0.005f);
+            allLight[5].Idiffuse = new Vector3(1f, 1f, 1f);
             allLight[5].Ispecular = new Vector3(0.8f, 0.8f, 0.8f);
             allLight[5].ConeAngle = 55.0f;
             allLight[5].ConeDirection = new Vector3(0.0f, -1.0f, 0.0f);
             allLight[5].Enabled = 1;
-
+            */
             /*
             allLight[6] = new Light();
             allLight[6].Position = new Vector4(13.0f, 8.00f, 13.00f, 1.0f);
@@ -318,9 +329,9 @@ namespace Labo0
             allLight[6].Enabled = 1;
             */
 
-
             /*
-            allLight = new Light[1];
+
+            //allLight = new Light[1];
             myLight = new Light();
             myLight.Position = new Vector4(4.0f, 4.0f, 4.0f,0.0f);//simula ser el SOL
             myLight.Iambient = new Vector3(0.9f, 0.9f, 0.9f);
@@ -328,8 +339,8 @@ namespace Labo0
             myLight.Ispecular = new Vector3(0.8f, 0.8f, 0.8f);
             myLight.ConeAngle = 10.0f;
             myLight.ConeDirection = new Vector3(0.0f, -1.0f, 0.0f);
-            myLight.Enabled = 1;
-            allLight[0] = myLight;
+            myLight.Enabled = 0;
+            allLight[1] = myLight;
             */
 
             myCamera = new CamaraSimple(new Vector3(2.0f,99.0f,0),myCamera.aspect); //Creo una camara.
@@ -423,7 +434,7 @@ namespace Labo0
             gl.Viewport(viewport); //Especificamos en que parte del glControl queremos dibujar.
             sProgram.Activate(); //Activamos el programa de shaders
             //Seteamos los valores uniformes.
-            sProgram.SetUniformValue("projMatrix", projMatrix);
+            sProgram.SetUniformValue("projMat", projMatrix);
             sProgram.SetUniformValue("viewMatrix", viewMatrix);
 
             //Dibujamos el objeto.
@@ -454,14 +465,14 @@ namespace Labo0
             {
                 sProgram.SetUniformValue("allLights[" + i + "].position", allLight[i].Position);
                 sProgram.SetUniformValue("allLights[" + i + "].Ia", allLight[i].Iambient);
-                sProgram.SetUniformValue("allLights[" + i + "].Id", allLight[i].Idiffuse);
+                sProgram.SetUniformValue("allLights[" + i + "].Ip", allLight[i].Idiffuse);
                 sProgram.SetUniformValue("allLights[" + i + "].Is", allLight[i].Ispecular);
                 sProgram.SetUniformValue("allLights[" + i + "].coneAngle", allLight[i].ConeAngle);
                 sProgram.SetUniformValue("allLights[" + i + "].coneDirection", allLight[i].ConeDirection);
                 sProgram.SetUniformValue("allLights[" + i + "].enabled", allLight[i].Enabled);
             }
             
-            //sProgram.SetUniformValue("cameraPosition", myCamera.getPosition());
+            sProgram.SetUniformValue("cameraPosition", myCamera.getPosition());
             sProgram.Deactivate(); //Desactivamos el programa de shader.
 
             //SHADER para el piso
