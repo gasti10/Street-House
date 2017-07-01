@@ -54,15 +54,14 @@ namespace Labo0
 
             SetupTextures();
            // miPiram = new ObjetoGrafico("CGUNS/ModelosOBJ/casa.obj");
-            miPiram = new ObjetoGrafico("CGUNS/ModelosOBJ/Street mediocompletoconcruce2.obj");
+            miPiram = new ObjetoGrafico("CGUNS/ModelosOBJ/Street2.obj");
             //miPiram.AddTextureToAllMeshes(GetTextureID("prueba1"));
             //miPiram.Build(sProgram);
             //miPiram.setMaterial(Material.Default);
 
             mapa = new ObjetoGrafico("CGUNS/ModelosOBJ/plano.obj");
             mapa.Build(sProgramBump);
-            mapa.AddTextureToAllMeshes(GetTextureID("calle"));
-            mapa.AddTextureToAllMeshes(GetTextureID("calle_n"));
+           
             mapa.setMaterial(Material.Default);
 
             foreach (Mesh m in miPiram.Meshes)
@@ -223,65 +222,196 @@ namespace Labo0
                         m.Build(sProgram);
                         break;
                     
-                    case "cruce_cruce_Line002_Line002_20___Default":
-                        m.AddTexture(GetTextureID("road"));
-                        m.AddTexture(GetTextureID("road_n"));
-                        m.material = Material.Silver;
-                        m.Build(sProgramBump);
-                        break;
+                   
                     case "plano_cruece_Plane001_Plane001_20___Default":
                         m.AddTexture(GetTextureID("calle"));//plano
                         m.AddTexture(GetTextureID("calle_n"));//plano_n
-                        m.material = Material.Chrome;
+                        m.material = Material.Default;
                         m.Build(sProgramBump);
                         break;
-                    case "line_cruce_Object010_Object010_21___Default":
-                        m.AddTexture(GetTextureID("line"));
-                        m.AddTexture(GetTextureID("line_n"));
+                    case "tronco":
+                        m.AddTexture(GetTextureID("tronco"));
                         m.material = Material.Default;
                         m.Build(sProgram);
                         break;
-                    
+                    case "hojas":
+                        m.AddTexture(GetTextureID("hojas"));
+                        m.material = Material.Default;
+                        m.Build(sProgram);
+                        break;
+                    case "contenedordeluces":
+                        m.AddTexture(GetTextureID("contenedordeluces"));
+                        m.material = Material.Default;
+                        m.Build(sProgram);
+                        break;
+                    case "pilar":
+                        m.AddTexture(GetTextureID("pilar"));
+                        m.material = Material.Default;
+                        m.Build(sProgram);
+                        break;
+                    case "sustentor":
+                        m.AddTexture(GetTextureID("sustentor"));
+                        m.material = Material.Default;
+                        m.Build(sProgram);
+                        break;
+                    case "luzverde1":
+                        m.AddTexture(GetTextureID("verde"));
+                        m.material = Material.Default;
+                        m.Build(sProgram);
+                        break;
+                    case "luzverde2":
+                        m.AddTexture(GetTextureID("verde"));
+                        m.material = Material.Default;
+                        m.Build(sProgram);
+                        break;
+                    case "luzamarilla1":
+                        m.AddTexture(GetTextureID("amarillo"));
+                        m.material = Material.Default;
+                        m.Build(sProgram);
+                        break;
+                    case "luzamarilla2":
+                        m.AddTexture(GetTextureID("amarillo"));
+                        m.material = Material.Default;
+                        m.Build(sProgram);
+                        break;
+                    case "luzroja1":
+                        m.AddTexture(GetTextureID("rojo"));
+                        m.material = Material.Default;
+                        m.Build(sProgram);
+                        break;
+                    case "luzroja2":
+                        m.AddTexture(GetTextureID("rojo"));
+                        m.material = Material.Default;
+                        m.Build(sProgram);
+                        break;
+                    case "auto":
+                       
+                        m.AddTexture(GetTextureID("auto"));
+                        m.material = Material.Default;
+                        m.Build(sProgram);
+                        break;
+                    //arenero1
+                    case "arenero1_parte1":
+                        m.AddTexture(GetTextureID("arenero_parte1"));
+                        m.material = Material.Default;
+                        m.Build(sProgram);
+                        break;
+                    case "arenero1_parte2":
+                        m.AddTexture(GetTextureID("arenero_parte2"));
+                        m.material = Material.Default;
+                        m.Build(sProgram);
+                        break;
+                    case "arenero1_parte3":
+                        m.AddTexture(GetTextureID("arenero_parte3"));
+                        m.material = Material.Default;
+                        m.Build(sProgram);
+                        break;
+                    case "arenero1_parte4":
+                        m.AddTexture(GetTextureID("arenero_parte4"));
+                        m.material = Material.Default;
+                        m.Build(sProgram);
+                        break;
+                    case "arenero1_parte5":
+                        m.AddTexture(GetTextureID("arenero_parte5"));
+                        m.material = Material.Default;
+                        m.Build(sProgram);
+                        break;
+
+                    //arenero2
+                    case "arenero2_parte1":
+                        m.AddTexture(GetTextureID("arenero_parte1"));
+                        m.material = Material.Default;
+                        m.Build(sProgram);
+                        break;
+                    case "arenero2_parte2":
+                        m.AddTexture(GetTextureID("arenero_parte2"));
+                        m.material = Material.Default;
+                        m.Build(sProgram);
+                        break;
+                    case "arenero2_parte3":
+                        m.AddTexture(GetTextureID("arenero_parte3"));
+                        m.material = Material.Default;
+                        m.Build(sProgram);
+                        break;
+                    case "arenero2_parte4":
+                        m.AddTexture(GetTextureID("arenero_parte4"));
+                        m.material = Material.Default;
+                        m.Build(sProgram);
+                        break;
+                    case "arenero2_parte5":
+                        m.AddTexture(GetTextureID("arenero_parte5"));
+                        m.material = Material.Default;
+                        m.Build(sProgram);
+                        break;
+
+                    //arenero3
+                    case "arenero3_parte1":
+                        m.AddTexture(GetTextureID("arenero_parte1"));
+                        m.material = Material.Default;
+                        m.Build(sProgram);
+                        break;
+                    case "arenero3_parte2":
+                        m.AddTexture(GetTextureID("arenero_parte2"));
+                        m.material = Material.Default;
+                        m.Build(sProgram);
+                        break;
+                    case "arenero3_parte3":
+                        m.AddTexture(GetTextureID("arenero_parte3"));
+                        m.material = Material.Default;
+                        m.Build(sProgram);
+                        break;
+                    case "arenero3_parte4":
+                        m.AddTexture(GetTextureID("arenero_parte4"));
+                        m.material = Material.Default;
+                        m.Build(sProgram);
+                        break;
+                    case "arenero3_parte5":
+                        m.AddTexture(GetTextureID("arenero_parte5"));
+                        m.material = Material.Default;
+                        m.Build(sProgram);
+                        break;
+
+                    case "luz":
+                        m.AddTexture(GetTextureID("luz"));
+                        m.material = Material.Default;
+                        m.Build(sProgram);
+                        break;
+                    case "pilarluz":
+                        m.AddTexture(GetTextureID("pilarluz"));
+                        m.material = Material.Default;
+                        m.Build(sProgram);
+                        break;
+
                 }
             }
 
 
-            allLight = new Light[1];
+            allLight = new Light[7];
 
             allLight[0] = new Light();
-            allLight[0].Position = new Vector4(4.0f, 8.0f, 4.0f, 0.0f);//simula ser el SOL
-            allLight[0].Iambient = new Vector3(0.9f, 0.9f, 0.9f);
+            allLight[0].Position = new Vector4(4.0f, 4.0f, 4.0f, 0.0f);//simula ser el SOL
+            allLight[0].Iambient = new Vector3(0.3f, 0.3f, 0.3f);
             allLight[0].Idiffuse = new Vector3(1.0f, 1.0f, 0.8f);
-            allLight[0].Ispecular = new Vector3(0.8f, 0.8f, 0.8f);
-            allLight[0].ConeAngle = 45.0f;
-            allLight[0].ConeDirection = new Vector3(0.0f, -1.0f, 0.0f);
-            allLight[0].Enabled = 0;            
-
-            /*
-            //Luz tipo del Sol
-            allLight[0] = new Light();
-            allLight[0].Position = new Vector4(0.0f, 2.0f, 0.0f, 1.0f);
-            allLight[0].Iambient = new Vector3(1f, 1f, 1f);
-            allLight[0].Idiffuse = new Vector3(1f, 1f, 1f);
-            allLight[0].Ispecular = new Vector3(1.0f, 1.0f, 1.0f);
+           // allLight[0].Ispecular = new Vector3(0.8f, 0.8f, 0.8f);
             allLight[0].ConeAngle = 180.0f;
             allLight[0].ConeDirection = new Vector3(0.0f, -1.0f, 0.0f);
-            allLight[0].Enabled = 1;
-            /*
+            allLight[0].Enabled = 1;            
+                       
+            
             //Luz tipo de auto 1
             allLight[1] = new Light();
             allLight[1].Position = new Vector4(1.5f, 0.20f, -3.40f, 1.0f);
-            allLight[1].Iambient = new Vector3(1f, 1f, 1f); //239, 127, 26
+            allLight[1].Iambient = new Vector3(0.0f, 0.0f, 0.0f); //239, 127, 26
             allLight[1].Idiffuse = new Vector3(1.0f, 1.0f, 1.0f); //0.243f, 0.165f, 0.005f
             allLight[1].Ispecular = new Vector3(0.8f, 0.8f, 0.8f);
             allLight[1].ConeAngle = 15.0f;
             allLight[1].ConeDirection = new Vector3(-0.95f, -0.25f, 0.0f);
-            allLight[1].Enabled = 1;
-
+            allLight[1].Enabled =1 ;
+            
             //Luz tipo de auto 2
             allLight[2] = new Light();
             allLight[2].Position = new Vector4(1.5f, 0.20f, -0.40f, 1.0f);
-            allLight[2].Iambient = new Vector3(1f, 1f, 1f);
+            allLight[2].Iambient = new Vector3(0.0f, 0.0f, 0.0f);
             allLight[2].Idiffuse = new Vector3(1f, 1f, 1f);
             allLight[2].Ispecular = new Vector3(0.8f, 0.8f, 0.8f);
             allLight[2].ConeAngle = 15.0f;
@@ -290,45 +420,46 @@ namespace Labo0
             
             //Luz tipo Farol
             allLight[3] = new Light();
-            allLight[3].Position = new Vector4(12.0f, 8.00f, -10.00f, 1.0f);
-            allLight[3].Iambient = new Vector3(1f, 1f, 1f);
+            allLight[3].Position = new Vector4(12.0f, 2.00f, -13.00f, 1.0f);
+            allLight[3].Iambient = new Vector3(0f, 0f, 0f);
             allLight[3].Idiffuse = new Vector3(1f, 1f, 1f); //0.243f, 0.165f, 0.005f
-            allLight[3].Ispecular = new Vector3(0.8f, 0.8f, 0.8f);
-            allLight[3].ConeAngle = 55.0f;
+           // allLight[3].Ispecular = new Vector3(0.8f, 0.8f, 0.8f);
+            allLight[3].ConeAngle = 70.0f;
             allLight[3].ConeDirection = new Vector3(0.0f, -1.0f, 0.0f);
             allLight[3].Enabled = 1;
             
+            
             //Luz tipo Faro2
             allLight[4] = new Light();
-            allLight[4].Position = new Vector4(-12.0f, 8.00f, -10.00f, 1.0f);
-            allLight[4].Iambient = new Vector3(1f, 1f, 1f); //239, 127, 26
+            allLight[4].Position = new Vector4(-12.0f, 1.00f, -10.00f, 1.0f);
+            allLight[4].Iambient = new Vector3(0f, 0f, 0f); //239, 127, 26
             allLight[4].Idiffuse = new Vector3(1f, 1f, 1f);
             allLight[4].Ispecular = new Vector3(0.8f, 0.8f, 0.8f);
-            allLight[4].ConeAngle = 55.0f;
+            allLight[4].ConeAngle = 70.0f;
             allLight[4].ConeDirection = new Vector3(0.0f, -1.0f, 0.0f);
             allLight[4].Enabled = 1;
             
             //Luz tipo Faro3
             allLight[5] = new Light();
-            allLight[5].Position = new Vector4(-13.0f, 8.00f, 13.00f, 1.0f);
-            allLight[5].Iambient = new Vector3(1f, 1f, 1f);
+            allLight[5].Position = new Vector4(-13.0f, 1.00f, 13.00f, 1.0f);
+            allLight[5].Iambient = new Vector3(0f, 0f, 0f);
             allLight[5].Idiffuse = new Vector3(1f, 1f, 1f);
             allLight[5].Ispecular = new Vector3(0.8f, 0.8f, 0.8f);
-            allLight[5].ConeAngle = 55.0f;
+            allLight[5].ConeAngle = 70.0f;
             allLight[5].ConeDirection = new Vector3(0.0f, -1.0f, 0.0f);
             allLight[5].Enabled = 1;
-            */
-            /*
+            
+            
             allLight[6] = new Light();
-            allLight[6].Position = new Vector4(13.0f, 8.00f, 13.00f, 1.0f);
-            allLight[6].Iambient = new Vector3(1f, 1f, 1f);
+            allLight[6].Position = new Vector4(13.0f, 1.00f, 13.00f, 1.0f);
+            allLight[6].Iambient = new Vector3(0f, 0f, 0f);
             allLight[6].Idiffuse = new Vector3(1f, 1f, 1f);
             allLight[6].Ispecular = new Vector3(0.8f, 0.8f, 0.8f);
-            allLight[6].ConeAngle = 45.0f;
+            allLight[6].ConeAngle = 70.0f;
             allLight[6].ConeDirection = new Vector3(0.0f, -1.0f, 0.0f);
             allLight[6].Enabled = 1;
-            */
-
+            
+            
             /*
 
             //allLight = new Light[1];
@@ -377,19 +508,43 @@ namespace Labo0
             //texturas de los bancos
             CargarTextura("files/Texturas/banco/banco.png", "banco");
             //textura de las hojas del arbol
-            CargarTextura("files/Texturas/arbol/hojas.jpg", "hojas");
+         
             //textura de las hojas del arbol
             CargarTextura("files/Texturas/arbol/tronco.jpg", "mesa");
-            //textura del cruce
-            CargarTextura("files/Texturas/cruce/plano.jpg", "plano");
-            CargarTextura("files/Texturas/cruce/plano_NRM.jpg", "plano_n");
-            CargarTextura("files/Texturas/cruce/line.jpg", "line");
-            CargarTextura("files/Texturas/cruce/line_NRM.jpg", "line_n");
-            CargarTextura("files/Texturas/cruce/road.jpg", "road");
-            CargarTextura("files/Texturas/cruce/road_NRM.jpg", "road_n");
+            
             //textura del plano
             CargarTextura("files/Texturas/plano/cruce.jpg", "calle");
             CargarTextura("files/Texturas/plano/cruce_NRM.jpg", "calle_n");
+
+            //textura de los arboles
+            CargarTextura("files/Texturas/arbol/hojas.jpg", "hojas");
+            CargarTextura("files/Texturas/arbol/tronco.jpg", "tronco");
+
+
+           
+            //textura del cruce
+            CargarTextura("files/Texturas/cruce/plano.jpg", "plano");
+            CargarTextura("files/Texturas/cruce/line.png", "line");
+            CargarTextura("files/Texturas/cruce/road.jpg", "road");
+
+            //textura de los semaforos
+            CargarTextura("files/Texturas/semaforo/amarillo.jpg", "amarillo");
+            CargarTextura("files/Texturas/semaforo/verde.jpg", "verde");
+            CargarTextura("files/Texturas/semaforo/rojo.jpg", "rojo");
+            CargarTextura("files/Texturas/semaforo/pilar.jpg", "pilar");
+            CargarTextura("files/Texturas/semaforo/sustentor.jpg", "sustentor");
+            CargarTextura("files/Texturas/semaforo/contenedordeluces.jpg", "contenedordeluces");
+
+            //textura de los areneros
+            CargarTextura("files/Texturas/arenero/arenero_parte1.png", "arenero_parte1");
+            CargarTextura("files/Texturas/arenero/arenero_parte2.png", "arenero_parte2");
+            CargarTextura("files/Texturas/arenero/arenero_parte3.png", "arenero_parte3");
+            CargarTextura("files/Texturas/arenero/arenero_parte4.png", "arenero_parte4");
+            CargarTextura("files/Texturas/arenero/arenero_parte5.png", "arenero_parte5");
+
+            //textura de los faroles
+            CargarTextura("files/Texturas/farol/luz.png", "luz");
+            CargarTextura("files/Texturas/farol/pilarluz.jpg", "pilarluz");
 
         }
 
@@ -466,7 +621,7 @@ namespace Labo0
                 sProgram.SetUniformValue("allLights[" + i + "].position", allLight[i].Position);
                 sProgram.SetUniformValue("allLights[" + i + "].Ia", allLight[i].Iambient);
                 sProgram.SetUniformValue("allLights[" + i + "].Ip", allLight[i].Idiffuse);
-                sProgram.SetUniformValue("allLights[" + i + "].Is", allLight[i].Ispecular);
+               // sProgram.SetUniformValue("allLights[" + i + "].Is", allLight[i].Ispecular);
                 sProgram.SetUniformValue("allLights[" + i + "].coneAngle", allLight[i].ConeAngle);
                 sProgram.SetUniformValue("allLights[" + i + "].coneDirection", allLight[i].ConeDirection);
                 sProgram.SetUniformValue("allLights[" + i + "].enabled", allLight[i].Enabled);
@@ -481,7 +636,7 @@ namespace Labo0
 
             /// BUMPED PHONG
             //Configuracion de los valores uniformes del shader compartidos por todos
-            material = Material.Silver;
+            material = Material.Obsidian;
 
             sProgramBump.SetUniformValue("modelMatrix", modelMatrix);
             sProgramBump.SetUniformValue("projMatrix", myCamera.getProjectionMatrix());
@@ -503,8 +658,8 @@ namespace Labo0
             {
                 sProgramBump.SetUniformValue("allLights[" + i + "].position", allLight[i].Position);
                 sProgramBump.SetUniformValue("allLights[" + i + "].Ia", allLight[i].Iambient);
-                sProgramBump.SetUniformValue("allLights[" + i + "].Id", allLight[i].Idiffuse);
-                sProgramBump.SetUniformValue("allLights[" + i + "].Is", allLight[i].Ispecular);
+                sProgramBump.SetUniformValue("allLights[" + i + "].Ip", allLight[i].Idiffuse);
+               // sProgramBump.SetUniformValue("allLights[" + i + "].Is", allLight[i].Ispecular);
                 sProgramBump.SetUniformValue("allLights[" + i + "].coneAngle", allLight[i].ConeAngle);
                 sProgramBump.SetUniformValue("allLights[" + i + "].coneDirection", allLight[i].ConeDirection);
                 sProgramBump.SetUniformValue("allLights[" + i + "].enabled", allLight[i].Enabled);

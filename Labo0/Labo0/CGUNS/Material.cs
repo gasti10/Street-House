@@ -28,6 +28,11 @@ namespace CGUNS
         new Vector3(0.727811f, 0.626959f, 0.626959f),
         0.6f * gloss);
 
+        public static Material Obsidian = new Material(
+        new Vector3(0.05375f, 0.05f, 0.06625f),
+         new Vector3(0.18275f, 0.17f, 0.22525f),
+         new Vector3(0.332741f, 0.328634f, 0.346435f),
+        0.3f * 128.0f);
 
         public static Material Brass = new Material(
         new Vector3(0.329412f, 0.223529f, 0.027451f),

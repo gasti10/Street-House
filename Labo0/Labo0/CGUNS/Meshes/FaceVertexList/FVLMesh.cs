@@ -402,7 +402,7 @@ namespace CGUNS.Meshes.FaceVertexList
             gl.BindBuffer(bufferType, tan_VBO); //Seleccionamos el buffer a utilizar.
             gl.VertexAttribPointer(attribIndex, cantComponentes, attribType, false, stride, offset);//Configuramos el layout (como estan organizados) los datos en el buffer.
             
-            
+            /*
             //2. Configuramos el VBO de bitangentes.
             attribIndex = sProgram.GetVertexAttribLocation("vBitangente"); //Yo lo saco de mi clase ProgramShader.
             cantComponentes = 3;   // 3 componentes (x, y, z)
@@ -414,7 +414,7 @@ namespace CGUNS.Meshes.FaceVertexList
             gl.EnableVertexAttribArray(attribIndex); //Habilitamos el indice de atributo.
             gl.BindBuffer(bufferType, bitan_VBO); //Seleccionamos el buffer a utilizar.
             gl.VertexAttribPointer(attribIndex, cantComponentes, attribType, false, stride, offset);//Configuramos el layout (como estan organizados) los datos en el buffer.
-            
+            */
             // 2.a.El bloque anterior se repite para cada atributo del vertice (color, normal, textura..)
 
             // 3. Configuramos el EBO a utilizar. (como son indices, no necesitan info de layout)
