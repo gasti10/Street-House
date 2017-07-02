@@ -23,10 +23,10 @@ void main(){
 	 f_TexCoord = vec2(TexCoord.s, 1 - TexCoord.t);
 	 
 	 mat4 mvMatrix = viewMatrix * modelMatrix;
-	 mat3 normalMatrix = transpose(inverse( mat3(mvMatrix) ));
+	 mat3 normalMatrix = transpose(inverse( mat3(modelMatrix) ));
 	 
 	 // posicion de los vertices en coordenas de la camara
-	 fragPos = vec3( mvMatrix * vec4(vPos,1.0) );
+	 fragPos = vec3( modelMatrix * vec4(vPos,1.0) );
 	 //vector N
 	 fragNormal = normalize(normalMatrix * vNormal);
 	 

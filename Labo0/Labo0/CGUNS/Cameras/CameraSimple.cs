@@ -132,5 +132,9 @@ namespace CGUNS.Cameras
         {
             eye.Y += v;
         }
+        public override void setPosition(Vector3 Pos)
+        {
+            eye = Pos;
+        }
     }
 }

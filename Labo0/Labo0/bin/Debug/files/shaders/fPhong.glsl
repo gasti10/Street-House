@@ -1,6 +1,6 @@
 //FRAGMENT SHADER
 #version 330
-#define maxLights 7
+#define maxLights 11
 
 struct Material {
 	vec3 Ka;
@@ -43,10 +43,13 @@ float phongSpecular(vec3 L, vec3 N, float roughness)
 	float spec = 0;
 	float sDotN = max( dot(L, N), 0.0 );
 	vec3 reflectionVector = reflect( -L, N );
-	vec3 cameraPositionView = normalize(vec3(viewMatrix * vec4(cameraPosition,1.0)));//coord de CAMARA
-	vec3 viewDirection = normalize(cameraPositionView - fragPos) ;//en bumpMapping se hace distinto
-	if( sDotN > 0.0 )
-		spec = pow( max( dot(reflectionVector, viewDirection), 0.0 ), roughness );
+	vec3 surfaceToCamera = normalize(cameraPosition - fragPos);
+	float cosAngle = max(0.0, dot(surfaceToCamera, reflectionVector));
+	spec = pow(cosAngle, material.Shininess);
+	//vec3 cameraPositionView = normalize(vec3(viewMatrix * vec4(cameraPosition,1.0)));//coord de CAMARA
+	//vec3 viewDirection = normalize(cameraPositionView - fragPos) ;//en bumpMapping se hace distinto
+	//if( sDotN > 0.0 )
+		//spec = pow( max( dot(reflectionVector, viewDirection), 0.0 ), roughness );
 	return spec;
 }
 
@@ -60,11 +63,9 @@ vec3 phongModel( vec3 N, Light light,vec3 texColor )
 		attenuation = 1.0; //no attenuation for directional lights.
 	} else { //Positional light (Spot or Point)		
 		//paso la LUZ a coord de CAMARA
-		vec3 posLuz = (viewMatrix * light.position).xyz;
 		L = normalize(light.position.xyz - fragPos);
 		
-		//Cone restrictions lo paso a coord. de CAMARA
-		vec3 coneDirection = vec3(normalize(viewMatrix * vec4(light.coneDirection,1.0)));
+		vec3 coneDirection = normalize(light.coneDirection);//vec3(normalize(viewMatrix * vec4(light.coneDirection,1.0)));
 		vec3 rayDirection = -L;
 		float lightToSurfaceAngle = degrees(acos(dot(rayDirection, coneDirection)));
 		if (lightToSurfaceAngle <= light.coneAngle) { //Inside cone
@@ -89,8 +90,7 @@ vec3 phongModel( vec3 N, Light light,vec3 texColor )
 }
 
 void main(){
-	vec4 fColor_tex = texture2D(ColorTex, f_TexCoord);
-	
+	vec4 fColor_tex = texture2D(ColorTex, f_TexCoord);	
 	//Acumular iluminacion de cada fuente de luz
 	vec3 linearColor=vec3(0);
 	for(int i=0; i<numLights; i++)

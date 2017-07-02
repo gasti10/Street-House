@@ -29,40 +29,61 @@ namespace Labo0
         #region Declaracion de variables
 
         private ShaderProgram sProgram; //Nuestro programa de shaders.
-        private ShaderProgram sProgramBump; 
+        private ShaderProgram sProgramBump;
 
         //Aca se almacenan las texturas
         private Dictionary<string, int> programTextures;
 
+        private Camera[] myCameras;
+        private int indexCamaras;
         private Camera myCamera;  //Camara
         private Rectangle viewport; //Viewport a utilizar (Porcion del glControl en donde voy a dibujar).
-        private ObjetoGrafico miPiram,mapa;
-        private Light myLight;
+        private ObjetoGrafico miPiram, auto, auto2;
         private Light[] allLight;
         private Material material;
+
+        //Variables utilizadas para la animacion
+        private float LuzAmbiente = 0.3f;
+        private bool flagAmbienteSuma = true;
+        private Matrix4 modelAuto1 = Matrix4.Identity;
+        private Matrix4 modelAuto2 = Matrix4.Identity;
+        private Matrix4 modelAuto3 = Matrix4.Identity;
+        private bool animacionAuto1 = true;
+        private bool animacionAuto2 = true;
+        private int contadorAuto1 = 0; // Contador para tiempo de frenado
+        private int contadorAuto2 = 0;
+        private int posXAuto1 = 15;
+
+
+        private const float DEG2RAD = (float)(Math.PI / 180.0);
         #endregion
 
         private void glControl3_Load(object sender, EventArgs e)
-        {            
+        {
             logContextInfo(); //Mostramos info de contexto.
             SetupShaders("vPhong.glsl", "fPhong.glsl", out sProgram); //Creamos los shaders y el programa de shader
-            //SetupShaders("vBumpedPhong.glsl", "fBumpedPhong.glsl", out sProgram); //Creamos los shaders y el programa de shader
             SetupShaders("vBumpedPhong.glsl", "fBumpedPhong.glsl", out sProgramBump); //Creamos los shaders y el programa de shader
 
             //Creo el contenedor de texturas
             programTextures = new Dictionary<string, int>();
 
             SetupTextures();
-           // miPiram = new ObjetoGrafico("CGUNS/ModelosOBJ/casa.obj");
-            miPiram = new ObjetoGrafico("CGUNS/ModelosOBJ/Street2.obj");
-            //miPiram.AddTextureToAllMeshes(GetTextureID("prueba1"));
-            //miPiram.Build(sProgram);
-            //miPiram.setMaterial(Material.Default);
 
-            mapa = new ObjetoGrafico("CGUNS/ModelosOBJ/plano.obj");
-            mapa.Build(sProgramBump);
-           
-            mapa.setMaterial(Material.Default);
+            #region Creacion de Objetos
+            miPiram = new ObjetoGrafico("CGUNS/ModelosOBJ/Street3.obj");
+            auto = new ObjetoGrafico("CGUNS/ModelosOBJ/Ford2.obj");
+            auto2 = new ObjetoGrafico("CGUNS/ModelosOBJ/Ford2.obj");
+            
+            auto.Build(sProgram);
+            auto.setMaterial(Material.Bronze);
+            auto.AddTextureToAllMeshes(GetTextureID("auto"));
+
+            auto2.Build(sProgram);
+            auto2.setMaterial(Material.Default);
+            auto2.AddTextureToAllMeshes(GetTextureID("auto"));
+#endregion
+
+            #region Build de mapa
 
             foreach (Mesh m in miPiram.Meshes)
             {
@@ -123,59 +144,59 @@ namespace Labo0
                         m.material = Material.Default;
                         m.Build(sProgram);
                         break;
-                     case "casa1_tipo1":
-                         m.AddTexture(GetTextureID("casa_tipo1"));
-                         m.material = Material.Default;
-                         m.Build(sProgram);
-                         break;
-                     case "casa2_tipo1":
-                         m.AddTexture(GetTextureID("casa_tipo1"));
-                         m.material = Material.Default;
-                         m.Build(sProgram);
-                         break;
-                     case "casa3_tipo1":
-                         m.AddTexture(GetTextureID("casa_tipo1"));
-                         m.material = Material.Default;
-                         m.Build(sProgram);
-                         break;
-                     case "casa4_tipo1":
-                         m.AddTexture(GetTextureID("casa_tipo1"));
-                         m.material = Material.Default;
-                         m.Build(sProgram);
-                         break;
-                     case "casa5_tipo1":
-                         m.AddTexture(GetTextureID("casa_tipo1"));
-                         m.material = Material.Default;
-                         m.Build(sProgram);
-                         break;
-                     case "casa6_tipo1":
-                         m.AddTexture(GetTextureID("casa_tipo1"));
-                         m.material = Material.Default;
-                         m.Build(sProgram);
-                         break;
-                     case "casa7_tipo2":
-                         m.AddTexture(GetTextureID("casa_tipo2"));
-                         m.material = Material.Default;
-                         m.Build(sProgram);
-                         break;
-                     case "casa8_tipo2":
-                         m.AddTexture(GetTextureID("casa_tipo2"));
-                         m.material = Material.Default;
-                         m.Build(sProgram);
-                         break;
-                     
+                    case "casa1_tipo1":
+                        m.AddTexture(GetTextureID("casa_tipo1"));
+                        m.material = Material.Default;
+                        m.Build(sProgram);
+                        break;
+                    case "casa2_tipo1":
+                        m.AddTexture(GetTextureID("casa_tipo1"));
+                        m.material = Material.Default;
+                        m.Build(sProgram);
+                        break;
+                    case "casa3_tipo1":
+                        m.AddTexture(GetTextureID("casa_tipo1"));
+                        m.material = Material.Default;
+                        m.Build(sProgram);
+                        break;
+                    case "casa4_tipo1":
+                        m.AddTexture(GetTextureID("casa_tipo1"));
+                        m.material = Material.Default;
+                        m.Build(sProgram);
+                        break;
+                    case "casa5_tipo1":
+                        m.AddTexture(GetTextureID("casa_tipo1"));
+                        m.material = Material.Default;
+                        m.Build(sProgram);
+                        break;
+                    case "casa6_tipo1":
+                        m.AddTexture(GetTextureID("casa_tipo1"));
+                        m.material = Material.Default;
+                        m.Build(sProgram);
+                        break;
+                    case "casa7_tipo2":
+                        m.AddTexture(GetTextureID("casa_tipo2"));
+                        m.material = Material.Default;
+                        m.Build(sProgram);
+                        break;
+                    case "casa8_tipo2":
+                        m.AddTexture(GetTextureID("casa_tipo2"));
+                        m.material = Material.Default;
+                        m.Build(sProgram);
+                        break;
+
                     case "casa9_tipo2":
                         m.AddTexture(GetTextureID("casa_tipo2"));
                         m.material = Material.Default;
                         m.Build(sProgram);
                         break;
-                     
+
                     case "casa10_tipo3":
                         m.AddTexture(GetTextureID("casa_tipo3"));
                         m.material = Material.Default;
                         m.Build(sProgram);
                         break;
-                   case "casa11_tipo4":
+                    case "casa11_tipo4":
                         m.AddTexture(GetTextureID("casa_tipo3"));
                         m.material = Material.Default;
                         m.Build(sProgram);
@@ -221,8 +242,8 @@ namespace Labo0
                         m.material = Material.Default;
                         m.Build(sProgram);
                         break;
-                    
-                   
+
+
                     case "plano_cruece_Plane001_Plane001_20___Default":
                         m.AddTexture(GetTextureID("calle"));//plano
                         m.AddTexture(GetTextureID("calle_n"));//plano_n
@@ -285,9 +306,9 @@ namespace Labo0
                         m.Build(sProgram);
                         break;
                     case "auto":
-                       
+
                         m.AddTexture(GetTextureID("auto"));
-                        m.material = Material.Default;
+                        m.material = Material.YellowPlastic;
                         m.Build(sProgram);
                         break;
                     //arenero1
@@ -385,107 +406,157 @@ namespace Labo0
                 }
             }
 
+            #endregion
 
-            allLight = new Light[7];
+            #region Luces
+
+            allLight = new Light[11];
 
             allLight[0] = new Light();
             allLight[0].Position = new Vector4(4.0f, 4.0f, 4.0f, 0.0f);//simula ser el SOL
             allLight[0].Iambient = new Vector3(0.1f, 0.1f, 0.1f);
             allLight[0].Idiffuse = new Vector3(0.7f, 0.7f, 0.7f);
-           // allLight[0].Ispecular = new Vector3(0.8f, 0.8f, 0.8f);
             allLight[0].ConeAngle = 180.0f;
             allLight[0].ConeDirection = new Vector3(0.0f, -1.0f, 0.0f);
-            allLight[0].Enabled = 1;            
-                       
-            
-            //Luz tipo de auto 1
+            allLight[0].Enabled = 1;
+
+            //farol6
             allLight[1] = new Light();
-            allLight[1].Position = new Vector4(1.5f, 0.20f, -3.40f, 1.0f);
+            allLight[1].Position = new Vector4(-16.69486f, 24.33494f, -28.28732f, 1.0f);
             allLight[1].Iambient = new Vector3(0.0f, 0.0f, 0.0f); //239, 127, 26
-            allLight[1].Idiffuse = new Vector3(1.0f, 1.0f, 1.0f); //0.243f, 0.165f, 0.005f
-            allLight[1].Ispecular = new Vector3(0.8f, 0.8f, 0.8f);
-            allLight[1].ConeAngle = 15.0f;
-            allLight[1].ConeDirection = new Vector3(-0.95f, -0.25f, 0.0f);
-            allLight[1].Enabled =1 ;
-            
-            //Luz tipo de auto 2
+            allLight[1].Idiffuse = new Vector3(1.0f, 1.0f, 1.0f); //0.243f, 0.165f, 0.005f            
+            allLight[1].ConeAngle = 30.0f;
+            allLight[1].ConeDirection = new Vector3(0.0f, -1.0f, 0.0f);
+            allLight[1].Enabled = 0;
+
+            //farol2
             allLight[2] = new Light();
-            allLight[2].Position = new Vector4(1.5f, 0.20f, -0.40f, 1.0f);
+            allLight[2].Position = new Vector4(19.69486f, 24.33494f, -37.28732f, 1.0f);
             allLight[2].Iambient = new Vector3(0.0f, 0.0f, 0.0f);
             allLight[2].Idiffuse = new Vector3(1f, 1f, 1f);
-            allLight[2].Ispecular = new Vector3(0.8f, 0.8f, 0.8f);
-            allLight[2].ConeAngle = 15.0f;
-            allLight[2].ConeDirection = new Vector3(-0.95f, -0.25f, 0.0f);
-            allLight[2].Enabled = 1;
-            
-            //Luz tipo Farol
+            allLight[2].ConeAngle = 30.0f;
+            allLight[2].ConeDirection = new Vector3(0.0f, -1.0f, 0.0f);
+            allLight[2].Enabled = 0;
+
+            //farol1
             allLight[3] = new Light();
-            allLight[3].Position = new Vector4(12.0f, 2.00f, -13.00f, 1.0f);
+            allLight[3].Position = new Vector4(19.69486f, 24.33494f, -23.28732f, 1.0f);
             allLight[3].Iambient = new Vector3(0f, 0f, 0f);
-            allLight[3].Idiffuse = new Vector3(1f, 1f, 1f); //0.243f, 0.165f, 0.005f
-           // allLight[3].Ispecular = new Vector3(0.8f, 0.8f, 0.8f);
-            allLight[3].ConeAngle = 70.0f;
+            allLight[3].Idiffuse = new Vector3(1f, 1f, 1f); //0.243f, 0.165f, 0.005f            
+            allLight[3].ConeAngle = 30.0f;
             allLight[3].ConeDirection = new Vector3(0.0f, -1.0f, 0.0f);
-            allLight[3].Enabled = 1;
-            
-            
-            //Luz tipo Faro2
+            allLight[3].Enabled = 0;
+
+            //farol3
             allLight[4] = new Light();
-            allLight[4].Position = new Vector4(-12.0f, 1.00f, -10.00f, 1.0f);
+            allLight[4].Position = new Vector4(25.69486f, 24.33494f, -41.28732f, 1.0f);
             allLight[4].Iambient = new Vector3(0f, 0f, 0f); //239, 127, 26
             allLight[4].Idiffuse = new Vector3(1f, 1f, 1f);
-            allLight[4].Ispecular = new Vector3(0.8f, 0.8f, 0.8f);
-            allLight[4].ConeAngle = 70.0f;
+            allLight[4].ConeAngle = 30.0f;
             allLight[4].ConeDirection = new Vector3(0.0f, -1.0f, 0.0f);
-            allLight[4].Enabled = 1;
-            
-            //Luz tipo Faro3
+            allLight[4].Enabled = 0;
+
+            //farol4
             allLight[5] = new Light();
-            allLight[5].Position = new Vector4(-13.0f, 1.00f, 13.00f, 1.0f);
+            allLight[5].Position = new Vector4(30.69486f, 24.33494f, -23.28732f, 1.0f);
             allLight[5].Iambient = new Vector3(0f, 0f, 0f);
             allLight[5].Idiffuse = new Vector3(1f, 1f, 1f);
-            allLight[5].Ispecular = new Vector3(0.8f, 0.8f, 0.8f);
-            allLight[5].ConeAngle = 70.0f;
+            allLight[5].ConeAngle = 30.0f;
             allLight[5].ConeDirection = new Vector3(0.0f, -1.0f, 0.0f);
-            allLight[5].Enabled = 1;
-            
-            
+            allLight[5].Enabled = 0;
+
+            //farol5
             allLight[6] = new Light();
-            allLight[6].Position = new Vector4(13.0f, 1.00f, 13.00f, 1.0f);
+            allLight[6].Position = new Vector4(42.69486f, 24.33494f, -23.28732f, 1.0f);
             allLight[6].Iambient = new Vector3(0f, 0f, 0f);
             allLight[6].Idiffuse = new Vector3(1f, 1f, 1f);
-            allLight[6].Ispecular = new Vector3(0.8f, 0.8f, 0.8f);
-            allLight[6].ConeAngle = 70.0f;
+            allLight[6].ConeAngle = 30.0f;
             allLight[6].ConeDirection = new Vector3(0.0f, -1.0f, 0.0f);
-            allLight[6].Enabled = 1;
-            
-            
-            /*
+            allLight[6].Enabled = 0;
 
-            //allLight = new Light[1];
-            myLight = new Light();
-            myLight.Position = new Vector4(4.0f, 4.0f, 4.0f,0.0f);//simula ser el SOL
-            myLight.Iambient = new Vector3(0.9f, 0.9f, 0.9f);
-            myLight.Idiffuse = new Vector3(1.0f, 1.0f, 0.8f);
-            myLight.Ispecular = new Vector3(0.8f, 0.8f, 0.8f);
-            myLight.ConeAngle = 10.0f;
-            myLight.ConeDirection = new Vector3(0.0f, -1.0f, 0.0f);
-            myLight.Enabled = 0;
-            allLight[1] = myLight;
+            //farol6
+            allLight[7] = new Light();
+            allLight[7].Position = new Vector4(42.69486f, 24.33494f, -30.28732f, 1.0f);
+            allLight[7].Iambient = new Vector3(0f, 0f, 0f);
+            allLight[7].Idiffuse = new Vector3(1f, 1f, 1f);
+            allLight[7].ConeAngle = 30.0f;
+            allLight[7].ConeDirection = new Vector3(0.0f, -1.0f, 0.0f);
+            allLight[7].Enabled = 0;
+
+            //farol7
+            allLight[8] = new Light();
+            allLight[8].Position = new Vector4(-16.69486f, 24.33494f, -37.28732f, 1.0f);
+            allLight[8].Iambient = new Vector3(0.0f, 0.0f, 0.0f); //239, 127, 26
+            allLight[8].Idiffuse = new Vector3(1.0f, 1.0f, 1.0f); //0.243f, 0.165f, 0.005f            
+            allLight[8].ConeAngle = 30.0f;
+            allLight[8].ConeDirection = new Vector3(0.0f, -1.0f, 0.0f);
+            allLight[8].Enabled = 0;
+
+            //Luz tipo de auto 1
+            allLight[9] = new Light();
+            allLight[9].Position = new Vector4(42.0f, 0.20f, 1.00f, 1.0f);
+            allLight[9].Iambient = new Vector3(0.0f, 0.0f, 0.0f); //239, 127, 26
+            allLight[9].Idiffuse = new Vector3(2.0f, 2.0f, 2.0f); //0.243f, 0.165f, 0.005f            
+            allLight[9].ConeAngle = 15.0f;
+            allLight[9].ConeDirection = new Vector3(-0.95f, -0.25f, 0.0f);
+            allLight[9].Enabled = 1;
+
+            //Luz tipo de auto 2
+            allLight[10] = new Light();
+            allLight[10].Position = new Vector4(42.0f, 0.20f, 3.80f, 1.0f); //-8.0f, 0.20f, 3.80f, 1.0f Posicion (0,0,0) del auto
+            allLight[10].Iambient = new Vector3(0.0f, 0.0f, 0.0f);
+            allLight[10].Idiffuse = new Vector3(2.0f, 2.0f, 2.0f);
+            allLight[10].ConeAngle = 15.0f;
+            allLight[10].ConeDirection = new Vector3(-0.95f, -0.25f, 0.0f);
+            allLight[10].Enabled = 1;
+
+            #endregion       
+
+            #region Inicializo Posicion de los Autos
+
+            //Inicializo la Posicion del auto1
+            Matrix4 scale = Matrix4.CreateScale(2f);
+            modelAuto1 = Matrix4.CreateTranslation(25f, -1.0f, 0f);
+            modelAuto1 = modelAuto1 * scale;
+
+            //Inicializo la Posicion del auto2              
+            modelAuto2 = Matrix4.CreateRotationY(DEG2RAD * 90f);
+            modelAuto2 = modelAuto2 * Matrix4.CreateTranslation(-4.5f, -1.0f, -20f);
+            modelAuto2 = modelAuto2 * scale;
+
+            /*
+            //Inicializo la Posicion del auto3             
+            modelAuto3 = Matrix4.CreateRotationY(DEG2RAD * 90f);
+            modelAuto3 = modelAuto3 * Matrix4.CreateTranslation(0.5f, -1.0f, -20f);
+            modelAuto3 = modelAuto3 * scale;
             */
 
-            myCamera = new CamaraSimple(new Vector3(2.0f,99.0f,0),myCamera.aspect); //Creo una camara.
-      
+            #endregion
+
+            #region Camaras
+            myCamera = new CamaraSimple(new Vector3(2.0f, 99.0f, 0), myCamera.aspect); //Creo una camara.
+
+            indexCamaras = 0;
+
+            myCameras = new CamaraSimple[5];
+            myCameras[0] = new CamaraSimple(new Vector3(2.0f, 99.0f, 0), myCamera.aspect);
+            myCameras[1] = new CamaraSimple(new Vector3(20.0f, 20.0f, 20f), myCamera.aspect);
+            myCameras[2] = new CamaraSimple(new Vector3(50.0f, 20.0f, -50), myCamera.aspect); // camara desde la plaza
+            myCameras[3] = new CamaraSimple(new Vector3(-10f, 8f, 10f), myCamera.aspect);
+            myCameras[4] = new CamaraSimple(new Vector3(45f, 3.0f, 2f), new Vector3(-50f, 1.0f, 0f), myCamera.aspect); // camara primera persona auto1
+            #endregion
+
             gl.Enable(EnableCap.DepthTest);
 
             gl.ClearColor(Color.FloralWhite); //Configuro el Color de borrado.
 
              gl.PolygonMode(MaterialFace.Front, PolygonMode.Fill);
    
-            GL.Hint(HintTarget.PerspectiveCorrectionHint, HintMode.Nicest);
-
+            GL.Hint(HintTarget.PerspectiveCorrectionHint, HintMode.Nicest);           
             
         }
+
+       
 
         private void SetupTextures()
         {
@@ -519,9 +590,7 @@ namespace Labo0
             //textura de los arboles
             CargarTextura("files/Texturas/arbol/hojas.jpg", "hojas");
             CargarTextura("files/Texturas/arbol/tronco.jpg", "tronco");
-
-
-           
+                       
             //textura del cruce
             CargarTextura("files/Texturas/cruce/plano.jpg", "plano");
             CargarTextura("files/Texturas/cruce/line.png", "line");
@@ -544,8 +613,7 @@ namespace Labo0
 
             //textura de los faroles
             CargarTextura("files/Texturas/farol/luz.png", "luz");
-            CargarTextura("files/Texturas/farol/pilarluz.jpg", "pilarluz");
-
+            CargarTextura("files/Texturas/farol/pilarluz.jpg", "pilarluz");            
         }
 
         private int CargarTextura(String imagenTex,String nombre)
@@ -587,31 +655,14 @@ namespace Labo0
             gl.Clear(ClearBufferMask.ColorBufferBit | ClearBufferMask.DepthBufferBit); //Borramos el contenido del glControl.
 
             gl.Viewport(viewport); //Especificamos en que parte del glControl queremos dibujar.
+
+            #region Dibujado de la Ciudad y los Autos con Phong
             sProgram.Activate(); //Activamos el programa de shaders
             //Seteamos los valores uniformes.
             sProgram.SetUniformValue("projMat", projMatrix);
             sProgram.SetUniformValue("viewMatrix", viewMatrix);
-
-            //Dibujamos el objeto.
-            //Matrix4 scale = Matrix4.CreateRotationY(0.0f);
-            //Matrix4 traslation = Matrix4.CreateTranslation(0, 0.0f, 75.0f);
-            //Matrix4.Mult( ref traslation, ref scale ,out modelMatrix );
-
+                      
             sProgram.SetUniformValue("modelMatrix", modelMatrix);
-
-            foreach (Mesh m in miPiram.Meshes)
-            {
-                Char[] separator = { '.' };
-                string prefijo = m.Name.Split(separator)[0];
-               
-                if ((prefijo != "plano_cruece_Plane001_Plane001_20___Default") && (prefijo != "cruce_cruce_Line002_Line002_20___Default") && (prefijo != "line_cruce_Object010_Object010_21___Default"))
-                    m.Dibujar(sProgram);
-             
-            }
-          
-
-
-
             sProgram.SetUniformValue("A", 0.3f);
             sProgram.SetUniformValue("B", 0.007f);
             sProgram.SetUniformValue("C", 0.00008f);
@@ -620,58 +671,67 @@ namespace Labo0
             {
                 sProgram.SetUniformValue("allLights[" + i + "].position", allLight[i].Position);
                 sProgram.SetUniformValue("allLights[" + i + "].Ia", allLight[i].Iambient);
-                sProgram.SetUniformValue("allLights[" + i + "].Ip", allLight[i].Idiffuse);
-               // sProgram.SetUniformValue("allLights[" + i + "].Is", allLight[i].Ispecular);
+                sProgram.SetUniformValue("allLights[" + i + "].Ip", allLight[i].Idiffuse);             
                 sProgram.SetUniformValue("allLights[" + i + "].coneAngle", allLight[i].ConeAngle);
                 sProgram.SetUniformValue("allLights[" + i + "].coneDirection", allLight[i].ConeDirection);
                 sProgram.SetUniformValue("allLights[" + i + "].enabled", allLight[i].Enabled);
             }
+
+            foreach (Mesh m in miPiram.Meshes)
+            {
+                Char[] separator = { '.' };
+                string prefijo = m.Name.Split(separator)[0];
+
+                if ((prefijo != "plano_cruece_Plane001_Plane001_20___Default") && (prefijo != "cruce_cruce_Line002_Line002_20___Default") && (prefijo != "line_cruce_Object010_Object010_21___Default"))
+                    m.Dibujar(sProgram);
+
+            }
+
+            //Dibujamos el auto 1
+            sProgram.SetUniformValue("modelMatrix", modelAuto1);            
+            auto.Dibujar(sProgram);
+
+            //Dibujamos el auto 2
+            sProgram.SetUniformValue("modelMatrix", modelAuto2);            
+            auto2.Dibujar(sProgram);
             
             sProgram.SetUniformValue("cameraPosition", myCamera.getPosition());
             sProgram.Deactivate(); //Desactivamos el programa de shader.
+            #endregion
+
+            #region Dibujado del piso con BumpMapping
 
             //SHADER para el piso
             sProgramBump.Activate(); //Activamos el programa de shaders
-
-
-            /// BUMPED PHONG
-            //Configuracion de los valores uniformes del shader compartidos por todos
+                        
+            //Configuracion de los valores uniformes
             material = Material.Obsidian;
 
             sProgramBump.SetUniformValue("modelMatrix", modelMatrix);
             sProgramBump.SetUniformValue("projMatrix", myCamera.getProjectionMatrix());
-            sProgramBump.SetUniformValue("viewMatrix", myCamera.getViewMatrix());
-            // sProgramBump.SetUniformValue("normalMatrix", normalMatrix);
+            sProgramBump.SetUniformValue("viewMatrix", myCamera.getViewMatrix());            
             sProgramBump.SetUniformValue("A", 0.3f);
             sProgramBump.SetUniformValue("B", 0.007f);
             sProgramBump.SetUniformValue("C", 0.00008f);
-            sProgramBump.SetUniformValue("material.Ka", material.Kambient);
-            //sProgramBump.SetUniformValue("material.Kd", material.Kdiffuse);
+            sProgramBump.SetUniformValue("material.Ka", material.Kambient);            
             sProgramBump.SetUniformValue("material.Ks", material.Kspecular);
             sProgramBump.SetUniformValue("material.Shininess", material.Shininess);
             sProgramBump.SetUniformValue("ColorTex", GetTextureID("calle"));
             sProgramBump.SetUniformValue("NormalMapTex", GetTextureID("calle_n"));
-
-
+            
             sProgramBump.SetUniformValue("numLights", allLight.Length);
             for (int i = 0; i < allLight.Length; i++)
             {
                 sProgramBump.SetUniformValue("allLights[" + i + "].position", allLight[i].Position);
                 sProgramBump.SetUniformValue("allLights[" + i + "].Ia", allLight[i].Iambient);
-                sProgramBump.SetUniformValue("allLights[" + i + "].Ip", allLight[i].Idiffuse);
-               // sProgramBump.SetUniformValue("allLights[" + i + "].Is", allLight[i].Ispecular);
+                sProgramBump.SetUniformValue("allLights[" + i + "].Ip", allLight[i].Idiffuse);               
                 sProgramBump.SetUniformValue("allLights[" + i + "].coneAngle", allLight[i].ConeAngle);
                 sProgramBump.SetUniformValue("allLights[" + i + "].coneDirection", allLight[i].ConeDirection);
                 sProgramBump.SetUniformValue("allLights[" + i + "].enabled", allLight[i].Enabled);
              }
-            //Dibujamos el mapa
-            Matrix4 scale = Matrix4.CreateScale(15.5f);
-            Matrix4 traslacion = Matrix4.CreateTranslation(-3f, 0.1f, 0.0f);
-            Matrix4 modelPlano = scale * traslacion ;
-
-
-            sProgramBump.SetUniformValue("modelMatrix", modelMatrix);
-             //mapa.Dibujar(sProgramBump);
+            
+            //Dibujamos el piso            
+            sProgramBump.SetUniformValue("modelMatrix", modelMatrix);             
 
             foreach (Mesh m in miPiram.Meshes)
             {
@@ -679,14 +739,11 @@ namespace Labo0
                 string prefijo = m.Name.Split(separator)[0];
 
                 if (prefijo == "plano_cruece_Plane001_Plane001_20___Default")
-                   m.Dibujar(sProgramBump);
-              // if (prefijo == "cruce_cruce_Line002_Line002_20___Default")
-               //    m.Dibujar(sProgramBump);
-              // if (prefijo == "line_cruce_Object010_Object010_21___Default")
-                //    m.Dibujar(sProgramBump);
+                   m.Dibujar(sProgramBump);              
             }
 
             sProgramBump.Deactivate(); //Desactivamos el programa de shader.
+            #endregion
 
             glControl3.SwapBuffers(); //Intercambiamos buffers frontal y trasero, para evitar flickering.
         }
@@ -703,8 +760,10 @@ namespace Labo0
             {
                 aspecto = (float)w / (float)h;
             }
+            //SETEO DE ASPECTO A LAS CAMARAS
             if (myCamera == null ) myCamera = new QuatCamera(aspecto);
             myCamera.aspect = aspecto;
+           
             //Configuro el tamaño del viewport
             viewport.X = 0;
             viewport.Y = 0;
@@ -755,38 +814,166 @@ namespace Labo0
             System.Diagnostics.Debug.WriteLine(String.Format(format, args), "[CGUNS]");
         }
 
+        #region Animación
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            AnimacionLuces();
+           
+            glControl3.Invalidate();
+        }
+
+        private void AnimacionLuces()
+        {
+            Console.Write(LuzAmbiente);
+            allLight[0].Iambient = new Vector3(LuzAmbiente, LuzAmbiente, LuzAmbiente);
+            
+            if (flagAmbienteSuma)
+            {
+                LuzAmbiente = LuzAmbiente + 0.05f;
+                if (LuzAmbiente > 2f)
+                    flagAmbienteSuma = false;
+            }
+            else
+            {
+                LuzAmbiente = LuzAmbiente - 0.05f;
+                if (LuzAmbiente < 0.37f)
+                    flagAmbienteSuma = true;
+            }
+
+            //Prendo las luces de Noche
+            if (LuzAmbiente < 1.2f)
+            {
+                Console.Write("prendo");
+                for (int i = 1; i < allLight.Length; i++)
+                    allLight[i].Enabled = 1;
+            }else
+                {
+                Console.Write("apago");
+                for (int i = 1; i < allLight.Length; i++)
+                    allLight[i].Enabled = 0;
+                }
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            contadorAuto1++;
+            //Animacion Auto1
+            if ((animacionAuto1) && (contadorAuto1 < 750))
+            {
+                modelAuto1 = modelAuto1 * Matrix4.CreateTranslation(-0.15f, 0f, 0f);
+                allLight[9].Position -= new Vector4(0.15f, 0f, 0f, 0f);
+                allLight[10].Position -= new Vector4(0.15f, 0f, 0f, 0f);
+                myCameras[4].setPosition(myCameras[4].getPosition() + new Vector3(-0.15f, 0f, 0f));
+
+                if (allLight[9].Position.X < posXAuto1)
+                    animacionAuto1 = false;
+            }
+            else {
+                posXAuto1 = -100;                
+                if (contadorAuto1 > 370)                
+                    animacionAuto1 = true;    
+             
+            }
+
+            contadorAuto2++;
+            if (contadorAuto2 > 500)
+                animacionAuto2 = false;
+
+            //Animacion Auto2
+            if (animacionAuto2)
+                modelAuto2 = modelAuto2 * Matrix4.CreateTranslation(0f, 0f, 0.15f);          
+                      
+
+            glControl3.Invalidate();
+        }
+
+        private void reinicioAuto1()
+        {
+            //Reinicio Posicion Auto1
+            Matrix4 scale = Matrix4.CreateScale(2f);
+            modelAuto1 = Matrix4.CreateTranslation(25f, -1.0f, 0f);
+            modelAuto1 = modelAuto1 * scale;
+            myCameras[4].setPosition(new Vector3(45f, 3.0f, 2f)); //reinicio camara desde el auto
+
+            //Reinicio Posicion de Luces del Auto
+            allLight[9].Position = new Vector4(42.0f, 0.20f, 1.00f, 1.0f);
+            allLight[10].Position = new Vector4(42.0f, 0.20f, 3.80f, 1.0f);
+            
+            //Reinicio contadores Auto1
+            contadorAuto1 = 0;
+            animacionAuto1 = true;
+            posXAuto1 = 15;
+
+        }
+
+        private void reinicioAuto2()
+        {
+            //Reinicio Posicion Auto2  
+            Matrix4 scale = Matrix4.CreateScale(2f);
+            modelAuto2 = Matrix4.CreateRotationY(DEG2RAD * 90f);
+            modelAuto2 = modelAuto2 * Matrix4.CreateTranslation(-4.5f, -1.0f, -20f);
+            modelAuto2 = modelAuto2 * scale;           
+
+            //Reinicio contadores Auto1
+            contadorAuto2 = 0;
+            animacionAuto2 = true;           
+
+        }
+
+        #endregion
+
         private void glControl3_KeyPress(object sender, System.Windows.Forms.KeyPressEventArgs e)
         {
-                switch (e.KeyChar) {
-                    case 'j':
-                      myCamera.Acercar(1f);
-                      break;
-                    case 'k':
-                      myCamera.Alejar(1f);
-                      break;
-                    case 'w':
-                      myCamera.Arriba();
-                      break;
-                    case 's':
-                      myCamera.Abajo();
-                      break;
-                    case 'a':
-                      myCamera.Izquierda();
-                      break;
-                    case 'd':
-                      myCamera.Derecha();
-                      break;
-                    case 'c':
-                        myCamera = new QuatCamera(myCamera.aspect);
-                        break;
-                    case 'v':
-                        myCamera = new CamaraSimple(new Vector3(2.0f, 99.0f, 0),myCamera.aspect);
-                        break;                
-                    case 'g':
-                      myLight.Position = new Vector4(0,0,2.0f,1.0f);
-                      myLight.ConeDirection = new Vector3(0,0,-1.0f);    
-                    break;           
-      }
+            switch (e.KeyChar) {
+                case 'j':
+                    myCamera.Acercar(1f);
+                    break;
+                case 'k':
+                    myCamera.Alejar(1f);
+                    break;
+                case 'w':
+                    myCamera.Arriba();
+                    break;
+                case 's':
+                    myCamera.Abajo();
+                    break;
+                case 'a':
+                    myCamera.Izquierda();
+                    break;
+                case 'd':
+                    myCamera.Derecha();
+                    break;
+                case 'c':
+                    myCamera = new QuatCamera(myCamera.aspect);
+                    break;
+                case 'v':
+                    myCamera = new CamaraSimple(new Vector3(2.0f, 99.0f, 0), myCamera.aspect);
+                    break;
+                case 'r':
+                    reinicioAuto1();
+                    reinicioAuto2();
+                    break;
+
+                case 'q':
+                    indexCamaras = (indexCamaras + 1) % (myCameras.Length - 1);
+                    myCameras[indexCamaras].aspect = myCamera.aspect;
+                    myCamera = myCameras[indexCamaras];
+
+                    break;
+                case 'f':
+
+                    myCameras[myCameras.Length - 1].aspect = myCamera.aspect;
+                    myCamera = myCameras[myCameras.Length - 1];
+
+                    break;
+                case 'p':
+                    //Pauso la animacion
+                    timer1.Enabled = !timer1.Enabled;
+                    
+                    break;
+
+            }
       glControl3.Invalidate();
     }
   }

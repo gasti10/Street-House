@@ -45,5 +45,7 @@ namespace CGUNS.Cameras
         public abstract void Izquierda();
 
         public abstract void Derecha();
+
+        public abstract void setPosition(Vector3 Pos);
     }
 }

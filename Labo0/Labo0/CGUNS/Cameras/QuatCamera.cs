@@ -128,6 +128,9 @@ namespace CGUNS.Cameras
             cameraRot.Normalize();
         }
 
-
+        public override void setPosition(Vector3 Pos)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

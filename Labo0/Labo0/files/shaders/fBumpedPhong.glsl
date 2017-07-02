@@ -1,7 +1,7 @@
 // FRAGMENT SHADER. Simple
 
 #version 330
-#define maxLights 7
+#define maxLights 11
 
 in vec2 f_TexCoord;
 

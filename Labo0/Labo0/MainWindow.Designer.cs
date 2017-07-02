@@ -28,7 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.glControl3 = new CGUNS.GLControl3();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // glControl3
@@ -39,7 +42,7 @@
             this.glControl3.BackColor = System.Drawing.Color.Black;
             this.glControl3.Location = new System.Drawing.Point(12, 12);
             this.glControl3.Name = "glControl3";
-            this.glControl3.Size = new System.Drawing.Size(260 , 238);
+            this.glControl3.Size = new System.Drawing.Size(260, 238);
             this.glControl3.TabIndex = 0;
             this.glControl3.VSync = false;
             this.glControl3.Load += new System.EventHandler(this.glControl3_Load);
@@ -47,13 +50,24 @@
             this.glControl3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.glControl3_KeyPress);
             this.glControl3.Resize += new System.EventHandler(this.glControl3_Resize);
             // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 500;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // timer2
+            // 
+            this.timer2.Enabled = true;
+            this.timer2.Interval = 5;
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 262);
             this.Controls.Add(this.glControl3);
-            //this.ForeColor = System.Drawing.SystemColors.ButtonShadow;
             this.Name = "MainWindow";
             this.Text = "Laboratorio 0";
             this.ResumeLayout(false);
@@ -63,8 +77,8 @@
         #endregion
 
         private CGUNS.GLControl3 glControl3;
-
-
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Timer timer2;
     }
 }
 
