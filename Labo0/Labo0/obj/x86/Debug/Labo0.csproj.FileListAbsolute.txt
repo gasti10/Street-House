@@ -480,3 +480,5 @@ C:\Users\Alejandro\Source\Repos\Street-House3\Labo0\Labo0\obj\x86\Debug\Labo0.ex
 C:\Users\Alejandro\Source\Repos\Street-House3\Labo0\Labo0\obj\x86\Debug\Labo0.pdb
 C:\Users\Alejandro\Source\Repos\Street-House3\Labo0\Labo0\bin\Debug\CGUNS\ModelosOBJ\Ford2.obj
 C:\Users\Alejandro\Source\Repos\Street-House3\Labo0\Labo0\bin\Debug\CGUNS\ModelosOBJ\Street3.obj
+C:\Users\Alejandro\Source\Repos\Street-House3\Labo0\Labo0\bin\Debug\CGUNS\ModelosOBJ\Street7.obj
+C:\Users\Alejandro\Source\Repos\Street-House3\Labo0\Labo0\bin\Debug\files\Texturas\semaforo\negro.jpg

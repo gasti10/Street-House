@@ -402,21 +402,6 @@ namespace CGUNS.Meshes.FaceVertexList
             gl.BindBuffer(bufferType, tan_VBO); //Seleccionamos el buffer a utilizar.
             gl.VertexAttribPointer(attribIndex, cantComponentes, attribType, false, stride, offset);//Configuramos el layout (como estan organizados) los datos en el buffer.
             
-            /*
-            //2. Configuramos el VBO de bitangentes.
-            attribIndex = sProgram.GetVertexAttribLocation("vBitangente"); //Yo lo saco de mi clase ProgramShader.
-            cantComponentes = 3;   // 3 componentes (x, y, z)
-            attribType = VertexAttribPointerType.Float; //Cada componente es un Float.
-            stride = 0;  //Los datos estan uno a continuacion del otro.
-            offset = 0;  //El primer dato esta al comienzo. (no hay offset).
-            bufferType = BufferTarget.ArrayBuffer; //Buffer de Datos.
-
-            gl.EnableVertexAttribArray(attribIndex); //Habilitamos el indice de atributo.
-            gl.BindBuffer(bufferType, bitan_VBO); //Seleccionamos el buffer a utilizar.
-            gl.VertexAttribPointer(attribIndex, cantComponentes, attribType, false, stride, offset);//Configuramos el layout (como estan organizados) los datos en el buffer.
-            */
-            // 2.a.El bloque anterior se repite para cada atributo del vertice (color, normal, textura..)
-
             // 3. Configuramos el EBO a utilizar. (como son indices, no necesitan info de layout)
             bufferType = BufferTarget.ElementArrayBuffer;
             gl.BindBuffer(bufferType, h_EBO);
@@ -469,16 +454,14 @@ namespace CGUNS.Meshes.FaceVertexList
 **/
         public override void Dibujar(ShaderProgram sProgram)
         {
-            //sProgram.SetUniformValue("modelMatrix", transform.localToWorld);
             sProgram.SetUniformValue("material.Ka", material.Kambient);
             sProgram.SetUniformValue("material.Kd", material.Kdiffuse);
             sProgram.SetUniformValue("material.Shininess", material.Shininess);
             sProgram.SetUniformValue("material.Ks", material.Kspecular);
-            //sProgram.SetUniformValue("normalMatrix", Matrix3.Transpose(Matrix3.Invert(new Matrix3(transform.localToWorld * viewMatrix))));
-
+            
             //Si tiene una textura especial, asignarla
             if (textures.Count > 0)
-                sProgram.SetUniformValue("ColorTex", textures[0]);
+                sProgram.SetUniformValue("ColorTex", textures[textures.Count - 1]);
                         
             PrimitiveType primitive; //Tipo de Primitiva a utilizar (triangulos, strip, fan, quads, ..)
             int offset; // A partir de cual indice dibujamos?

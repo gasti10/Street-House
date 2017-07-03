@@ -132,5 +132,15 @@ namespace CGUNS.Cameras
         {
             throw new NotImplementedException();
         }
+
+        public override void setTarget(Vector3 tarjet)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override Vector3 getTarget()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

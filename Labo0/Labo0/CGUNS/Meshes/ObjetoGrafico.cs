@@ -12,43 +12,20 @@ namespace CGUNS.Meshes
     {
         //Submeshes
         List<Mesh> meshes;
-        //Transformaciones compartidas por todos las meshes
-        //Transform rootTransform;
         //Materiales
         List<Material> materiales;
 
         public ObjetoGrafico()
         {
             meshes = new List<Mesh>();
-         //   transform = new Transform();
             materiales = new List<Material>();
         }
 
         public ObjetoGrafico(string path)
         {
             meshes = CGUNS.Parsers.ObjFileParser.parseFile(path).Cast<Mesh>().ToList();
-           // transform = new Transform();
-        }
-        /**
-        public Transform transform
-        {
-            get { return rootTransform; }
-            set
-            {
-                rootTransform = value;
-                UpdateAllTransforms();
-            }
         }
 
-        //A todas las Mesh le asigna el transform del ObjetoGrafico.
-        private void UpdateAllTransforms()
-        {
-            foreach (Mesh m in meshes)
-            {
-                m.Transform = rootTransform;
-            }
-        }
-            **/
         public List<Mesh> Meshes
         {
             get { return meshes; }
@@ -83,23 +60,7 @@ namespace CGUNS.Meshes
                 m.Dibujar(sProgram);
             }
         }
-        /**
-        public void DibujarShadows(ShaderProgram sProgram)
-        {
-            foreach (Mesh m in meshes)
-            {
-                m.DibujarShadows(sProgram);
-            }
-        }
-
-        public void DibujarNormales(ShaderProgram sProgram)
-        {
-            foreach (Mesh m in meshes)
-            {
-                m.DibujarNormales(sProgram);
-            }
-        }
-    **/
+     
         /// <summary>
         /// 
         /// </summary>

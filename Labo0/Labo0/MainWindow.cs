@@ -70,10 +70,10 @@ namespace Labo0
             SetupTextures();
 
             #region Creacion de Objetos
-            miPiram = new ObjetoGrafico("CGUNS/ModelosOBJ/Street3.obj");
+            miPiram = new ObjetoGrafico("CGUNS/ModelosOBJ/Street7.obj");
             auto = new ObjetoGrafico("CGUNS/ModelosOBJ/Ford2.obj");
             auto2 = new ObjetoGrafico("CGUNS/ModelosOBJ/Ford2.obj");
-            
+
             auto.Build(sProgram);
             auto.setMaterial(Material.Bronze);
             auto.AddTextureToAllMeshes(GetTextureID("auto"));
@@ -81,7 +81,7 @@ namespace Labo0
             auto2.Build(sProgram);
             auto2.setMaterial(Material.Default);
             auto2.AddTextureToAllMeshes(GetTextureID("auto"));
-#endregion
+            #endregion
 
             #region Build de mapa
 
@@ -246,7 +246,7 @@ namespace Labo0
 
                     case "plano_cruece_Plane001_Plane001_20___Default":
                         m.AddTexture(GetTextureID("calle"));//plano
-                        m.AddTexture(GetTextureID("calle_n"));//plano_n
+                       // m.AddTexture(GetTextureID("calle_n"));//plano_n
                         m.material = Material.Default;
                         m.Build(sProgramBump);
                         break;
@@ -275,38 +275,22 @@ namespace Labo0
                         m.material = Material.Default;
                         m.Build(sProgram);
                         break;
-                    case "luzverde1":
-                        m.AddTexture(GetTextureID("verde"));
-                        m.material = Material.Default;
-                        m.Build(sProgram);
-                        break;
-                    case "luzverde2":
-                        m.AddTexture(GetTextureID("verde"));
-                        m.material = Material.Default;
-                        m.Build(sProgram);
-                        break;
-                    case "luzamarilla1":
-                        m.AddTexture(GetTextureID("amarillo"));
-                        m.material = Material.Default;
-                        m.Build(sProgram);
-                        break;
-                    case "luzamarilla2":
-                        m.AddTexture(GetTextureID("amarillo"));
-                        m.material = Material.Default;
-                        m.Build(sProgram);
-                        break;
-                    case "luzroja1":
+                    case "luzverde":
                         m.AddTexture(GetTextureID("rojo"));
                         m.material = Material.Default;
                         m.Build(sProgram);
                         break;
-                    case "luzroja2":
-                        m.AddTexture(GetTextureID("rojo"));
+                    case "luzamarilla":
+                        m.AddTexture(GetTextureID("negro"));
+                        m.material = Material.Default;
+                        m.Build(sProgram);
+                        break;
+                    case "luzroja":
+                        m.AddTexture(GetTextureID("negro"));
                         m.material = Material.Default;
                         m.Build(sProgram);
                         break;
                     case "auto":
-
                         m.AddTexture(GetTextureID("auto"));
                         m.material = Material.YellowPlastic;
                         m.Build(sProgram);
@@ -550,13 +534,13 @@ namespace Labo0
 
             gl.ClearColor(Color.FloralWhite); //Configuro el Color de borrado.
 
-             gl.PolygonMode(MaterialFace.Front, PolygonMode.Fill);
-   
-            GL.Hint(HintTarget.PerspectiveCorrectionHint, HintMode.Nicest);           
-            
+            gl.PolygonMode(MaterialFace.Front, PolygonMode.Fill);
+
+            GL.Hint(HintTarget.PerspectiveCorrectionHint, HintMode.Nicest);
+
         }
 
-       
+
 
         private void SetupTextures()
         {
@@ -579,10 +563,10 @@ namespace Labo0
             //texturas de los bancos
             CargarTextura("files/Texturas/banco/banco.png", "banco");
             //textura de las hojas del arbol
-         
+
             //textura de las hojas del arbol
             CargarTextura("files/Texturas/arbol/tronco.jpg", "mesa");
-            
+
             //textura del plano
             CargarTextura("files/Texturas/plano/cruce.jpg", "calle");
             CargarTextura("files/Texturas/plano/cruce_NRM.jpg", "calle_n");
@@ -590,14 +574,9 @@ namespace Labo0
             //textura de los arboles
             CargarTextura("files/Texturas/arbol/hojas.jpg", "hojas");
             CargarTextura("files/Texturas/arbol/tronco.jpg", "tronco");
-                       
-            //textura del cruce
-            CargarTextura("files/Texturas/cruce/plano.jpg", "plano");
-            CargarTextura("files/Texturas/cruce/line.png", "line");
-            CargarTextura("files/Texturas/cruce/road.jpg", "road");
 
             //textura de los semaforos
-            CargarTextura("files/Texturas/semaforo/amarillo.jpg", "amarillo");
+            CargarTextura("files/Texturas/semaforo/negro.jpg", "negro");
             CargarTextura("files/Texturas/semaforo/verde.jpg", "verde");
             CargarTextura("files/Texturas/semaforo/rojo.jpg", "rojo");
             CargarTextura("files/Texturas/semaforo/pilar.jpg", "pilar");
@@ -613,10 +592,10 @@ namespace Labo0
 
             //textura de los faroles
             CargarTextura("files/Texturas/farol/luz.png", "luz");
-            CargarTextura("files/Texturas/farol/pilarluz.jpg", "pilarluz");            
+            CargarTextura("files/Texturas/farol/pilarluz.jpg", "pilarluz");
         }
 
-        private int CargarTextura(String imagenTex,String nombre)
+        private int CargarTextura(String imagenTex, String nombre)
         {
             //Selecciono como textura activa la que corresponda segun el orden que se agregue.
             gl.ActiveTexture(TextureUnit.Texture0 + programTextures.Count);
@@ -651,7 +630,7 @@ namespace Labo0
             Matrix4 modelMatrix = Matrix4.Identity; //Por ahora usamos la identidad.
             Matrix4 viewMatrix = myCamera.getViewMatrix();
             Matrix4 projMatrix = myCamera.getProjectionMatrix();
-            
+
             gl.Clear(ClearBufferMask.ColorBufferBit | ClearBufferMask.DepthBufferBit); //Borramos el contenido del glControl.
 
             gl.Viewport(viewport); //Especificamos en que parte del glControl queremos dibujar.
@@ -661,7 +640,7 @@ namespace Labo0
             //Seteamos los valores uniformes.
             sProgram.SetUniformValue("projMat", projMatrix);
             sProgram.SetUniformValue("viewMatrix", viewMatrix);
-                      
+
             sProgram.SetUniformValue("modelMatrix", modelMatrix);
             sProgram.SetUniformValue("A", 0.3f);
             sProgram.SetUniformValue("B", 0.007f);
@@ -671,7 +650,7 @@ namespace Labo0
             {
                 sProgram.SetUniformValue("allLights[" + i + "].position", allLight[i].Position);
                 sProgram.SetUniformValue("allLights[" + i + "].Ia", allLight[i].Iambient);
-                sProgram.SetUniformValue("allLights[" + i + "].Ip", allLight[i].Idiffuse);             
+                sProgram.SetUniformValue("allLights[" + i + "].Ip", allLight[i].Idiffuse);
                 sProgram.SetUniformValue("allLights[" + i + "].coneAngle", allLight[i].ConeAngle);
                 sProgram.SetUniformValue("allLights[" + i + "].coneDirection", allLight[i].ConeDirection);
                 sProgram.SetUniformValue("allLights[" + i + "].enabled", allLight[i].Enabled);
@@ -688,13 +667,13 @@ namespace Labo0
             }
 
             //Dibujamos el auto 1
-            sProgram.SetUniformValue("modelMatrix", modelAuto1);            
+            sProgram.SetUniformValue("modelMatrix", modelAuto1);
             auto.Dibujar(sProgram);
 
             //Dibujamos el auto 2
-            sProgram.SetUniformValue("modelMatrix", modelAuto2);            
+            sProgram.SetUniformValue("modelMatrix", modelAuto2);
             auto2.Dibujar(sProgram);
-            
+
             sProgram.SetUniformValue("cameraPosition", myCamera.getPosition());
             sProgram.Deactivate(); //Desactivamos el programa de shader.
             #endregion
@@ -703,35 +682,35 @@ namespace Labo0
 
             //SHADER para el piso
             sProgramBump.Activate(); //Activamos el programa de shaders
-                        
+
             //Configuracion de los valores uniformes
             material = Material.Obsidian;
 
             sProgramBump.SetUniformValue("modelMatrix", modelMatrix);
             sProgramBump.SetUniformValue("projMatrix", myCamera.getProjectionMatrix());
-            sProgramBump.SetUniformValue("viewMatrix", myCamera.getViewMatrix());            
+            sProgramBump.SetUniformValue("viewMatrix", myCamera.getViewMatrix());
             sProgramBump.SetUniformValue("A", 0.3f);
             sProgramBump.SetUniformValue("B", 0.007f);
             sProgramBump.SetUniformValue("C", 0.00008f);
-            sProgramBump.SetUniformValue("material.Ka", material.Kambient);            
+            sProgramBump.SetUniformValue("material.Ka", material.Kambient);
             sProgramBump.SetUniformValue("material.Ks", material.Kspecular);
             sProgramBump.SetUniformValue("material.Shininess", material.Shininess);
             sProgramBump.SetUniformValue("ColorTex", GetTextureID("calle"));
             sProgramBump.SetUniformValue("NormalMapTex", GetTextureID("calle_n"));
-            
+
             sProgramBump.SetUniformValue("numLights", allLight.Length);
             for (int i = 0; i < allLight.Length; i++)
             {
                 sProgramBump.SetUniformValue("allLights[" + i + "].position", allLight[i].Position);
                 sProgramBump.SetUniformValue("allLights[" + i + "].Ia", allLight[i].Iambient);
-                sProgramBump.SetUniformValue("allLights[" + i + "].Ip", allLight[i].Idiffuse);               
+                sProgramBump.SetUniformValue("allLights[" + i + "].Ip", allLight[i].Idiffuse);
                 sProgramBump.SetUniformValue("allLights[" + i + "].coneAngle", allLight[i].ConeAngle);
                 sProgramBump.SetUniformValue("allLights[" + i + "].coneDirection", allLight[i].ConeDirection);
                 sProgramBump.SetUniformValue("allLights[" + i + "].enabled", allLight[i].Enabled);
-             }
-            
+            }
+
             //Dibujamos el piso            
-            sProgramBump.SetUniformValue("modelMatrix", modelMatrix);             
+            sProgramBump.SetUniformValue("modelMatrix", modelMatrix);
 
             foreach (Mesh m in miPiram.Meshes)
             {
@@ -739,7 +718,7 @@ namespace Labo0
                 string prefijo = m.Name.Split(separator)[0];
 
                 if (prefijo == "plano_cruece_Plane001_Plane001_20___Default")
-                   m.Dibujar(sProgramBump);              
+                    m.Dibujar(sProgramBump);
             }
 
             sProgramBump.Deactivate(); //Desactivamos el programa de shader.
@@ -761,9 +740,9 @@ namespace Labo0
                 aspecto = (float)w / (float)h;
             }
             //SETEO DE ASPECTO A LAS CAMARAS
-            if (myCamera == null ) myCamera = new QuatCamera(aspecto);
+            if (myCamera == null) myCamera = new QuatCamera(aspecto);
             myCamera.aspect = aspecto;
-           
+
             //Configuro el tamaño del viewport
             viewport.X = 0;
             viewport.Y = 0;
@@ -772,7 +751,7 @@ namespace Labo0
             glControl3.Invalidate(); //Invalidamos el glControl para que se redibuje.(llama al metodo Paint)
         }
 
-        private void SetupShaders(String vShaderFile,String fShaderFile, out ShaderProgram sProgram)
+        private void SetupShaders(String vShaderFile, String fShaderFile, out ShaderProgram sProgram)
         {
             //Lo hago con mis clases, que encapsulan el manejo de shaders.
             //1. Creamos los shaders, a partir de archivos.
@@ -819,45 +798,68 @@ namespace Labo0
         private void timer1_Tick(object sender, EventArgs e)
         {
             AnimacionLuces();
-           
+
             glControl3.Invalidate();
         }
 
         private void AnimacionLuces()
         {
-            Console.Write(LuzAmbiente);
-            allLight[0].Iambient = new Vector3(LuzAmbiente, LuzAmbiente, LuzAmbiente);
             
+            allLight[0].Iambient = new Vector3(LuzAmbiente, LuzAmbiente, LuzAmbiente);
+
             if (flagAmbienteSuma)
             {
                 LuzAmbiente = LuzAmbiente + 0.05f;
-                if (LuzAmbiente > 2f)
+                if (LuzAmbiente > 1.9f)
                     flagAmbienteSuma = false;
             }
             else
             {
                 LuzAmbiente = LuzAmbiente - 0.05f;
-                if (LuzAmbiente < 0.37f)
+                if (LuzAmbiente < 0.25f)
                     flagAmbienteSuma = true;
             }
 
             //Prendo las luces de Noche
             if (LuzAmbiente < 1.2f)
             {
-                Console.Write("prendo");
+                
                 for (int i = 1; i < allLight.Length; i++)
                     allLight[i].Enabled = 1;
-            }else
-                {
-                Console.Write("apago");
+            } else
+            {
+              
                 for (int i = 1; i < allLight.Length; i++)
                     allLight[i].Enabled = 0;
-                }
+            }
         }
 
         private void timer2_Tick(object sender, EventArgs e)
         {
             contadorAuto1++;
+
+            //Animacion Semaforo            
+            if(contadorAuto1 == 360)
+                foreach (Mesh m in miPiram.Meshes)
+                {
+                    Char[] separator = { '.' };
+                    string prefijo = m.Name.Split(separator)[0];
+                    switch (prefijo)
+                    {
+                        case "luzverde":
+                            
+                            m.AddTexture(GetTextureID("negro"));
+                            m.material = Material.Default;
+                            m.Build(sProgram);
+                            break;
+                        
+                        case "luzroja":
+                            m.AddTexture(GetTextureID("verde"));
+                            m.material = Material.Default;
+                            m.Build(sProgram);
+                            break;
+                    }
+                }
             //Animacion Auto1
             if ((animacionAuto1) && (contadorAuto1 < 750))
             {
@@ -867,13 +869,32 @@ namespace Labo0
                 myCameras[4].setPosition(myCameras[4].getPosition() + new Vector3(-0.15f, 0f, 0f));
 
                 if (allLight[9].Position.X < posXAuto1)
-                    animacionAuto1 = false;
+                {
+                    animacionAuto1 = false;// contador = 180                    
+                }
+
+                //Animo la camara de primera persona 
+                if ((contadorAuto1 > 140) && (contadorAuto1 < 360))// 180
+                {
+                    myCameras[4].setTarget(myCameras[4].getTarget() + new Vector3(0f, 0.3f, 0f));
+                }
+                
+
             }
             else {
-                posXAuto1 = -100;                
-                if (contadorAuto1 > 370)                
-                    animacionAuto1 = true;    
-             
+                posXAuto1 = -100;
+                if (contadorAuto1 > 370) 
+                    animacionAuto1 = true;
+
+                //Animo la camara de primera persona 
+                if (contadorAuto1 < 225) // 180
+                {
+                    myCameras[4].setTarget(myCameras[4].getTarget() + new Vector3(0f, 0.3f, 0f));
+                }
+                else 
+                    if(contadorAuto1 < 310)
+                        myCameras[4].setTarget(myCameras[4].getTarget() + new Vector3(0f, -0.3f, 0f));
+                    
             }
 
             contadorAuto2++;
@@ -888,6 +909,8 @@ namespace Labo0
             glControl3.Invalidate();
         }
 
+        
+
         private void reinicioAuto1()
         {
             //Reinicio Posicion Auto1
@@ -895,6 +918,7 @@ namespace Labo0
             modelAuto1 = Matrix4.CreateTranslation(25f, -1.0f, 0f);
             modelAuto1 = modelAuto1 * scale;
             myCameras[4].setPosition(new Vector3(45f, 3.0f, 2f)); //reinicio camara desde el auto
+            myCameras[4].setTarget(new Vector3(-50f, 1.0f, 0f));          
 
             //Reinicio Posicion de Luces del Auto
             allLight[9].Position = new Vector4(42.0f, 0.20f, 1.00f, 1.0f);
@@ -920,6 +944,32 @@ namespace Labo0
             animacionAuto2 = true;           
 
         }
+
+        private void reiniciarSemaforo()
+        {
+            foreach (Mesh m in miPiram.Meshes)
+            {
+                Char[] separator = { '.' };
+                string prefijo = m.Name.Split(separator)[0];
+                switch (prefijo)
+                {
+                    case "luzverde":
+
+                        m.AddTexture(GetTextureID("rojo"));
+                        m.material = Material.Default;
+                        m.Build(sProgram);
+                        break;
+
+                    case "luzroja":
+                        m.AddTexture(GetTextureID("negro"));
+                        m.material = Material.Default;
+                        m.Build(sProgram);
+                        break;
+                }
+            }
+        }
+
+       
 
         #endregion
 
@@ -953,6 +1003,7 @@ namespace Labo0
                 case 'r':
                     reinicioAuto1();
                     reinicioAuto2();
+                    reiniciarSemaforo();
                     break;
 
                 case 'q':

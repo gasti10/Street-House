@@ -136,5 +136,14 @@ namespace CGUNS.Cameras
         {
             eye = Pos;
         }
+        public override void setTarget(Vector3 tarjet)
+        {
+            this.target = tarjet;
+        }
+        public override Vector3 getTarget()
+        {
+            return target;
+        }
+        
     }
 }

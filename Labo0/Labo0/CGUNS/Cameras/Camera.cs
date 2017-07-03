@@ -47,5 +47,13 @@ namespace CGUNS.Cameras
         public abstract void Derecha();
 
         public abstract void setPosition(Vector3 Pos);
+
+        public abstract void setTarget(Vector3 tarjet);
+
+        public abstract Vector3 getTarget();
+
+
+
+
     }
 }
